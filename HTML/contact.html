@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElBasha Construction</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../imgs/fav_icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../imgs/fav_icon.png">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Scripts -->
+    <script src="../JS/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="../imgs/logo.png" alt="ElBasha Logo"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                <li><a href="services.html" data-en="Services" data-ar="خدماتنا">Services</a></li>
+                <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                <li><a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="lang-btn" onclick="toggleLanguage()">AR</button>
+    </header>
+
+    <!-- Contact Page -->
+    <main class="contact-page">
+        <div class="contact-container">
+
+            <!-- Left: Info -->
+            <section class="contact-info">
+                <h2 data-en="Contact Information" data-ar="معلومات التواصل">Contact Information</h2>
+                <p><strong>Phone:</strong><br>+20 111 611 1015<br>+20 101 416 5151<br>+20 100 699 2768</p>
+                <p><strong>Email:</strong><br>
+                    <a href="mailto:elbasha.constructions@gmail.com">elbasha.constructions@gmail.com</a>
+                </p>
+
+                <!-- Social Icons -->
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1b3x72sW7X/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/company/elbashaconstructions/" target="_blank"><i
+                            class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </section>
+
+            <!-- Right: Form -->
+            <section class="contact-form">
+                <h2 data-en="Send a Message" data-ar="أرسل رسالة">Send a Message</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Name / الاسم" required>
+            <input type="email" name="email" placeholder="Email / البريد الإلكتروني" required>
+            <input type="tel" name="phone" placeholder="Phone / الهاتف">
+            <textarea name="message" placeholder="Your Message / رسالتك" required></textarea>
+            <button type="submit">Send</button>
+            <p class="success-message" id="successMsg">✅ Your message has been sent successfully!</p>
+        </form>
+            </section>
+        </div>
+    </main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Left: Company Info -->
+        <div class="footer-info">
+            <p>&copy; 2025 El-Basha Company. All Rights Reserved.</p>
+            <p><strong>Phone:</strong> +20 111 611 1015 | +20 101 416 5151 | +20 100 699 2768</p>
+            <p><strong>Email:</strong>
+                <a href="mailto:elbasha.constructions@gmail.com">elbasha.constructions@gmail.com</a>
+            </p>
+        </div>
+
+        <!-- Right: Social Icons -->
+        <div class="footer-social">
+            <a href="https://www.facebook.com/share/1b3x72sW7X/" target="_blank">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/elbashaconstructions/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
