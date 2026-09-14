@@ -1,0 +1,19 @@
+# Build output
+dist/
+
+# Dependencies (the build has none; media tooling installs sharp on demand)
+node_modules/
+package-lock.json
+
+# Environment files (never commit real values)
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
