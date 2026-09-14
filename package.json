@@ -12,7 +12,7 @@
     "build:drafts": "node scripts/build.mjs --drafts && node scripts/check.mjs --drafts",
     "preview": "node scripts/serve.mjs",
     "check": "node scripts/check.mjs",
-    "media": "npm install --no-save --no-package-lock sharp@0.34 && node scripts/media.mjs",
+    "media": "npm install --no-save --no-package-lock sharp@0.35.4 && node scripts/media.mjs",
     "video": "node scripts/video.mjs"
   }
 }

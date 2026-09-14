@@ -1,0 +1,236 @@
+{
+  "hero-ar": {
+    "width": 1920,
+    "height": 864,
+    "webp": [
+      {
+        "w": 960,
+        "file": "img/hero-ar-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-ar-1280.webp"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-ar-1920.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 960,
+        "file": "img/hero-ar-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-ar-1280.jpg"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-ar-1920.jpg"
+      }
+    ]
+  },
+  "hero-ar-mobile": {
+    "width": 691,
+    "height": 864,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/hero-ar-mobile-480.webp"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-ar-mobile-691.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/hero-ar-mobile-480.jpg"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-ar-mobile-691.jpg"
+      }
+    ]
+  },
+  "hero-en": {
+    "width": 1920,
+    "height": 864,
+    "webp": [
+      {
+        "w": 960,
+        "file": "img/hero-en-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-en-1280.webp"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-en-1920.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 960,
+        "file": "img/hero-en-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-en-1280.jpg"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-en-1920.jpg"
+      }
+    ]
+  },
+  "hero-en-mobile": {
+    "width": 691,
+    "height": 864,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/hero-en-mobile-480.webp"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-en-mobile-691.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/hero-en-mobile-480.jpg"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-en-mobile-691.jpg"
+      }
+    ]
+  },
+  "project-future-of-egypt": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-future-of-egypt-480.webp"
+      },
+      {
+        "w": 800,
+        "file": "img/project-future-of-egypt-800.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/project-future-of-egypt-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-future-of-egypt-480.jpg"
+      },
+      {
+        "w": 800,
+        "file": "img/project-future-of-egypt-800.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/project-future-of-egypt-960.jpg"
+      }
+    ]
+  },
+  "project-amr-ibn-al-as-axis": {
+    "width": 796,
+    "height": 597,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-amr-ibn-al-as-axis-480.webp"
+      },
+      {
+        "w": 796,
+        "file": "img/project-amr-ibn-al-as-axis-796.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-amr-ibn-al-as-axis-480.jpg"
+      },
+      {
+        "w": 796,
+        "file": "img/project-amr-ibn-al-as-axis-796.jpg"
+      }
+    ]
+  },
+  "project-october-western-sector": {
+    "width": 1200,
+    "height": 900,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-october-western-sector-480.webp"
+      },
+      {
+        "w": 800,
+        "file": "img/project-october-western-sector-800.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/project-october-western-sector-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-october-western-sector-480.jpg"
+      },
+      {
+        "w": 800,
+        "file": "img/project-october-western-sector-800.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/project-october-western-sector-1200.jpg"
+      }
+    ]
+  },
+  "project-wadi-el-natrun": {
+    "width": 720,
+    "height": 540,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-wadi-el-natrun-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/project-wadi-el-natrun-720.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-wadi-el-natrun-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/project-wadi-el-natrun-720.jpg"
+      }
+    ]
+  },
+  "logo": {
+    "width": 168,
+    "height": 112,
+    "png": "img/logo.png"
+  },
+  "og": {
+    "width": 1200,
+    "height": 630,
+    "file": "og-image.jpg"
+  }
+}
