@@ -1,5 +1,5 @@
 // Reusable page components.
-import { html, icon, ltr, needs, slot, isMarker, plural } from './lib.mjs';
+import { html, icon, isMarker, ltr, needs, phone, plural, raw, slot } from './lib.mjs';
 
 const srcset = (ctx, list) => list.map(({ w, file }) => `${ctx.asset(file)} ${w}w`).join(', ');
 
@@ -41,7 +41,7 @@ export function whatsappButton(ctx, { className = 'btn btn--whatsapp', label = c
 export function callButton(ctx, { className = 'btn btn--outline-light', label = ctx.t.cta.call, showNumber = false } = {}) {
   const p = ctx.site.contact.primaryPhone;
   return html`<a class="${className}" href="tel:${p.tel}">
-    ${icon('phone', { size: 20 })}<span>${label}${showNumber ? html` ${ltr(p.display)}` : ''}</span></a>`;
+    ${icon('phone', { size: 20 })}<span>${label}${showNumber ? html`${raw('&nbsp;')}${phone(p.display)}` : ''}</span></a>`;
 }
 
 export function serviceCard(ctx, s) {

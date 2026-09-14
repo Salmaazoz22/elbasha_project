@@ -1,5 +1,5 @@
 // Page bodies. Each returns { title, description, body, indexable, scripts? }.
-import { email, html, icon, ltr, needs, raw, slot } from './lib.mjs';
+import { email, html, icon, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
   picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand,
 } from './components.mjs';
@@ -175,7 +175,7 @@ ${pageHero(ctx, { title: t.contact.title, lead: t.contact.lead })}
         <span class="contact-card__icon">${icon('whatsapp', { size: 26 })}</span>
         <div>
           <h3 class="contact-card__title">${t.contact.whatsappTitle}</h3>
-          <p class="contact-card__value">${ltr(c.primaryPhone.display)}</p>
+          <p class="contact-card__value">${phone(c.primaryPhone.display)}</p>
           ${whatsappButton(ctx, { className: 'btn btn--whatsapp btn--sm' })}
         </div>
       </div>
@@ -183,10 +183,10 @@ ${pageHero(ctx, { title: t.contact.title, lead: t.contact.lead })}
         <span class="contact-card__icon">${icon('phone', { size: 26 })}</span>
         <div>
           <h3 class="contact-card__title">${t.contact.callTitle}</h3>
-          <p class="contact-card__value"><a href="tel:${c.primaryPhone.tel}">${ltr(c.primaryPhone.display)}</a></p>
+          <p class="contact-card__value"><a href="tel:${c.primaryPhone.tel}">${phone(c.primaryPhone.display)}</a></p>
           <p class="contact-card__sub">${t.contact.otherPhones}:</p>
           <ul class="contact-card__list" role="list">
-            ${c.secondaryPhones.map((p) => html`<li><a href="tel:${p.tel}">${ltr(p.display)}</a></li>`)}
+            ${c.secondaryPhones.map((p) => html`<li><a href="tel:${p.tel}">${phone(p.display)}</a></li>`)}
           </ul>
         </div>
       </div>

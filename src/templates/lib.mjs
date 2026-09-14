@@ -68,6 +68,9 @@ export function plural(forms, n, lang) {
 /** Wrap phone numbers etc. so they keep left-to-right order inside RTL text. */
 export const ltr = (text) => html`<bdi dir="ltr">${text}</bdi>`;
 
+/** Phone number in LTR with non-breaking spaces so it never wraps mid-number. */
+export const phone = (display) => html`<bdi dir="ltr">${raw(esc(display).replace(/ /g, '&nbsp;'))}</bdi>`;
+
 /** Email address in LTR with a line-break opportunity after the @ (long addresses on small screens). */
 export function email(address) {
   const [local, domain] = String(address).split('@');

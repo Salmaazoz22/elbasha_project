@@ -1,5 +1,5 @@
 // Document shell: <head> metadata, header, footer and mobile contact bar.
-import { email, html, icon, ltr, needs } from './lib.mjs';
+import { email, html, icon, ltr, needs, phone } from './lib.mjs';
 import { whatsappButton } from './components.mjs';
 
 const NAV = [
@@ -91,7 +91,7 @@ ${ctx.drafts ? html`<div class="draft-banner" role="note">${t.draftBanner}</div>
         <span aria-hidden="true">${t.nav.switchTo}</span><span class="visually-hidden">${t.nav.switchToLabel}</span>
       </a>
       <a class="btn btn--primary btn--sm site-nav__call" href="tel:${ctx.site.contact.primaryPhone.tel}">
-        ${icon('phone', { size: 18 })}<span>${ltr(ctx.site.contact.primaryPhone.display)}</span>
+        ${icon('phone', { size: 18 })}<span>${phone(ctx.site.contact.primaryPhone.display)}</span>
       </a>
     </nav>
   </div>
@@ -120,8 +120,8 @@ function footer(ctx) {
     <div class="site-footer__col">
       <h2 class="site-footer__heading">${t.footer.contact}</h2>
       <ul class="site-footer__list site-footer__contact">
-        <li><a href="tel:${c.primaryPhone.tel}">${icon('phone', { size: 18 })}${ltr(c.primaryPhone.display)}</a></li>
-        ${c.secondaryPhones.map((p) => html`<li><a href="tel:${p.tel}">${icon('phone', { size: 18 })}${ltr(p.display)}</a></li>`)}
+        <li><a href="tel:${c.primaryPhone.tel}">${icon('phone', { size: 18 })}${phone(c.primaryPhone.display)}</a></li>
+        ${c.secondaryPhones.map((p) => html`<li><a href="tel:${p.tel}">${icon('phone', { size: 18 })}${phone(p.display)}</a></li>`)}
         <li><a href="mailto:${c.email}">${icon('mail', { size: 18 })}${email(c.email)}</a></li>
         ${needs(ctx, c.address[lang], () => html`<li>${icon('map-pin', { size: 18 })}<span>${c.address[lang]}</span></li>`)}
       </ul>
@@ -159,7 +159,7 @@ function mobileBar(ctx) {
 }
 
 export function layout(ctx, page) {
-  return `<!doctype html>
+  return `<!DOCTYPE html>
 <html lang="${ctx.lang}" dir="${ctx.dir}" class="${page.key === 'notFound' ? 'page-404' : `page-${page.key}`}">
 ${head(ctx, page)}
 <body>
