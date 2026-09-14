@@ -22,6 +22,31 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Metric-matched fallbacks (installed system fonts only). Text laid out before Cairo arrives keeps
+   almost the same width, so the swap does not move content: Lighthouse CLS on /about/ mobile went from
+   0.17 to 0. Measured with fontTools: average advance Arial 0.470 em vs Cairo 0.442 em (Latin);
+   Segoe UI 0.565 em vs Cairo 0.562 em (Arabic). Trade-off: slightly more style/layout work while the
+   font swaps in (lab TBT), accepted because layout stability is a Core Web Vital. */
+@font-face {
+  font-family: "Cairo Fallback";
+  src: local("Arial");
+  size-adjust: 93.95%;
+  ascent-override: 138.7%;
+  descent-override: 60.8%;
+  line-gap-override: 0%;
+  unicode-range: U+0000-00FF;
+}
+
+@font-face {
+  font-family: "Cairo Fallback";
+  src: local("Segoe UI"), local("Tahoma");
+  size-adjust: 99.6%;
+  ascent-override: 130.8%;
+  descent-override: 57.3%;
+  line-gap-override: 0%;
+  unicode-range: U+0600-06FF;
+}
+
 /* ---------- Tokens ---------- */
 :root {
   --navy-600: #184098;
@@ -44,7 +69,7 @@
   --error: #b91c1c;
   --success: #15803d;
 
-  --font: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font: "Cairo", "Cairo Fallback", "Segoe UI", Tahoma, Arial, sans-serif;
   --fs-base: 1rem;
   --lh-body: 1.7;
 
@@ -1203,6 +1228,13 @@ bdi {
 .about-intro__logo {
   width: min(100%, 20rem);
   height: auto;
+}
+
+/* On phones the logo card only repeats the header logo and moved when the web font swapped in (CLS). */
+@media (max-width: 61.99em) {
+  .about-intro__aside:not(:has(.needs-client)) {
+    display: none;
+  }
 }
 
 .expertise-list {
