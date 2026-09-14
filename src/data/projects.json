@@ -1,0 +1,343 @@
+{
+  "categories": [
+    {
+      "id": "roads",
+      "name": {
+        "ar": "مشاريع الطرق والبنية التحتية",
+        "en": "Road & Infrastructure Projects"
+      },
+      "icon": "route"
+    },
+    {
+      "id": "bridges",
+      "name": {
+        "ar": "مشاريع الكباري والمحاور",
+        "en": "Bridge & Axis Projects"
+      },
+      "icon": "milestone"
+    },
+    {
+      "id": "maintenance",
+      "name": {
+        "ar": "التطوير والصيانة",
+        "en": "Development & Maintenance"
+      },
+      "icon": "wrench"
+    },
+    {
+      "id": "brick-factories",
+      "name": {
+        "ar": "مصانع الطوب",
+        "en": "Brick Factories"
+      },
+      "icon": "factory"
+    }
+  ],
+  "projects": [
+    {
+      "n": 1,
+      "category": "roads",
+      "name": {
+        "ar": "طريق أسيوط الغربي بوابة أسيوط أكتوبر",
+        "en": "Asyut Western Road - Asyut Gate October"
+      },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm English name of project 1 (\"Asyut Gate October\")]]",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Asyut Gate October]]"
+    },
+    {
+      "n": 2,
+      "category": "roads",
+      "name": {
+        "ar": "طريق أسيوط الغربي الصوامع ومرور الفيوم",
+        "en": "Asyut Western Road - Fayoum Silos & Checkpoint"
+      },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm English name of project 2 (\"Checkpoint\" for \"مرور الفيوم\")]]",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Fayoum Silos & Checkpoint]]"
+    },
+    {
+      "n": 3,
+      "category": "roads",
+      "name": {
+        "ar": "طريق أسيوط الغربي محور سمالوط",
+        "en": "Asyut Western Road - Samalut Axis"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Samalut Axis]]"
+    },
+    {
+      "n": 4,
+      "category": "roads",
+      "name": {
+        "ar": "طريق أسيوط الغربي بوابة المنيا",
+        "en": "Asyut Western Road - Minya Gate"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Minya Gate]]"
+    },
+    {
+      "n": 5,
+      "category": "roads",
+      "name": {
+        "ar": "مشروع مستقبل مصر",
+        "en": "Future of Egypt Project"
+      },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm English name of project 5 (\"Future of Egypt Project\")]]",
+      "image": "project-future-of-egypt",
+      "alt": {
+        "ar": "جريدر يمهّد طريقًا في منطقة صحراوية",
+        "en": "A motor grader levelling a road in the desert"
+      }
+    },
+    {
+      "n": 6,
+      "category": "bridges",
+      "name": {
+        "ar": "محور الطالبية",
+        "en": "Talbia Axis"
+      },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm spelling \"Talbia\" (project 6)]]",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Talbia Axis]]"
+    },
+    {
+      "n": 7,
+      "category": "bridges",
+      "name": {
+        "ar": "محور الزمر",
+        "en": "Zomor Axis"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Zomor Axis]]"
+    },
+    {
+      "n": 8,
+      "category": "bridges",
+      "name": {
+        "ar": "محور كمال عامر",
+        "en": "Kamal Amer Axis"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Kamal Amer Axis]]"
+    },
+    {
+      "n": 9,
+      "category": "bridges",
+      "name": {
+        "ar": "محور عمرو بن العاص",
+        "en": "Amr Ibn Al-As Axis"
+      },
+      "image": "project-amr-ibn-al-as-axis",
+      "alt": {
+        "ar": "تسليح التربة بالجيوجريد وحائط ساند من البلوكات أسفل كوبري",
+        "en": "Geogrid soil reinforcement and a block retaining wall beneath a flyover"
+      },
+      "photoNote": "[[NEEDS_CLIENT: permission to publish this photo (timestamp overlay cropped out; people visible)]]"
+    },
+    {
+      "n": 10,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وتوسعة طريق الدائري نزلة قليوب",
+        "en": "Ring Road Development & Widening - Qalyoub Exit"
+      },
+      "sourceNameEn": "Ring Road Development - Qalyoub Exit",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Ring Road Development & Widening - Qalyoub Exit]]"
+    },
+    {
+      "n": 11,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وتوسعة طريق الدائري نزلة المنصورية هرم",
+        "en": "Ring Road Development & Widening - Mansouria (Haram) Exit"
+      },
+      "sourceNameEn": "Ring Road Development - Mansouria Exit",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Ring Road Development & Widening - Mansouria (Haram) Exit]]"
+    },
+    {
+      "n": 12,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وتوسعة الدائري بهتيم",
+        "en": "Ring Road Development & Widening - Bahtim"
+      },
+      "sourceNameEn": "Ring Road Development - Bahtim",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Ring Road Development & Widening - Bahtim]]"
+    },
+    {
+      "n": 13,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وتوسعة طرق جامعة القاهرة فرع الشيخ زايد",
+        "en": "Cairo University Roads Development & Widening - Sheikh Zayed Branch"
+      },
+      "sourceNameEn": "Cairo University Roads - Sheikh Zayed Branch",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Cairo University Roads Development & Widening - Sheikh Zayed Branch]]"
+    },
+    {
+      "n": 14,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وتوسعة طريق المثلث - السويس",
+        "en": "El-Mothallath (Triangle) Road Development & Widening - Suez"
+      },
+      "sourceNameEn": "El-Masallat Road - Suez",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – El-Mothallath (Triangle) Road Development & Widening - Suez]]"
+    },
+    {
+      "n": 15,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وتوسعة طريق السويس - السخنة",
+        "en": "Suez - Sokhna Road Development & Widening"
+      },
+      "sourceNameEn": "Suez - Sokhna Road",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Suez - Sokhna Road Development & Widening]]"
+    },
+    {
+      "n": 16,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة القطاع الغربي أكتوبر",
+        "en": "October Western Sector Development & Maintenance"
+      },
+      "sourceNameEn": "October Western Sector Maintenance",
+      "image": "project-october-western-sector",
+      "alt": {
+        "ar": "رصيف من الإنترلوك بجانب بردورة الطريق",
+        "en": "Interlock paving laid beside the road curbstones"
+      },
+      "photoNote": "[[NEEDS_CLIENT: permission to publish this photo (workers visible)]]"
+    },
+    {
+      "n": 17,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة جنوب الأحياء أكتوبر",
+        "en": "October Southern Districts Development & Maintenance"
+      },
+      "sourceNameEn": "October Southern Districts Maintenance",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – October Southern Districts Development & Maintenance]]"
+    },
+    {
+      "n": 18,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة غرب سوميد أكتوبر",
+        "en": "October West Sumed Development & Maintenance"
+      },
+      "sourceNameEn": "October West Sumed Maintenance",
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm spelling \"Sumed\" (project 18)]]",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – October West Sumed Development & Maintenance]]"
+    },
+    {
+      "n": 19,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة القطاع الشمالي أكتوبر",
+        "en": "October Northern Sector Development & Maintenance"
+      },
+      "sourceNameEn": "October Northern Sector Maintenance",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – October Northern Sector Development & Maintenance]]"
+    },
+    {
+      "n": 20,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة المقطم",
+        "en": "Mokattam Development & Maintenance"
+      },
+      "sourceNameEn": "Mokattam Maintenance",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Mokattam Development & Maintenance]]"
+    },
+    {
+      "n": 21,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة زهراء المعادي",
+        "en": "Zahraa Maadi Development & Maintenance"
+      },
+      "sourceNameEn": "Zahraa Maadi Maintenance",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Zahraa Maadi Development & Maintenance]]"
+    },
+    {
+      "n": 22,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة المعادي نيركو",
+        "en": "Maadi Nerco Development & Maintenance"
+      },
+      "sourceNameEn": "Maadi Nerco Maintenance",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Maadi Nerco Development & Maintenance]]"
+    },
+    {
+      "n": 23,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير وصيانة وادي النطرون",
+        "en": "Wadi El Natrun Development & Maintenance"
+      },
+      "sourceNameEn": "Natrn Valley Maintenance",
+      "image": "project-wadi-el-natrun",
+      "alt": {
+        "ar": "سطح طريق ممهّد في منطقة صحراوية",
+        "en": "A graded road surface in the desert"
+      }
+    },
+    {
+      "n": 24,
+      "category": "brick-factories",
+      "name": {
+        "ar": "مصنع الطوب في العاصمة R1 وR2",
+        "en": "Brick Factory - New Capital (R1 & R2)"
+      },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm \"New Capital\" for \"العاصمة\" (project 24)]]",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - New Capital (R1 & R2)]]"
+    },
+    {
+      "n": 25,
+      "category": "brick-factories",
+      "name": {
+        "ar": "مصنع الطوب في مدينة العبور",
+        "en": "Brick Factory - Obour City"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - Obour City]]"
+    },
+    {
+      "n": 26,
+      "category": "brick-factories",
+      "name": {
+        "ar": "مصنع الطوب في مدينة السويس",
+        "en": "Brick Factory - Suez City"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - Suez City]]"
+    },
+    {
+      "n": 27,
+      "category": "brick-factories",
+      "name": {
+        "ar": "مصنع الطوب في مدينة 15 مايو",
+        "en": "Brick Factory - 15 May City"
+      },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm \"15 May City\" spelling (project 27)]]",
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - 15 May City]]"
+    }
+  ]
+}

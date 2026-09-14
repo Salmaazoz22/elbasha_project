@@ -1,0 +1,139 @@
+{
+  "_readme": "English interface strings. Company copy is taken from the original site; no new business claims.",
+  "locale": "en_US",
+  "langName": "English",
+  "skip": "Skip to content",
+  "draftBanner": "Drafts preview — shows every piece of missing client information. Do not publish.",
+  "nav": {
+    "label": "Main menu",
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "open": "Open menu",
+    "close": "Close menu",
+    "switchTo": "العربية",
+    "switchToLabel": "عرض هذه الصفحة بالعربية"
+  },
+  "cta": {
+    "whatsapp": "Chat on WhatsApp",
+    "call": "Call us",
+    "callShort": "Call",
+    "whatsappShort": "WhatsApp",
+    "quickContact": "Quick contact",
+    "bandTitle": "Discuss your project with us",
+    "bandText": "Reach us directly on WhatsApp or by phone, or send a message from the contact page.",
+    "bandLink": "Contact page"
+  },
+  "common": {
+    "newTab": "(opens in a new tab)",
+    "viewAllProjects": "View all projects",
+    "projectsCount": { "one": "1 project", "other": "{n} projects" }
+  },
+  "meta": {
+    "home": {
+      "title": "El Basha for General Supplies & Contracting | Roads & Infrastructure",
+      "description": "El-Basha Egyptian Company specializes in general supplies, construction services and infrastructure projects: roads, curbstone and interlock, concrete slopes and New Jersey barriers, signage and brick factories."
+    },
+    "projects": {
+      "title": "Projects | El Basha for General Supplies & Contracting",
+      "description": "El Basha projects in road and infrastructure, bridges and axes, development and maintenance, and brick factories — including the Asyut Western Road, the Ring Road and the Suez - Sokhna Road."
+    },
+    "about": {
+      "title": "About Us | El Basha for General Supplies & Contracting",
+      "description": "El-Basha Egyptian Company specializes in general supplies, construction services and infrastructure projects. Learn about our areas of expertise."
+    },
+    "contact": {
+      "title": "Contact | El Basha for General Supplies & Contracting",
+      "description": "Contact El Basha on WhatsApp, by phone on +20 111 611 1015 or by email, or send a message directly from the website."
+    },
+    "notFound": {
+      "title": "Page not found | El Basha"
+    },
+    "ogImageAlt": "El Basha for General Supplies & Contracting logo over a photo from a work site"
+  },
+  "hero": {
+    "eyebrow": "General supplies · Contracting · Infrastructure",
+    "title": "El Basha for General Supplies & Contracting",
+    "lead": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects.",
+    "imageAlt": "A motor grader levelling a road on a work site",
+    "headlinePendingConfirmation": "Roads and bridges construction",
+    "headlineMarker": "[[NEEDS_CLIENT: confirm hero headline \"Roads and bridges construction\" — does the company construct bridges, or paint them?]]"
+  },
+  "home": {
+    "servicesEyebrow": "What we do",
+    "servicesTitle": "Our Services",
+    "projectsEyebrow": "On site",
+    "projectsTitle": "Selected projects",
+    "projectsLead": "Photos from company projects. The projects page has the full list.",
+    "videoEyebrow": "Video",
+    "videoTitle": "From our work on site",
+    "videoLabel": "Footage of motor graders levelling a road and an aerial shot along a road",
+    "videoPause": "Pause video",
+    "videoPlay": "Play video"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "lead": "Company projects in road and infrastructure, bridges and axes, development and maintenance, and brick factories.",
+    "jumpLabel": "Project categories",
+    "photoPending": "No photo for this project yet"
+  },
+  "about": {
+    "title": "About Us",
+    "intro": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects. We are committed to delivering quality and excellence in every project we handle.",
+    "expertiseTitle": "Our Expertise",
+    "profileMarker": "[[NEEDS_CLIENT: company profile – 2-4 sentences (history, scope, equipment, classification) only if the company wants them published]]",
+    "photoMarker": "[[NEEDS_CLIENT: about photo – team on site, equipment fleet or office, 3:2, min 1600×1067]]",
+    "trustMarker": "[[NEEDS_CLIENT: trust signals – clients/owners (with permission), certificates, contractor classification. Leave empty if none.]]"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "lead": "The fastest way to reach us is WhatsApp or a direct call. You can also send a message using the form.",
+    "methodsTitle": "Ways to reach us",
+    "whatsappTitle": "WhatsApp",
+    "callTitle": "Phone",
+    "otherPhones": "Other numbers",
+    "emailTitle": "Email",
+    "socialTitle": "Follow us",
+    "addressTitle": "Address",
+    "hoursTitle": "Working hours",
+    "areaTitle": "Service area",
+    "mapLink": "Open location on the map"
+  },
+  "form": {
+    "title": "Send a message",
+    "required": "required",
+    "optional": "optional",
+    "name": "Name",
+    "phone": "Phone number",
+    "email": "Email",
+    "message": "Your message",
+    "submit": "Send",
+    "sending": "Sending…",
+    "subject": "New message from the El Basha website (English)",
+    "privacy": "Your message is sent to the company's email address via Formspree.",
+    "successTitle": "Your message has been sent",
+    "successText": "Thank you for contacting El Basha. We have received your message.",
+    "sendAnother": "Send another message",
+    "errorTitle": "Message not sent",
+    "errorText": "Something went wrong while sending. Check your connection and try again, or contact us directly on WhatsApp.",
+    "errorSummary": "Please fix the following fields:",
+    "errName": "Please enter your name.",
+    "errPhone": "Please enter a valid phone number (digits only, may start with +).",
+    "errEmail": "The email address format is not valid.",
+    "errMessage": "Please write your message (at least 10 characters)."
+  },
+  "footer": {
+    "about": "General supplies, construction services and infrastructure projects.",
+    "links": "Links",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page may have moved, or the link may be incorrect.",
+    "home": "Back to home"
+  }
+}

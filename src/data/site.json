@@ -1,0 +1,55 @@
+{
+  "_readme": "Single source of truth for company and contact details. Values containing [[NEEDS_CLIENT: ...]] are hidden on the live site and shown as visible markers in the drafts build (npm run build:drafts).",
+  "brand": {
+    "name": {
+      "ar": "الباشا للتوريدات العمومية والمقاولات",
+      "en": "El Basha for General Supplies & Contracting"
+    },
+    "shortName": {
+      "ar": "الباشا",
+      "en": "El Basha"
+    },
+    "tagline": {
+      "ar": "للتوريدات العمومية والمقاولات",
+      "en": "General Supplies & Contracting"
+    },
+    "legalName": "[[NEEDS_CLIENT: official legal company name in Arabic and English]]"
+  },
+  "contact": {
+    "primaryPhone": {
+      "tel": "+201116111015",
+      "display": "+20 111 611 1015"
+    },
+    "whatsappUrl": "https://wa.me/201116111015",
+    "secondaryPhones": [
+      { "tel": "+201014165151", "display": "+20 101 416 5151" },
+      { "tel": "+201006992768", "display": "+20 100 699 2768" }
+    ],
+    "email": "elbasha.constructions@gmail.com",
+    "address": {
+      "ar": "[[NEEDS_CLIENT: company address in Arabic]]",
+      "en": "[[NEEDS_CLIENT: company address in English]]"
+    },
+    "mapUrl": "[[NEEDS_CLIENT: Google Maps link to the office]]",
+    "serviceArea": {
+      "ar": "[[NEEDS_CLIENT: governorates / regions served (Arabic)]]",
+      "en": "[[NEEDS_CLIENT: governorates / regions served (English)]]"
+    },
+    "hours": {
+      "ar": "[[NEEDS_CLIENT: working days and hours (Arabic)]]",
+      "en": "[[NEEDS_CLIENT: working days and hours (English)]]"
+    }
+  },
+  "social": [
+    { "id": "facebook", "label": "Facebook", "url": "https://www.facebook.com/share/1b3x72sW7X/" },
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/company/elbashaconstructions/" }
+  ],
+  "form": {
+    "endpoint": "https://formspree.io/f/mjkeplye"
+  },
+  "domain": "[[NEEDS_CLIENT: production domain name]]",
+  "structuredData": {
+    "_readme": "Keep disabled until legalName, address and serviceArea are real values and SITE_URL is the production domain.",
+    "enabled": false
+  }
+}

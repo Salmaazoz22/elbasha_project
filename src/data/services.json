@@ -1,0 +1,66 @@
+{
+  "_readme": "Services as provided in the original site and source-assets/notes. Descriptions are client input: replace the [[NEEDS_CLIENT]] markers with 1-2 sentences to show them on the live site.",
+  "services": [
+    {
+      "id": "road-construction",
+      "icon": "route",
+      "name": { "ar": "بناء الطرق", "en": "Road Construction" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – بناء الطرق]]", "en": "[[NEEDS_CLIENT: short description – Road Construction]]" }
+    },
+    {
+      "id": "material-supply",
+      "icon": "truck",
+      "name": { "ar": "توريد المواد", "en": "Material Supply" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description and which materials – توريد المواد]]", "en": "[[NEEDS_CLIENT: short description and which materials – Material Supply]]" }
+    },
+    {
+      "id": "infrastructure",
+      "icon": "construction",
+      "name": { "ar": "البنية التحتية", "en": "Infrastructure" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – البنية التحتية]]", "en": "[[NEEDS_CLIENT: short description – Infrastructure]]" }
+    },
+    {
+      "id": "brick-factories",
+      "icon": "brick-wall",
+      "name": { "ar": "مصانع الطوب", "en": "Brick Factories" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – مصانع الطوب]]", "en": "[[NEEDS_CLIENT: short description – Brick Factories]]" }
+    },
+    {
+      "id": "road-marking",
+      "icon": "footprints",
+      "name": { "ar": "أعمال تخطيط الطرق وعبور المشاة", "en": "Road Planning & Pedestrian Crossings" },
+      "nameToConfirm": "[[NEEDS_CLIENT: confirm English wording \"Road Planning\" vs \"Road Marking\" for تخطيط الطرق]]",
+      "description": { "ar": "[[NEEDS_CLIENT: short description – أعمال تخطيط الطرق وعبور المشاة]]", "en": "[[NEEDS_CLIENT: short description – Road Planning & Pedestrian Crossings]]" }
+    },
+    {
+      "id": "signage",
+      "icon": "signpost",
+      "name": { "ar": "أعمال تركيب اللافتات الإرشادية والتحذيرية", "en": "Guiding & Warning Signs Installation" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – أعمال تركيب اللافتات الإرشادية والتحذيرية]]", "en": "[[NEEDS_CLIENT: short description – Guiding & Warning Signs Installation]]" }
+    },
+    {
+      "id": "building-construction",
+      "icon": "building-2",
+      "name": { "ar": "أعمال الإنشاءات للمباني", "en": "Building Construction" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – أعمال الإنشاءات للمباني]]", "en": "[[NEEDS_CLIENT: short description – Building Construction]]" }
+    },
+    {
+      "id": "curbstone-interlock",
+      "icon": "layout-grid",
+      "name": { "ar": "تركيب بردورة وإنترلوك", "en": "Curbstone & Interlock Installation" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – تركيب بردورة وإنترلوك]]", "en": "[[NEEDS_CLIENT: short description – Curbstone & Interlock Installation]]" }
+    },
+    {
+      "id": "slopes-barriers",
+      "icon": "fence",
+      "name": { "ar": "أعمال الميول الخرسانية والنيوجيرسي", "en": "Concrete Slopes & New Jersey Barriers" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – أعمال الميول الخرسانية والنيوجيرسي]]", "en": "[[NEEDS_CLIENT: short description – Concrete Slopes & New Jersey Barriers]]" }
+    },
+    {
+      "id": "painting",
+      "icon": "paint-roller",
+      "name": { "ar": "أعمال دهانات الكباري والنيوجيرسي", "en": "Bridge & Barrier Painting" },
+      "description": { "ar": "[[NEEDS_CLIENT: short description – أعمال دهانات الكباري والنيوجيرسي]]", "en": "[[NEEDS_CLIENT: short description – Bridge & Barrier Painting]]" }
+    }
+  ]
+}
