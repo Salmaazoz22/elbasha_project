@@ -65,6 +65,8 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 
 ## 3. What I need from the company
 
+> A client-ready **Arabic** version of these requests is in [`CLIENT_REQUESTS.md`](CLIENT_REQUESTS.md). It lists all 64 items, numbered, grouped by page, with image sizes and `projects-inventory.xlsx` row numbers.
+
 | # | Item | Why | Where to put it |
 |---|---|---|---|
 | 1 | **Official legal company name** (Arabic and English) | Footer, social previews, structured data | `src/data/site.json` → `brand.legalName` |

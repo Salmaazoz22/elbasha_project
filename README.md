@@ -58,6 +58,7 @@ dist/                     build output (git-ignored) — the only folder the hos
 | Document | Contents |
 |---|---|
 | [docs/AUDIT_REPORT.md](docs/AUDIT_REPORT.md) | Audit of the original site, findings by priority, **BLOCKED / NEEDS CLIENT INPUT** (§15) |
+| [docs/CLIENT_REQUESTS.md](docs/CLIENT_REQUESTS.md) | **Arabic, ready to send to the client:** the 64 missing items by page, with image specs and spreadsheet row references |
 | [docs/projects-inventory.xlsx](docs/projects-inventory.xlsx) | All 27 projects: names, approved English corrections, photo status, what's needed |
 | [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) | The approved plan, hosting and form decisions, implementation notes |
 | [docs/QA_REPORT.md](docs/QA_REPORT.md) | Test results, Lighthouse before and after, remaining markers |
