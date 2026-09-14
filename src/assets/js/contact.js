@@ -15,6 +15,8 @@
   const PHONE = /^\+?[0-9\s\-()]{7,20}$/;
   const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+  const fieldMessages = { name: messages.errName, phone: messages.errPhone, email: messages.errEmail, message: messages.errMessage };
+
   const rules = {
     name: (v) => (v.trim().length >= 2 ? '' : messages.errName),
     phone: (v) => (PHONE.test(v.trim()) && v.replace(/\D/g, '').length >= 7 ? '' : messages.errPhone),
@@ -66,7 +68,8 @@
 
   function setSending(state) {
     sending = state;
-    submit.disabled = state;
+    // aria-disabled (not disabled) keeps keyboard focus on the button while sending.
+    submit.setAttribute('aria-disabled', String(state));
     form.setAttribute('aria-busy', String(state));
     submitLabel.textContent = state ? messages.sending : messages.submit;
   }
@@ -98,7 +101,8 @@
         for (const err of data.errors || []) {
           const input = err.field && form.elements[err.field];
           if (input && rules[err.field]) {
-            setFieldError(input, rules[err.field]('') || err.message);
+            // Always show our localised message, not Formspree's English text.
+            setFieldError(input, fieldMessages[err.field]);
             mapped = true;
           }
         }

@@ -30,6 +30,7 @@
   --orange-500: #f07820;
   --orange-600: #e06a12;
   --orange-700: #c2410c;
+  --orange-800: #9a3412;
   --sand-50: #f7f5f2;
   --sand-100: #efebe5;
   --white: #ffffff;
@@ -468,6 +469,8 @@ bdi {
 .site-nav__link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
   min-height: 2.75rem;
   padding-inline: var(--space-3);
   border-radius: 999px;
@@ -1006,7 +1009,7 @@ bdi {
   padding: 0.125rem 0.75rem;
   border-radius: 999px;
   background: rgb(240 120 32 / 0.14);
-  color: var(--orange-700);
+  color: var(--orange-800);
   font-weight: 700;
   font-size: 0.9375rem;
 }
@@ -1516,7 +1519,7 @@ textarea.field__input {
 }
 
 .not-found__code {
-  color: var(--orange-500);
+  color: var(--orange-700);
   font-size: clamp(4rem, 12vw, 7rem);
   font-weight: 800;
   line-height: 1;
@@ -1601,6 +1604,7 @@ textarea.field__input {
   align-items: center;
   gap: var(--space-2);
   min-height: 2.75rem;
+  min-width: 2.75rem;
   color: var(--slate-300);
   text-decoration: none;
 }

@@ -150,12 +150,12 @@ export function socialLinks(ctx) {
 
 function mobileBar(ctx) {
   const { t, site } = ctx;
-  return html`<div class="mobile-cta" data-mobile-cta>
+  return html`<aside class="mobile-cta" aria-label="${t.cta.quickContact}" data-mobile-cta>
   <a class="mobile-cta__btn mobile-cta__btn--whatsapp" href="${site.contact.whatsappUrl}" target="_blank" rel="noopener">
     ${icon('whatsapp', { size: 22 })}<span>${t.cta.whatsappShort}</span><span class="visually-hidden">${t.common.newTab}</span></a>
   <a class="mobile-cta__btn mobile-cta__btn--call" href="tel:${site.contact.primaryPhone.tel}">
     ${icon('phone', { size: 22 })}<span>${t.cta.callShort}</span></a>
-</div>`;
+</aside>`;
 }
 
 export function layout(ctx, page) {
