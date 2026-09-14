@@ -60,7 +60,7 @@ All QA tools ran from a scratch directory. Nothing was added to the project, whi
 ```
 $ SITE_URL=https://elbasha-website.pages.dev npm run build
 Built production site → dist (74 files, 15.2 MiB)
-Hidden blocks awaiting client input (65 unique [[NEEDS_CLIENT]] markers): …
+Hidden blocks awaiting client input (64 unique [[NEEDS_CLIENT]] markers): …
 Checked dist: 9 HTML pages, 74 files, 15.2 MiB
 ✔ All checks passed
 ```
@@ -461,6 +461,12 @@ I searched the tracked files with `git grep` for `api_key|secret|token|password|
 6. **The mobile hero** uses a crop of that still, at most 691 px wide. It's acceptable behind the dark gradient, but a portrait photo from the client would be sharper.
 
 ---
+
+**Change after QA:** commit `1e6a134` lets the About profile and the address card render once real text is added.
+- I rebuilt the pre-change commit and diffed the result.
+- The production HTML of all pages is **identical** apart from asset hashes.
+- The only other change is one CSS rule for the not-yet-used `.about-intro__profile` class.
+- So the results above still apply.
 
 ## 16. Result
 

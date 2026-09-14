@@ -529,7 +529,11 @@ I will not guess on any of these. Until answered, the implementation will use vi
 | 13 | **Canonical social URLs** (Facebook share link vs profile URL; other networks) | Footer, `sameAs` | Keep the existing links as-is |
 | 14 | **Analytics** wanted? | Privacy/consent, script weight | None added unless requested |
 | 15 | **Fate of unused files:** `reel 1.mp4`, `slider1–3.jpg`, `مصانع الطوب.txt` | Deletion is irreversible for the client | Kept in the repo but moved out of the deploy path; not deleted without approval |
+| 16 | **English wording for service "تخطيط الطرق وعبور المشاة"** — "Road Planning" (as in source) vs "Road Marking" *(found during implementation)* | Published service name | Source wording kept; drafts marker on `/en/` |
+| 17 | **Service descriptions** (10 × 1–2 sentences, Arabic and English) *(found during implementation; see M-09)* | Service cards | Cards show title and icon only; description slots hidden in production |
+| 18 | **Account ownership:** the GitHub repo is on a personal account (`Salmaazoz22`); who should own the GitHub, Cloudflare and Formspree accounts long term *(found during deployment planning)* | Business continuity, access to deploys and form messages | Documented in DEPLOYMENT_GUIDE §3 #15; no change made |
+| 19 | **High-resolution hero photo** (landscape ≥ 1920×1080 plus portrait for phones) | Hero is currently a still from the company video (1920×864, slightly soft) | Video stills used as interim hero |
 
 ---
 
-**Next step:** report approved. Phase 3 plan: `docs/IMPLEMENTATION_PLAN.md`. All §15 items other than 1, 3, 4, 5 remain **NEEDS CLIENT INPUT**.
+**Status (2026-09-15):** Phases 4–6 are complete; see `docs/QA_REPORT.md` and `docs/DEPLOYMENT_GUIDE.md`. §15 items 1, 3, 4 and 5 are resolved. Every other §15 item (2, 6–19) is still **NEEDS CLIENT INPUT**.

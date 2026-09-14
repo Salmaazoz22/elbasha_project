@@ -398,4 +398,23 @@ These stay unchanged from audit §15: #2 legal name, #6 project photos and publi
 
 ---
 
-**⏸ STOP — awaiting approval of this plan before Phase 4.**
+---
+
+## 11. Implementation notes (Phase 4 — what changed from the plan, and why)
+
+| Plan item | What was built | Why |
+|---|---|---|
+| §1.1 `src/static/` | Split into `src/assets/` (content-hashed) and `src/public/` (copied as-is: `_headers`, `_redirects`, favicons, OG image) | Hashed names allow year-long caching; root files must keep fixed names |
+| §1.3 drafts build | Output goes to `dist-drafts/` (git-ignored), with `noindex` and `Disallow: /` | So the drafts can never be deployed by mistake |
+| T-02 build | Also `scripts/video.mjs` (reproducible video cut) | The cut can be redone without guesswork |
+| T-05 mobile nav | Collapsed by CSS from the first paint; `nojs.css` in `<noscript>` shows the full menu without JavaScript | The JS-only collapse caused a layout shift (Lighthouse CLS 0.153) |
+| T-10 video | Cut = 76.5–112 s + 155.5–172 s (52 s); WebM 5.91 MiB, MP4 6.50 MiB, no audio; plays when ≥ 25% visible | Clean ranges from a 1 fps frame review |
+| T-13 fonts | Cairo variable woff2: Arabic 30.9 KB, Latin 33.8 KB. Plus metric-matched fallback faces using **installed fonts only** | Removes font-swap layout shift. Variants that looked up missing fonts were measurably slower and were dropped. |
+| T-14 hero | Stills from the company video (1920×864) with art-directed 4:5 phone crops: Arabic subject on the left, English on the right. No `<link rel=preload>`; the `<img>` uses `fetchpriority="high"` | Native resolution beats upscaling the 1280 px photo; LCP is already ≤ 2.6 s on mobile |
+| T-14 logo | Palette PNG only, 168×112 (8 KB) + 632×421 for About | PNG came out smaller than WebP for this flat artwork |
+| T-16 animation | CSS scroll-driven `animation-timeline: view()` instead of an IntersectionObserver script | No JavaScript; content always visible where unsupported; no invisible content in screenshots or renderers |
+| Accessibility (found in QA) | `scroll-padding-bottom` for the mobile bar; global smooth scrolling removed; 44 px minimum on nav and footer links; badge colour `#9A3412` | axe-core, tap-target and focus-obscured sweeps (QA_REPORT §6–8) |
+| T-24 JSON-LD | Scaffold in `build.mjs`, disabled; the build **fails** if it is enabled while data is still a marker | Prevents publishing invented structured data |
+| Media tooling | `sharp` pinned to 0.35.4 | 0.34.x has a high-severity libvips advisory (GHSA-f88m-g3jw-g9cj) |
+
+Commit history on `improve/production-ready` shows each step. The original upload is at tag `original-upload`.
