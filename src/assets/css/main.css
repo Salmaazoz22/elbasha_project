@@ -1208,6 +1208,12 @@ bdi {
   line-height: 1.8;
 }
 
+.about-intro__profile {
+  margin-block-start: var(--space-4);
+  color: var(--gray-600);
+  font-size: 1.0625rem;
+}
+
 .about-intro__actions {
   display: flex;
   flex-wrap: wrap;

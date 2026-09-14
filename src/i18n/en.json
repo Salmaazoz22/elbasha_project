@@ -83,7 +83,7 @@
     "title": "About Us",
     "intro": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects. We are committed to delivering quality and excellence in every project we handle.",
     "expertiseTitle": "Our Expertise",
-    "profileMarker": "[[NEEDS_CLIENT: company profile – 2-4 sentences (history, scope, equipment, classification) only if the company wants them published]]",
+    "profile": "[[NEEDS_CLIENT: company profile – 2-4 sentences (history, scope, equipment, classification) only if the company wants them published]]",
     "photoMarker": "[[NEEDS_CLIENT: about photo – team on site, equipment fleet or office, 3:2, min 1600×1067]]",
     "trustMarker": "[[NEEDS_CLIENT: trust signals – clients/owners (with permission), certificates, contractor classification. Leave empty if none.]]"
   },

@@ -87,7 +87,7 @@ Checked dist: 9 HTML pages, 74 files, 15.2 MiB
 | Check | Result |
 |---|---|
 | `npm run build` (production) | ✅ pass |
-| `npm run build:drafts` | ✅ pass; 116 markers shown visibly in `dist-drafts/` |
+| `npm run build:drafts` | ✅ pass; 114 markers shown visibly in `dist-drafts/` |
 | JS syntax (`node --check`) on 2 browser scripts, 4 build scripts and 6 templates | ✅ pass |
 | Lint / type-check | Not applicable. There is no ESLint or TypeScript, because the project keeps zero dependencies (plan §1.2). The syntax check, HTML validation and the build checks above cover that role. |
 | Unit tests | The project has none. The behaviour tests in §6–§9 ran with puppeteer from the scratch directory. |
@@ -342,7 +342,7 @@ Confirm these again on Cloudflare with `curl -I` after deployment (DEPLOYMENT_GU
 | Search | Result |
 |---|---|
 | `[[NEEDS_CLIENT` in the production output `dist/` | **0** |
-| `[[NEEDS_CLIENT` in the drafts output `dist-drafts/` | 116 shown, as intended for client review |
+| `[[NEEDS_CLIENT` in the drafts output `dist-drafts/` | 114 shown, as intended for client review |
 | `[[NEEDS_CLIENT` in tracked source | 71 occurrences (68 unique markers) in the 5 data files below. The string also appears 7 more times in `scripts/build.mjs`, `scripts/check.mjs` and `src/templates/lib.mjs`, which is the code that *detects* markers. |
 | `lorem` (any case) in tracked source | 1, in `scripts/check.mjs:122`: the check that *fails* the build if "lorem ipsum" appears |
 | `lorem` in `dist/` | **0** |

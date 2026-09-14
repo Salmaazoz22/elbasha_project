@@ -119,7 +119,7 @@ ${pageHero(ctx, { title: t.about.title })}
     <div class="about-intro__text" data-reveal>
       <h2 class="visually-hidden" id="about-intro-title">${ctx.site.brand.name[lang]}</h2>
       <p class="about-intro__lead">${t.about.intro}</p>
-      ${slot(ctx, t.about.profileMarker)}
+      ${needs(ctx, t.about.profile, () => html`<p class="about-intro__profile">${t.about.profile}</p>`)}
       <div class="about-intro__actions">
         ${whatsappButton(ctx, { className: 'btn btn--primary' })}
         <a class="btn btn--outline" href="${ctx.url('projects', lang)}">${t.common.viewAllProjects}</a>
@@ -197,10 +197,10 @@ ${pageHero(ctx, { title: t.contact.title, lead: t.contact.lead })}
           <p class="contact-card__value contact-card__value--email"><a href="mailto:${c.email}">${email(c.email)}</a></p>
         </div>
       </div>
-      ${needs(ctx, [c.address[lang], c.mapUrl], () => html`<div class="contact-card" data-reveal>
+      ${needs(ctx, c.address[lang], () => html`<div class="contact-card" data-reveal>
         <span class="contact-card__icon">${icon('map-pin', { size: 26 })}</span>
         <div><h3 class="contact-card__title">${t.contact.addressTitle}</h3><p>${c.address[lang]}</p>
-        <a href="${c.mapUrl}" target="_blank" rel="noopener">${t.contact.mapLink}<span class="visually-hidden">${t.common.newTab}</span></a></div>
+        ${needs(ctx, c.mapUrl, () => html`<a href="${c.mapUrl}" target="_blank" rel="noopener">${t.contact.mapLink}<span class="visually-hidden">${t.common.newTab}</span></a>`)}</div>
       </div>`)}
       ${needs(ctx, c.hours[lang], () => html`<div class="contact-card" data-reveal>
         <span class="contact-card__icon">${icon('clock', { size: 26 })}</span>
