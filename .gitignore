@@ -1,5 +1,6 @@
 # Build output
 dist/
+dist-drafts/
 
 # Dependencies (the build has none; media tooling installs sharp on demand)
 node_modules/
