@@ -228,6 +228,11 @@
     "height": 112,
     "png": "img/logo.png"
   },
+  "logoLarge": {
+    "width": 632,
+    "height": 421,
+    "png": "img/logo-large.png"
+  },
   "og": {
     "width": 1200,
     "height": 630,

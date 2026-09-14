@@ -127,7 +127,7 @@ ${pageHero(ctx, { title: t.about.title })}
     </div>
     <div class="about-intro__aside" data-reveal>
       ${slot(ctx, t.about.photoMarker)}
-      <img class="about-intro__logo" src="${ctx.asset(ctx.images.logo.png)}" width="${ctx.images.logo.width}" height="${ctx.images.logo.height}" alt="" loading="lazy">
+      <img class="about-intro__logo" src="${ctx.asset(ctx.images.logoLarge.png)}" width="${Math.round(ctx.images.logoLarge.width / 2)}" height="${Math.round(ctx.images.logoLarge.height / 2)}" alt="" loading="lazy">
     </div>
   </div>
 </section>

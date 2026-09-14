@@ -137,10 +137,6 @@ h4 {
   line-height: 1.45;
 }
 
-p {
-  text-wrap: pretty;
-}
-
 a {
   color: var(--navy-600);
   text-underline-offset: 0.2em;
@@ -533,17 +529,18 @@ bdi {
   display: inline-flex;
 }
 
-/* Collapsed navigation (only when JS is available: the toggle loses [hidden]). */
+/* Collapsed navigation below 62em. Collapsed from the first paint (no layout shift when JS runs);
+   without JavaScript, nojs.css (loaded in <noscript>) shows the full menu instead. */
 @media (max-width: 61.99em) {
   .brand__logo {
     height: 2.75rem;
   }
 
-  .site-header.has-js .nav-toggle {
+  .nav-toggle {
     display: inline-flex;
   }
 
-  .site-header.has-js .site-nav {
+  .site-nav {
     display: none;
     position: absolute;
     inset-inline: 0;
@@ -559,24 +556,24 @@ bdi {
     overflow-y: auto;
   }
 
-  .site-header.has-js.nav-open .site-nav {
+  .site-header.nav-open .site-nav {
     display: flex;
   }
 
-  .site-header.has-js .site-nav__list {
+  .site-nav__list {
     flex-direction: column;
     gap: 0;
   }
 
-  .site-header.has-js .site-nav__link {
+  .site-nav__link {
     width: 100%;
     min-height: 3rem;
     border-radius: var(--radius-sm);
     font-size: 1.0625rem;
   }
 
-  .site-header.has-js .lang-switch,
-  .site-header.has-js .site-nav__call {
+  .lang-switch,
+  .site-nav__call {
     justify-content: center;
     min-height: 3rem;
   }

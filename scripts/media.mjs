@@ -84,6 +84,11 @@ await responsive('project-wadi-el-natrun', 'وادي_النطرون.jpg', { crop
   // Palette PNG is smaller than WebP for this flat artwork, so only PNG is shipped.
   manifest.logo = { width, height, png: 'img/logo.png' };
   console.log(`logo ${width}x${height}  png ${kb(png.size)}`);
+  // Larger version for the About page (displayed up to 320 px wide → 640 px source).
+  const largeW = Math.min(640, meta.width);
+  const large = await sharp(clean).resize({ width: largeW }).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(join(IMG, 'logo-large.png'));
+  manifest.logoLarge = { width: large.width, height: large.height, png: 'img/logo-large.png' };
+  console.log(`logo-large ${large.width}x${large.height}  png ${kb(large.size)}`);
 }
 
 // ---------- Favicons (derived from the 368 px icon; no vector source exists) ----------

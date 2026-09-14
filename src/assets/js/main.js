@@ -12,8 +12,6 @@
   if (header && toggle && nav) {
     const label = toggle.querySelector('[data-nav-toggle-label]');
     const desktop = window.matchMedia('(min-width: 62em)');
-    header.classList.add('has-js');
-    toggle.hidden = false;
 
     const setOpen = (open, { focus = false } = {}) => {
       toggle.setAttribute('aria-expanded', String(open));

@@ -52,6 +52,7 @@ function head(ctx, page) {
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="${ctx.asset(font)}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${ctx.asset('css/main.css')}">
+  <noscript><link rel="stylesheet" href="${ctx.asset('css/nojs.css')}"></noscript>
   <script src="${ctx.asset('js/main.js')}" defer></script>
   ${page.scripts?.map((s) => html`<script src="${ctx.asset(s)}" defer></script>`)}
   ${page.structuredData ? html`<script type="application/ld+json">${page.structuredData}</script>` : ''}
@@ -79,7 +80,7 @@ ${ctx.drafts ? html`<div class="draft-banner" role="note">${t.draftBanner}</div>
         <span class="brand__tagline">${brand.tagline[lang]}</span>
       </span>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
       data-nav-toggle data-label-open="${t.nav.open}" data-label-close="${t.nav.close}">
       <span class="nav-toggle__icon nav-toggle__icon--open">${icon('menu')}</span>
       <span class="nav-toggle__icon nav-toggle__icon--close">${icon('x')}</span>
