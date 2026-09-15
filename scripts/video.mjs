@@ -44,6 +44,7 @@ const REEL = {
   ],
   size: { w: 720, h: 1280 },
   vp9: '2000k', x264: '2300k',
+  posterQuality: 60, // phones fetch this poster on page load, next to the hero image
   name: 'reel',
 };
 const STILLS = [
@@ -95,7 +96,7 @@ function encode(job) {
   // Poster = first frame of the cut, so nothing jumps when playback starts.
   const poster = join(OUT_DIR, `${job.name}-poster.webp`);
   ff(['-ss', String(job.segments[0].start), '-i', job.master, '-frames:v', '1',
-    '-vf', `${job.crop ? `crop=${job.crop},` : ''}scale=${w}:${h}:flags=lanczos`, '-c:v', 'libwebp', '-quality', '80', poster]);
+    '-vf', `${job.crop ? `crop=${job.crop},` : ''}scale=${w}:${h}:flags=lanczos`, '-c:v', 'libwebp', '-quality', String(job.posterQuality ?? 80), poster]);
 
   const duration = job.segments.reduce((a, s) => a + s.end - s.start, 0);
   for (const f of [webm, mp4, poster]) console.log(`${f.replace(ROOT, '.')}  ${(statSync(f).size / 1048576).toFixed(2)} MiB`);
