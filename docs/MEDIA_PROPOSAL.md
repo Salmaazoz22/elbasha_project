@@ -1,6 +1,6 @@
 # Al-Basha — Media Proposal (client photos & videos, batch 1)
 
-**Date:** 2026-09-15 · **Status:** proposal only. Nothing has been built, and no client media has been copied into the site.
+**Date:** 2026-09-15 · **Updated:** 2026-09-16 · **Status:** ideas 1–4 are built (client approval 2026-09-16); ideas 5–7 are still pending. See [§5 Build log](#5-build-log--what-was-built-2026-09-16) for exactly what shipped, what changed against this proposal, and what is still waiting on the client.
 **Source:** `incoming-photos&videos/` (git-ignored, originals untouched). Working copies are in `media-work/` (git-ignored).
 **Companion files:**
 - [`media-mapping.csv`](media-mapping.csv) — new names ↔ original names, sizes, SHA-256
@@ -118,7 +118,7 @@ Every idea below stays static, free and fast:
 - Images are responsive WebP + JPEG with explicit sizes.
 - Nothing ships without the client's confirmation where a project or a face is involved.
 
-### Idea 1 — Rebuild the hero stills and the work video from the high-quality master · **P0**
+### Idea 1 — Rebuild the hero stills and the work video from the high-quality master · **P0** · ✅ built
 
 **What it needs:**
 - video-046 as the source for:
@@ -151,7 +151,7 @@ Phone (≤ 48em)                 Desktop
                                └──────────────────────────────────────────────┘
 ```
 
-### Idea 2 — Image-led "featured services" row plus section backgrounds · **P1**
+### Idea 2 — Image-led "featured services" row plus section backgrounds · **P1** · ✅ built
 
 **What it needs:**
 - Featured services (4 large image cards):
@@ -196,7 +196,7 @@ Phone (≤ 48em)                 Desktop
 └──────┴──────┴──────┴──────┴──────┴──────┘
 ```
 
-### Idea 3 — "من مواقعنا" gallery with subject filters and a lightbox · **P1**
+### Idea 3 — "من مواقعنا" gallery with subject filters and a lightbox · **P1** · ✅ built
 
 **What it needs:**
 - B- and A-rated distinct photos, grouped by **subject** rather than project:
@@ -243,7 +243,7 @@ Phone (≤ 48em)                 Desktop
 └──────────────────────────────┘
 ```
 
-### Idea 4 — About page imagery · **P1**
+### Idea 4 — About page imagery · **P1** · ✅ built
 
 **What it needs:**
 - **178** (grader plus surveyor) as the About photo. It replaces the logo card that is currently hidden on phones.
@@ -255,7 +255,7 @@ Phone (≤ 48em)                 Desktop
 
 **Needs:** the client's confirmation that the photo may be used generally, since no person is identifiable.
 
-### Idea 5 — "Work in progress" clip wall from the short videos · **P2**
+### Idea 5 — "Work in progress" clip wall from the short videos · **P2** · ⏸ not built
 
 **What it needs:** 4–6 very short (3–4 s) muted loops cut from B-rated clips:
 
@@ -289,7 +289,7 @@ Phone (≤ 48em)                 Desktop
 └──────┴──────┴──────┘
 ```
 
-### Idea 6 — Equipment / capabilities strip · **P2 (blocked on a client fact)**
+### Idea 6 — Equipment / capabilities strip · **P2** · ⛔ skipped, blocked on a client fact
 
 **What it needs:**
 
@@ -317,7 +317,7 @@ Phone (≤ 48em)                 Desktop
 └──────┘└──────┘└──────┘└──────┘└──────┘└──────┘
 ```
 
-### Idea 7 — Fill the 23 empty project cards · **P0 as a process, not a build**
+### Idea 7 — Fill the 23 empty project cards · **P0 as a process, not a build** · ⏸ waiting on the client
 
 **What it needs:**
 - The client's answers in `photo-triage.pdf` ("صورة 177 = مشروع 5").
@@ -353,3 +353,75 @@ Each step keeps the current QA gates:
 - no horizontal overflow;
 - Lighthouse mobile ≥ 90;
 - reduced-motion behaviour verified.
+
+---
+
+## 5. Build log — what was built (2026-09-16)
+
+Client approval: build ideas 1–4, skip the equipment strip (idea 6) until ownership is confirmed.
+Hard exclusions kept throughout: police and military sites (047, 054, 056, 060, 062, 064, 070, 087, 110, 118, 140, 017),
+the watermarked photos 162 and 165, the stamped 154/156/158, the flagged face items (009, 034, 043, 083, 095, video-031),
+video-016, and anything with third-party logos, decals or plates (007, 011, 072, 079, 081, 112).
+
+| Step | Commit | What shipped |
+|---|---|---|
+| 1 — hero video and stills | `33afc73`, `a86e607` | Highlight re-cut from FINAL.mp4 (1280×576, 52 s, WebM 6.23 MiB + MP4 6.83 MiB), phone reel from `reel 1.mp4` (720×1280, 13 s, WebM 3.12 MiB + MP4 3.57 MiB), both posters, and new hero stills |
+| 2 — services and backgrounds | `8c76cca` | Four photo service cards (177, 120, 014, 160) and three backdrop photos under the navy overlay (CTA 184, projects hero 164, about hero 177) |
+| 3 — gallery | `edd79cd` | "من مواقعنا / From our sites" on `/projects/`: 22 photos, 4 subject filters, `<dialog>` lightbox, lazy thumbnails |
+| 4 — About imagery | `a7e615c` | Photo 178 next to the company paragraph, replacing the logo card |
+| 5 — equipment strip | — | Deliberately skipped (see idea 6) |
+
+### Changes against the proposal, and why
+
+- **FINAL.mp4 is letterboxed.** The 1920×1080 master has 108 px grey bars top and bottom; its actual picture is
+  1920×864, exactly the frame of the older master. So the promised "full 16:9 framing" does not exist — the bars are
+  cropped off and the output keeps the 20:9 frame at a higher bitrate. The gain is image quality, not framing.
+- **The phone reel is cut, not just trimmed.** Between 2.4 s and 5.96 s a worker walks past the camera with his face
+  clearly visible. The triage sheet had video-047 marked "no faces", which was wrong. Those seconds are cut, so the
+  reel runs 13 s instead of 17 s. If the client gets that worker's permission, the segment can go back in.
+- **Landscape phones keep the landscape video.** A 9:16 reel in a sideways phone is tiny, so the `<source media>`
+  query is `(min-width: 48em), (orientation: landscape)`.
+- **Curb & interlock service card: photo 014, cropped.** The full frame shows two workers with visible faces; the card
+  uses the lower part of the frame (paving only) and the full photo is **not** in the gallery.
+- **Material supply card: photo 120.** The truck carries a decorative "FULLOPTION" decal and an "M I S" marking. They
+  are illegible at card size, but they are third-party text on a vehicle we do not know the owner of. Flag it if the
+  client would rather not show that truck: `[[NEEDS_CLIENT: is the tipper in photo 120 the company's own truck?]]`.
+- **Gallery is 22 photos, not 24–30.** Four candidates were dropped after a second look at full size, because faces
+  are identifiable: 003, 014, 124 (also a "CIFA" mixer logo and a readable plate) and 196 (also a branded truck).
+  Photos already used elsewhere on the site (164, 177, 120) are not repeated in the gallery.
+- **No project attribution anywhere.** Every gallery item has an empty `"project"` field in `src/data/gallery.json`,
+  waiting for the client's answers. The 23 photo-less project cards are unchanged.
+
+### Performance after the build
+
+Mobile Lighthouse (median of 3 runs, `http://127.0.0.1:4173`, the gate is ≥ 90):
+
+| Page | Before the media build | After | LCP after | CLS after | Page weight after |
+|---|---|---|---|---|---|
+| Home ar / en | 90 / 92 | **92 / 93** | 2.40 s / 2.36 s | 0 / 0 | 284 / 255 KiB |
+| Projects ar / en | 92 / 95 | **94 / 96** | 1.96 s / 1.75 s | 0.001 / 0 | 173 / 142 KiB |
+| About ar / en | 96 / 95 | **93 / 96** | 2.13 s / 1.94 s | 0 / 0 | 202 / 171 KiB |
+| Contact ar / en | 99 / 96 | **99 / 97** | 1.74 s / 1.57 s | 0 / 0 | 95 / 64 KiB |
+| 404 | 100 | **100** | 1.73 s | 0 | 91 KiB |
+
+Desktop stays at 99–100 on every page. The video files themselves are not in these numbers: they load only when the
+video scrolls into view, and the gallery's full-size photos only when a thumbnail is opened.
+
+Two performance fixes were needed along the way, both recorded in the commits: the phone poster was re-encoded at
+quality 60 (86 KB → 58 KB) because it loads next to the hero image, and the two About buttons now stack on phones,
+because side by side they fit with the fallback font but wrap once Cairo loads (a 0.095 layout shift).
+
+### Still pending
+
+| # | Item | Blocked on |
+|---|---|---|
+| 1 | Photos on the 23 empty project cards (idea 7) | The client's project numbers in `photo-triage.pdf` |
+| 2 | Filling the `"project"` field of the 22 gallery items | Same answers |
+| 3 | Equipment / capabilities strip (idea 6) | Whether the machines are company-owned or rented |
+| 4 | Clip wall from the short videos (idea 5) | Client decision; also needs face permission for video-031 |
+| 5 | Putting the cut 2.4–5.96 s back into the phone reel | Permission from the worker shown |
+| 6 | The six flagged face items (009, 034, 043, 083, 095, video-031) | Publishing permission |
+| 7 | 154 / 156 / 158 | Only usable cropped; confirm the crops are acceptable |
+| 8 | 162, 165, video-016 | Who owns the watermark / the third-party logo |
+| 9 | A proper About photo (team, fleet or office) | Client; photo 178 is the interim |
+| 10 | Whether photo 120's tipper is the company's own truck | Client |

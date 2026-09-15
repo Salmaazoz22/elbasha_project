@@ -530,9 +530,57 @@ Lighthouse was not re-run for this content-only batch. The markup change is one 
 
 Lighthouse was not re-run: the change is 20 short text paragraphs, with no new assets or scripts.
 
+## 15d. Re-run after the media build (2026-09-16)
+
+**What changed** — commits `33afc73`, `a86e607`, `8c76cca`, `edd79cd`, `a7e615c`; full detail in `docs/MEDIA_PROPOSAL.md` §5.
+
+- Work video re-cut from the client's 1080p master, plus a 9:16 phone reel with its own poster.
+- Four photo service cards, three backdrop photos under the navy overlay (CTA band, projects hero, about hero).
+- New "من مواقعنا / From our sites" gallery on the projects page: 22 photos, subject filters, `<dialog>` lightbox, 2.6 KB of JavaScript loaded only on that page.
+- About page: site photo instead of the logo card.
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL = https://elbasha.pages.dev) |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass |
+| HTML validation (9 pages) | Same 9 accepted findings as §3 (`tel-non-breaking` 8, `long-title` 1). A tenth finding (`src=""` on the lightbox image) was fixed by creating that image in JavaScript instead of the markup |
+| Horizontal overflow, 9 pages × 6 widths | **0 / 54** |
+| Console / network errors | **0** |
+| Tap targets < 44 px (27 page/width combinations) | **0** |
+| axe-core WCAG 2.2 AA + best practice (18 runs) | **0 violations**. Contrast over the new background photos is an "incomplete" for axe (it cannot read text over an image); it was computed by hand for the worst case, a pure white area of the photo: CTA band 5.1:1, page hero 5.8:1, both above 4.5:1 |
+| Focus not obscured (478 focus stops) | 0 fully hidden; 3 partly covered (AAA only) |
+| Contact form (7 scenarios × 2 languages), keyboard, redirects/headers | ✅ all pass |
+| Video source selection | Phones in portrait get `reel.webm` with the portrait poster; ≥ 48em or landscape get `highlight.webm`; switching orientation reloads the right file; reduced motion keeps it paused; without JavaScript the markup alone still picks the reel on phones |
+| Gallery (both languages) | Filters set `aria-pressed` and the counts match; the lightbox opens by mouse and by keyboard, Escape and the arrow keys work, the counter follows the filtered set, focus returns to the thumbnail, and without JavaScript all 22 photos show and each links to the full-size image |
+| Photo review | Every published photo re-checked at full size: no identifiable faces, no camera stamps, no police or military sites, no readable plates. 003, 014 (uncropped), 124 and 196 were dropped at this stage |
+
+**Lighthouse** — median of 3 mobile runs per page, 1 desktop run, against `node scripts/serve.mjs`:
+
+| Page | Mobile before | Mobile after | Desktop after | LCP | CLS |
+|---|---|---|---|---|---|
+| `/` | 90 | **92** | 100 | 2.40 s | 0 |
+| `/projects/` | 92 | **94** | 100 | 1.96 s | 0.001 |
+| `/about/` | 96 | **93** | 99 | 2.13 s | 0 |
+| `/contact/` | 99 | **99** | 100 | 1.74 s | 0 |
+| `/en/` | 92 | **93** | 100 | 2.36 s | 0 |
+| `/en/projects/` | 95 | **96** | 100 | 1.75 s | 0 |
+| `/en/about/` | 95 | **96** | 100 | 1.94 s | 0 |
+| `/en/contact/` | 96 | **97** | 100 | 1.57 s | 0 |
+| `/404.html` | 100 | **100** | 100 | 1.73 s | 0 |
+
+Accessibility, best practices and SEO stay at 100 everywhere (the 404 page scores 58 on SEO because it is deliberately `noindex`).
+Two regressions found during the build and fixed before committing:
+
+- **/about/ CLS 0.095.** The two buttons under the company paragraph fit on one row with the fallback font but wrap once Cairo loads. They now stack below 30em, and CLS is 0 again. (The same shift appeared in one pre-media run, so it was an existing flake this change made reliable.)
+- **Home mobile 84–90.** The phone poster (86 KB) loads next to the hero image; re-encoded at quality 60 (58 KB), which brought LCP back from 2.73 s to 2.40 s.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.
+
+Since 2026-09-16 it also carries the client's own photos and video: see §15d and `docs/MEDIA_PROPOSAL.md` §5 for what is published and what is still waiting on the client.
 
 **Before launch:**
 - Set `SITE_URL` to the real domain.

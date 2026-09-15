@@ -26,3 +26,6 @@ desktop.ini
 .vscode/
 .idea/
 *.log
+
+# Client-facing PDFs are generated from the Markdown and sent by WhatsApp/email; never committed.
+docs/*.pdf
