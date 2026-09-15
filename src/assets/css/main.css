@@ -1138,9 +1138,16 @@ bdi {
   display: none;
 }
 
-@media (max-width: 47.99em) {
+/* Phones held upright play the vertical reel (see <source media> in the home template and main.js); the frame is
+   capped to 80% of the viewport height so the whole reel stays visible. */
+@media (max-width: 47.99em) and (orientation: portrait) {
+  .video-frame {
+    width: min(100%, 80svh * 9 / 16);
+    margin-inline: auto;
+  }
+
   .video-frame__video {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 9 / 16;
   }
 }
 

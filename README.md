@@ -28,7 +28,7 @@ Media tools are only needed when images or the video change:
 
 ```bash
 npm run media           # source-assets/images → responsive WebP/JPEG, favicons, OG image (installs sharp temporarily)
-npm run video           # source-assets/video/Final.mp4 → 52 s WebM/MP4 highlight + poster (needs ffmpeg)
+npm run video           # FINAL.mp4 + reel 1.mp4 (kept outside git) → desktop highlight, phone reel, posters, hero stills (needs ffmpeg)
 ```
 
 ## Where things live

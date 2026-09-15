@@ -368,9 +368,9 @@ curl -sI "https://SITE$(curl -s https://SITE/ | grep -o '/assets/css/main\.[0-9a
 5. Run `npm run build`, check it, then commit the new files in `src/assets/img/`, `images.json` and `projects.json`.
 
 ### Replacing or re-cutting the video
-1. Put the new master in `source-assets/video/`.
-2. Edit `SEGMENTS` (start/end seconds) in `scripts/video.mjs`.
-3. Run `npm run video`. This needs ffmpeg with libvpx-vp9, libx264 and libwebp; set `FFMPEG` to its path if it isn't on your PATH.
+1. The masters are too large for GitHub and are **not in git**: `FINAL.mp4` (1920×1080, 286 MB) for the desktop highlight and hero stills, and `reel 1.mp4` (1080×1920) for the phone reel. By default the script reads them from `incoming-photos&videos/`; point `VIDEO_MASTER` / `REEL_MASTER` at them if they live elsewhere.
+2. Edit the `segments` (start/end seconds) of `HIGHLIGHT` or `REEL` in `scripts/video.mjs`.
+3. Run `npm run video` (both), or `npm run video -- highlight` / `npm run video -- reel` for one. Then run `npm run media` so the hero images pick up new stills. This needs ffmpeg with libvpx-vp9, libx264 and libwebp; set `FFMPEG` to its path if it isn't on your PATH.
 4. Keep each output **under 25 MiB** (Cloudflare's limit) and ideally **5–8 MB**. The build check fails if a file is over 25 MiB.
 
 ### Turning on structured data (after the client provides the data)

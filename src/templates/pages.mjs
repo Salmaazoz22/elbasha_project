@@ -52,10 +52,12 @@ export function home(ctx) {
     ${sectionHead(ctx, { eyebrow: t.home.videoEyebrow, title: t.home.videoTitle, id: 'video-title' })}
     <figure class="video-frame" data-reveal>
       <video class="video-frame__video" controls muted loop playsinline preload="none"
-        poster="${video('highlight-poster.webp')}" width="1280" height="576"
+        poster="${video('reel-poster.webp')}" data-poster-landscape="${video('highlight-poster.webp')}" width="1280" height="576"
         aria-label="${t.home.videoLabel}" data-autoplay-video>
-        <source src="${video('highlight.webm')}" type="video/webm">
-        <source src="${video('highlight.mp4')}" type="video/mp4">
+        <source src="${video('highlight.webm')}" type="video/webm" media="(min-width: 48em), (orientation: landscape)">
+        <source src="${video('highlight.mp4')}" type="video/mp4" media="(min-width: 48em), (orientation: landscape)">
+        <source src="${video('reel.webm')}" type="video/webm">
+        <source src="${video('reel.mp4')}" type="video/mp4">
       </video>
       <button class="video-frame__toggle" type="button" hidden data-video-toggle
         data-label-pause="${t.home.videoPause}" data-label-play="${t.home.videoPlay}">

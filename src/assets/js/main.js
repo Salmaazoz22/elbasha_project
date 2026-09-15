@@ -58,6 +58,16 @@
     video.muted = true;
     videoToggle.hidden = false;
 
+    // Phones get the vertical reel (<source media>) and its portrait poster, which is the markup default so phones
+    // never download the landscape poster; wider screens swap it in. Re-select both on breakpoint change.
+    const portrait = window.matchMedia('(max-width: 47.99em) and (orientation: portrait)');
+    const portraitPoster = video.getAttribute('poster');
+    const setPoster = () => {
+      const next = portrait.matches ? portraitPoster : video.dataset.posterLandscape;
+      if (next && video.getAttribute('poster') !== next) video.setAttribute('poster', next);
+    };
+    setPoster();
+
     const render = () => {
       const playing = !video.paused;
       videoToggle.setAttribute('aria-pressed', String(playing));
@@ -78,6 +88,13 @@
         userPaused = true;
         video.pause();
       }
+    });
+
+    portrait.addEventListener('change', () => {
+      const wasPlaying = !video.paused;
+      setPoster();
+      video.load();
+      if (wasPlaying) play();
     });
 
     reducedMotion.addEventListener('change', (e) => {
