@@ -6,6 +6,10 @@ dist-drafts/
 # Still available in git history at tag original-upload.
 archive/
 
+# Raw client media (WhatsApp/Facebook) and working copies — never committed.
+/incoming-photos&videos/
+/media-work/
+
 # Dependencies (the build has none; media tooling installs sharp on demand)
 node_modules/
 package-lock.json
