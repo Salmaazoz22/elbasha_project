@@ -2,6 +2,10 @@
 dist/
 dist-drafts/
 
+# Unused original files kept locally only (client decision 2026-09-15).
+# Still available in git history at tag original-upload.
+archive/
+
 # Dependencies (the build has none; media tooling installs sharp on demand)
 node_modules/
 package-lock.json
