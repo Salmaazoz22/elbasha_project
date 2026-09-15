@@ -30,17 +30,18 @@
 - [ ] Create the Cloudflare Pages project and set `SITE_URL` (§8).
 - [ ] Verify the recipient email in the Formspree dashboard, then send **one real test message** (§11).
 - [ ] Run the post-deploy checks in §11 on a real iPhone and a real Android phone.
-- [ ] Connect the custom domain when the client provides it, update `SITE_URL`, then redeploy (§10).
+- [ ] **No custom domain for now** (client, 2026-09-15): launch on the free `*.pages.dev` URL with `SITE_URL` set to that URL. When a domain is added later, follow §10.
 
 ### Waiting on the company
 The site works without these items; any missing ones are simply hidden. Details are in §3–§6:
 - [ ] Photos for the 23 projects that have none
-- [ ] Service descriptions
-- [ ] Address, working hours and service area
-- [ ] Legal company name
-- [ ] Confirmation of the hero headline and of 8 English names
-- [ ] Domain name
+- [ ] Service descriptions (10, Arabic and English) and the list of material types
+- [ ] Written address and working hours (service area and map link are done)
+- [ ] About page: profile, photo, trust information (optional)
+- [ ] Legal company name, social links confirmation, SVG logo, high-resolution hero photo
 - [ ] Permission to publish two photos that show people
+
+**Answered in client batch 1 (2026-09-15) and applied:** hero headline (company name), "Road Marking & Pedestrian Crossings", 7 English project names, service area, Google Maps link, no custom domain for now, unused originals archived.
 
 ---
 
@@ -65,6 +66,8 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 
 ## 3. What I need from the company
 
+> **Status after client batch 1 (2026-09-15):** rows 4, 6, 7, 8 and 14 are resolved and row 2 is partly resolved (map link done). The Arabic client list `CLIENT_REQUESTS.md` now has 37 remaining items.
+
 > A client-ready **Arabic** version of these requests is in [`CLIENT_REQUESTS.md`](CLIENT_REQUESTS.md). It lists all 64 items, numbered, grouped by page, with image sizes and `projects-inventory.xlsx` row numbers.
 
 | # | Item | Why | Where to put it |
@@ -82,7 +85,7 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 | 11 | **Trust information** (optional, only if real): clients/owners with permission, certificates, contractor classification | About page | New content; ask the developer |
 | 12 | **Canonical social links:** is `facebook.com/share/1b3x72sW7X/` the link to keep? Any Instagram / YouTube / TikTok? | Footer and contact page | `site.json` → `social` |
 | 13 | **Analytics:** wanted or not? Cloudflare Web Analytics is free and cookie-free. | Visitor statistics | Cloudflare dashboard (no code needed) |
-| 14 | **Unused originals:** keep or delete `reel 1.mp4`, `slider1–3.jpg`, `مصانع الطوب.txt` (in `source-assets/`) | Housekeeping | Reply; do not delete without approval |
+| 14 | ~~Unused originals~~ | — | ✅ Resolved 2026-09-15: moved to the git-ignored `/archive` folder at the repository root (local only; also in git history at tag `original-upload`) |
 | 15 | **Account ownership:** the GitHub repository is on a personal account (`Salmaazoz22`). Decide who owns the repository, the Cloudflare account and the Formspree account long term. A company email is recommended for all three. | Business continuity | Accounts |
 
 ## 4. What images I need
@@ -116,6 +119,8 @@ This is the Images Needed table from `AUDIT_REPORT.md` §7.2, with the current s
 - **Optional, only if real:** per-project details such as location, owner, year and scope; clients, certificates and classification.
 
 ## 6. What domain information I need
+
+> **Decision 2026-09-15:** no custom domain for now. The site launches on the free `*.pages.dev` address. The questions below apply when the client adds a domain later.
 
 - The **domain name**, if one is already owned, e.g. `elbasha-eg.com`. Or approval to launch on the free `*.pages.dev` address first.
 - **Where the domain is registered**, and who can log in to change DNS or nameservers.
@@ -235,6 +240,8 @@ There are **no secret values**. `.env` files are git-ignored, and `.env.example`
 
 ## 10. Connecting a custom domain (DNS and SSL)
 
+> Not needed at launch (no domain yet, 2026-09-15). Kept for when the client registers or provides a domain.
+
 > **Order matters.** Always add the domain in the **Pages dashboard first**, then create DNS records. A CNAME that points at Pages before the domain is attached there fails with **error 522** (Cloudflare docs).
 
 ### Option A — Root domain (`example.com`), recommended
@@ -339,7 +346,7 @@ curl -sI "https://SITE$(curl -s https://SITE/ | grep -o '/assets/css/main\.[0-9a
 |---|---|---|
 | Phone numbers, WhatsApp link, email, social links, form endpoint | `src/data/site.json` | One file updates every page, both languages |
 | Address, hours, service area, map link | `src/data/site.json` | Replace the `[[NEEDS_CLIENT: …]]` text with the real value; the section appears automatically. The map link is optional. |
-| Service names and descriptions | `src/data/services.json` | Replace the description markers to show descriptions under each service |
+| Service names and descriptions | `src/data/services.json` | Replace the description markers to show descriptions under each service. Descriptions written as drafts for client review get `"draft": true` inside the description object (`{"ar": "…", "en": "…", "draft": true}`); the flag has no visible effect, and the build lists flagged descriptions. Remove the flag when the client approves. |
 | Project names and categories | `src/data/projects.json` | Keep `name.ar` and `name.en`; `category` is `roads`, `bridges`, `maintenance` or `brick-factories` |
 | Page text, titles, meta descriptions, buttons, form messages | `src/i18n/ar.json`, `src/i18n/en.json` | Keep both languages in step |
 | Colours, spacing, layout | `src/assets/css/main.css` | Colour tokens at the top; keep the contrast rules noted there |

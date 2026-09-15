@@ -43,7 +43,8 @@ src/templates/            page templates (plain JS template literals)
 src/assets/               CSS, JS, fonts, images, video → published with content-hashed names
 src/public/               copied to the site root: _headers, _redirects, favicons, og-image.jpg
 scripts/                  build.mjs · check.mjs · serve.mjs · media.mjs · video.mjs
-source-assets/            original photos, logo, video and notes — never published
+source-assets/            original photos, logo and master video — never published
+archive/                  unused originals (git-ignored, local only)
 docs/                     audit, plan, QA, deployment guide, projects inventory
 dist/                     build output (git-ignored) — the only folder the host publishes
 ```

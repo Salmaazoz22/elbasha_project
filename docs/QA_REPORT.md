@@ -468,6 +468,43 @@ I searched the tracked files with `git grep` for `api_key|secret|token|password|
 - The only other change is one CSS rule for the not-yet-used `.about-intro__profile` class.
 - So the results above still apply.
 
+## 15b. Re-run after client answers batch 1 (2026-09-15)
+
+**What changed**
+
+Content and templates (commits `8749f2f`, `06ec0b2`, `5b0d5e1`):
+- Hero headline kept as the company name in both languages; the alternative-headline marker is removed.
+- The service is now named "Road Marking & Pedestrian Crossings".
+- 7 client-confirmed English project names.
+- Service area added.
+- Google Maps "عرض على الخريطة / View on map" link in the contact section and footer.
+- `site.json` domain set to `null` (deploy on `*.pages.dev`).
+- Support for `draft: true` on service descriptions.
+- Unused originals moved to the git-ignored `/archive` folder.
+
+The 10 service description drafts were **not** in the client batch, so descriptions remain `[[NEEDS_CLIENT]]` markers, hidden on the live site.
+
+**Checks re-run on the new build** (`SITE_URL=https://elbasha.pages.dev`):
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (74 files); 52 unique markers hidden in production (was 64) |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 93 markers rendered (was 114) |
+| JS syntax (`node --check`, 12 files) | ✅ pass |
+| HTML validation (9 pages) | Same 9 accepted findings as §3 (`tel-non-breaking` 8, `long-title` 1) |
+| Horizontal overflow, 9 pages × 6 widths | **0 / 54** |
+| Console / network errors | **0** |
+| Tap targets < 44 px (27 page/width combinations) | **0** |
+| axe-core WCAG 2.2 AA + best practice (18 runs) | **0 violations** |
+| Focus not obscured by the mobile bar (470 focus stops) | 0 fully hidden; 3 partly covered (AAA only) |
+| Contact form: all 7 scenarios, Arabic and English (Formspree mocked) | ✅ all pass |
+| Video: no early download, plays in view, pause, reduced motion | ✅ |
+| Keyboard: skip link, mobile menu open/Escape | ✅ |
+| Redirects / 404 / case-sensitivity / cache headers | ✅ unchanged (301, 308, 404, immutable) |
+| New map link | Present in the contact card and the footer on all 9 pages; external, `target=_blank rel=noopener` with a visually hidden "opens in a new tab" note; screenshots reviewed at 390 px in both languages |
+
+Lighthouse was not re-run for this content-only batch. The markup change is one link and one card, with no new images, scripts or fonts.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.
