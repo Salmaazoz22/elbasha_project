@@ -23,6 +23,7 @@ const readJson = (p) => JSON.parse(readFileSync(join(SRC, p), 'utf8'));
 const site = readJson('data/site.json');
 const { services } = readJson('data/services.json');
 const { categories, projects } = readJson('data/projects.json');
+const gallery = readJson('data/gallery.json');
 const images = readJson('data/images.json');
 const i18n = { ar: readJson('i18n/ar.json'), en: readJson('i18n/en.json') };
 
@@ -83,7 +84,7 @@ function context(lang) {
   const other = lang === 'ar' ? 'en' : 'ar';
   return {
     lang, dir: lang === 'ar' ? 'rtl' : 'ltr', t: i18n[lang], other: i18n[other],
-    site, services, categories, projects, images, asset, url, abs, drafts, report, year,
+    site, services, categories, projects, gallery, images, asset, url, abs, drafts, report, year,
   };
 }
 

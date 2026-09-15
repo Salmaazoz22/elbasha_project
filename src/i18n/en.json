@@ -80,6 +80,20 @@
     "jumpLabel": "Project categories",
     "photoPending": "No photo for this project yet"
   },
+  "gallery": {
+    "eyebrow": "From our sites",
+    "title": "Photos from the work sites",
+    "lead": "Photos taken by the team on site, grouped by type of work. They are not attributed to individual projects yet.",
+    "filterLabel": "Filter photos by type of work",
+    "all": "All",
+    "open": "View the full-size photo",
+    "lightboxLabel": "Photo viewer",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "close": "Close the viewer",
+    "counter": "{n} of {total}",
+    "empty": "No photos in this category."
+  },
   "about": {
     "title": "About Us",
     "intro": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects. We are committed to delivering quality and excellence in every project we handle.",

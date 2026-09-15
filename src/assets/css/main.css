@@ -1166,6 +1166,168 @@ bdi {
   font-size: 0.8125rem;
 }
 
+/* ---------- Site gallery (projects page) ---------- */
+.gallery__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-end: var(--space-6);
+}
+
+.chip--filter {
+  border-color: rgb(24 64 152 / 0.25);
+  background: var(--white);
+  color: var(--navy-700);
+  cursor: pointer;
+}
+
+.chip--filter:hover {
+  background: rgb(24 64 152 / 0.06);
+}
+
+.chip--filter[aria-pressed="true"] {
+  background: var(--navy-600);
+  border-color: var(--navy-600);
+  color: var(--white);
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 36em) {
+  .gallery__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 62em) {
+  .gallery__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+}
+
+.gallery__link {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--sand-100);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery__media,
+.gallery__media img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__media img {
+  transition: transform 0.5s var(--ease);
+}
+
+.gallery__link:hover img {
+  transform: scale(1.05);
+}
+
+.gallery__empty {
+  margin-block-start: var(--space-6);
+  color: var(--gray-600);
+}
+
+/* Lightbox */
+.lightbox {
+  width: min(100%, 72rem);
+  max-width: 100%;
+  max-height: 100svh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--white);
+  overflow: visible;
+}
+
+.lightbox::backdrop {
+  background: rgb(11 27 63 / 0.92);
+}
+
+.lightbox__figure {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-4);
+}
+
+.lightbox__img {
+  width: 100%;
+  max-height: 74svh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: var(--navy-950);
+}
+
+.lightbox__caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  font-size: 0.9375rem;
+}
+
+.lightbox__count {
+  color: var(--slate-300);
+}
+
+.lightbox__btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  border-radius: 999px;
+  background: rgb(11 27 63 / 0.85);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.lightbox__btn:hover {
+  background: var(--navy-600);
+}
+
+.lightbox__btn--close {
+  top: var(--space-2);
+  inset-inline-end: var(--space-2);
+}
+
+.lightbox__btn--prev,
+.lightbox__btn--next {
+  top: calc(50% - 1.375rem);
+}
+
+.lightbox__btn--prev {
+  inset-inline-start: var(--space-2);
+}
+
+.lightbox__btn--next {
+  inset-inline-end: var(--space-2);
+}
+
+/* The arrow icon points forward; the "previous" button mirrors it in both writing directions. */
+.lightbox__btn--prev .icon {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .lightbox__btn--prev .icon {
+  transform: none;
+}
+
 /* ---------- Video ---------- */
 .video-frame {
   position: relative;

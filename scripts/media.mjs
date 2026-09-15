@@ -19,15 +19,19 @@ const kb = (b) => `${(b / 1024).toFixed(1)} KB`;
  * Crop (optional), then write each width as WebP + JPEG. Never upscales.
  * Records { width, height, webp: [{ w, file }], jpg: [...] } under `key`.
  */
-async function responsive(key, file, { crop, widths, quality = 72 }) {
+async function responsive(key, file, { crop, widths, quality = 72, ratio }) {
   let base = sharp(join(SRC, file)).rotate();
   if (crop) base = base.extract(crop);
   const buf = await base.toBuffer();
   const { width, height } = await sharp(buf).metadata();
-  const entry = { width, height, webp: [], jpg: [] };
+  const entry = ratio ? { width: Math.min(width, Math.max(...widths)), height: 0, webp: [], jpg: [] } : { width, height, webp: [], jpg: [] };
+  if (ratio) entry.height = Math.round(entry.width / ratio);
   for (const w of [...new Set(widths.map((x) => Math.min(x, width)))]) {
     const name = `${key}-${w}`;
-    const resized = sharp(buf).resize({ width: w, withoutEnlargement: true });
+    // `ratio` centre-crops to a fixed aspect ratio (gallery thumbnails); otherwise the frame is kept.
+    const resized = ratio
+      ? sharp(buf).resize({ width: w, height: Math.round(w / ratio), fit: 'cover', position: 'centre', withoutEnlargement: true })
+      : sharp(buf).resize({ width: w, withoutEnlargement: true });
     const webp = await resized.clone().webp({ quality, effort: 6 }).toFile(join(IMG, `${name}.webp`));
     const jpg = await resized.clone().jpeg({ quality: quality + 6, mozjpeg: true, progressive: true }).toFile(join(IMG, `${name}.jpg`));
     entry.webp.push({ w, file: `img/${name}.webp` });
@@ -65,6 +69,13 @@ await responsive('service-slopes-barriers', 'client-photos/photo-160.jpg', { cro
 await responsive('bg-cta', 'client-photos/photo-184.jpg', { widths: [640, 960, 1280], quality: 55 });
 await responsive('bg-projects', 'client-photos/photo-164.jpg', { widths: [640, 960, 1280], quality: 55 });
 await responsive('bg-about', 'client-photos/photo-177.jpg', { widths: [640, 960, 1280], quality: 55 });
+
+// ---------- Site gallery (projects page). Thumbnails are 4:3 centre crops; the lightbox uses the full frame. ----------
+for (const n of [178, 184, 169, 12, 142, 136, 1, 101, 102, 45, 38, 108, 66, 32, 160, 152, 172, 180, 182, 126, 130, 134]) {
+  const file = `client-photos/photo-${String(n).padStart(3, '0')}.jpg`;
+  await responsive(`gallery-${n}`, file, { widths: [400, 760], quality: 68, ratio: 4 / 3 });
+  await responsive(`gallery-${n}-full`, file, { widths: [760, 1280], quality: 72 });
+}
 
 // ---------- Logo: drop the dark 9 px band on the right edge, make the outer white transparent ----------
 {

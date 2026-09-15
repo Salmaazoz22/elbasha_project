@@ -90,6 +90,55 @@ export function projectCard(ctx, p, { headingLevel = 3, sizes = '(min-width: 75e
   </article>`;
 }
 
+/**
+ * Site photo gallery: filter chips (revealed by gallery.js), a lazy 4:3 grid and, with JavaScript,
+ * a <dialog> lightbox. Without JavaScript every thumbnail is a link to the full-size photo.
+ */
+export function gallery(ctx) {
+  const { t, lang } = ctx;
+  const { subjects, items } = ctx.gallery;
+  const count = (id) => items.filter((it) => it.subject === id).length;
+  const chip = (id, label, n, pressed) => html`<button class="chip chip--filter" type="button"
+    aria-pressed="${pressed ? 'true' : 'false'}" data-gallery-filter="${id}">
+    <span>${label}</span><span class="chip__count">${ltr(String(n))}</span></button>`;
+  return html`
+<section class="section section--tint gallery" id="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    ${sectionHead(ctx, { eyebrow: t.gallery.eyebrow, title: t.gallery.title, lead: t.gallery.lead, id: 'gallery-title' })}
+    <div class="gallery__filters" role="group" aria-label="${t.gallery.filterLabel}" data-gallery-filters hidden>
+      ${chip('all', t.gallery.all, items.length, true)}
+      ${subjects.map((s) => chip(s.id, s.name[lang], count(s.id), false))}
+    </div>
+    <ul class="gallery__grid" role="list" data-gallery-grid>
+      ${items.map((it) => {
+    const full = ctx.images[`gallery-${it.n}-full`];
+    return html`<li class="gallery__item" data-subject="${it.subject}">
+        <a class="gallery__link" href="${ctx.asset(full.jpg[full.jpg.length - 1].file)}" data-gallery-link
+          data-srcset="${full.webp.map((w) => `${ctx.asset(w.file)} ${w.w}w`).join(', ')}">
+          ${picture(ctx, `gallery-${it.n}`, { alt: it.alt[lang], sizes: '(min-width: 62em) 22vw, (min-width: 36em) 30vw, 45vw', className: 'gallery__media' })}
+          <span class="visually-hidden">${t.gallery.open}</span>
+        </a>
+      </li>`;
+  })}
+    </ul>
+    <p class="gallery__empty" data-gallery-empty hidden>${t.gallery.empty}</p>
+  </div>
+</section>
+<dialog class="lightbox" aria-label="${t.gallery.lightboxLabel}" data-lightbox>
+  <figure class="lightbox__figure">
+    <div class="lightbox__media" data-lightbox-media></div>
+    <figcaption class="lightbox__caption">
+      <span data-lightbox-caption></span>
+      <span class="lightbox__count" data-lightbox-count></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__btn--close" type="button" data-lightbox-close aria-label="${t.gallery.close}">${icon('x', { size: 24 })}</button>
+  <button class="lightbox__btn lightbox__btn--prev" type="button" data-lightbox-prev aria-label="${t.gallery.prev}">${icon('arrow-right', { size: 24, className: 'icon--flip-rtl' })}</button>
+  <button class="lightbox__btn lightbox__btn--next" type="button" data-lightbox-next aria-label="${t.gallery.next}">${icon('arrow-right', { size: 24, className: 'icon--flip-rtl' })}</button>
+  <script type="application/json" data-lightbox-strings>${raw(JSON.stringify({ counter: t.gallery.counter }).replace(/</g, '\\u003c'))}</script>
+</dialog>`;
+}
+
 export function projectsCount(ctx, n) {
   return plural(ctx.t.common.projectsCount, n, ctx.lang);
 }

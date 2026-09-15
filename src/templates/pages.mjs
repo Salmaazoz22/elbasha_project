@@ -1,7 +1,7 @@
 // Page bodies. Each returns { title, description, body, indexable, scripts? }.
 import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
-  backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand,
+  backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand, gallery,
 } from './components.mjs';
 import { socialLinks } from './layout.mjs';
 
@@ -111,8 +111,12 @@ ${groups.map((g, i) => html`
     </div>
   </div>
 </section>`)}
+${gallery(ctx)}
 ${ctaBand(ctx)}`;
-  return { title: t.meta.projects.title, description: t.meta.projects.description, body, indexable: true };
+  return {
+    title: t.meta.projects.title, description: t.meta.projects.description, body, indexable: true,
+    scripts: ['js/gallery.js'],
+  };
 }
 
 export function about(ctx) {
