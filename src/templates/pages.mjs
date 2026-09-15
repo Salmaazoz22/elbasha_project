@@ -136,7 +136,7 @@ ${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
     </div>
     <div class="about-intro__aside" data-reveal>
       ${slot(ctx, t.about.photoMarker)}
-      <img class="about-intro__logo" src="${ctx.asset(ctx.images.logoLarge.png)}" width="${Math.round(ctx.images.logoLarge.width / 2)}" height="${Math.round(ctx.images.logoLarge.height / 2)}" alt="" loading="lazy">
+      ${picture(ctx, 'about-photo', { alt: t.about.photoAlt, sizes: '(min-width: 62em) 33vw, 94vw', className: 'about-intro__photo' })}
     </div>
   </div>
 </section>

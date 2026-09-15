@@ -70,6 +70,9 @@ await responsive('bg-cta', 'client-photos/photo-184.jpg', { widths: [640, 960, 1
 await responsive('bg-projects', 'client-photos/photo-164.jpg', { widths: [640, 960, 1280], quality: 55 });
 await responsive('bg-about', 'client-photos/photo-177.jpg', { widths: [640, 960, 1280], quality: 55 });
 
+// About page photo (the 16:9 frame, no crop).
+await responsive('about-photo', 'client-photos/photo-178.jpg', { widths: [480, 760, 1280] });
+
 // ---------- Site gallery (projects page). Thumbnails are 4:3 centre crops; the lightbox uses the full frame. ----------
 for (const n of [178, 184, 169, 12, 142, 136, 1, 101, 102, 45, 38, 108, 66, 32, 160, 152, 172, 180, 182, 126, 130, 134]) {
   const file = `client-photos/photo-${String(n).padStart(3, '0')}.jpg`;
@@ -110,11 +113,6 @@ for (const n of [178, 184, 169, 12, 142, 136, 1, 101, 102, 45, 38, 108, 66, 32, 
   // Palette PNG is smaller than WebP for this flat artwork, so only PNG is shipped.
   manifest.logo = { width, height, png: 'img/logo.png' };
   console.log(`logo ${width}x${height}  png ${kb(png.size)}`);
-  // Larger version for the About page (displayed up to 320 px wide → 640 px source).
-  const largeW = Math.min(640, meta.width);
-  const large = await sharp(clean).resize({ width: largeW }).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(join(IMG, 'logo-large.png'));
-  manifest.logoLarge = { width: large.width, height: large.height, png: 'img/logo-large.png' };
-  console.log(`logo-large ${large.width}x${large.height}  png ${kb(large.size)}`);
 }
 
 // ---------- Favicons (derived from the 368 px icon; no vector source exists) ----------

@@ -1494,24 +1494,13 @@ bdi {
 
 .about-intro__aside {
   display: grid;
-  place-items: center;
-  padding: var(--space-8);
-  background: var(--white);
-  border: 1px solid var(--sand-100);
+  gap: var(--space-4);
+}
+
+.about-intro__photo img {
+  width: 100%;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.about-intro__logo {
-  width: min(100%, 20rem);
-  height: auto;
-}
-
-/* On phones the logo card only repeats the header logo and moved when the web font swapped in (CLS). */
-@media (max-width: 61.99em) {
-  .about-intro__aside:not(:has(.needs-client)) {
-    display: none;
-  }
+  box-shadow: var(--shadow);
 }
 
 .expertise-list {

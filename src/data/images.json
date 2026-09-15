@@ -447,6 +447,38 @@
       }
     ]
   },
+  "about-photo": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/about-photo-480.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/about-photo-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/about-photo-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/about-photo-480.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/about-photo-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/about-photo-1280.jpg"
+      }
+    ]
+  },
   "gallery-178": {
     "width": 760,
     "height": 570,
@@ -1499,11 +1531,6 @@
     "width": 168,
     "height": 112,
     "png": "img/logo.png"
-  },
-  "logoLarge": {
-    "width": 632,
-    "height": 421,
-    "png": "img/logo-large.png"
   },
   "og": {
     "width": 1200,
