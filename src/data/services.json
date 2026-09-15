@@ -9,8 +9,9 @@
         "en": "Road Construction"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – بناء الطرق]]",
-        "en": "[[NEEDS_CLIENT: short description – Road Construction]]"
+        "ar": "تنفيذ أعمال الطرق من التمهيد والتسوية وطبقات الأساس حتى الرصف الأسفلتي، وفق المواصفات الفنية المعتمدة.",
+        "en": "Full road works from grading and base layers to asphalt paving, executed to approved technical specifications.",
+        "draft": true
       }
     },
     {
@@ -21,8 +22,9 @@
         "en": "Material Supply"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description and which materials – توريد المواد]]",
-        "en": "[[NEEDS_CLIENT: short description and which materials – Material Supply]]"
+        "ar": "توريد مواد البناء والطرق اللازمة لمواقع التنفيذ في مواعيدها وبالكميات المطلوبة.",
+        "en": "Supplying construction and road-building materials to project sites on schedule and in the required quantities.",
+        "draft": true
       }
     },
     {
@@ -33,8 +35,9 @@
         "en": "Infrastructure"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – البنية التحتية]]",
-        "en": "[[NEEDS_CLIENT: short description – Infrastructure]]"
+        "ar": "تنفيذ أعمال البنية التحتية المصاحبة للطرق، مثل شبكات تصريف المياه والحفر والردم والأعمال الخرسانية.",
+        "en": "Infrastructure works accompanying roads, including drainage networks, excavation and backfilling, and concrete works.",
+        "draft": true
       }
     },
     {
@@ -45,8 +48,9 @@
         "en": "Brick Factories"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – مصانع الطوب]]",
-        "en": "[[NEEDS_CLIENT: short description – Brick Factories]]"
+        "ar": "تنفيذ الأعمال الإنشائية والمدنية لمصانع الطوب، من الأساسات حتى التشطيب.",
+        "en": "Civil and structural works for brick factories, from foundations through to finishing.",
+        "draft": true
       }
     },
     {
@@ -57,8 +61,9 @@
         "en": "Road Marking & Pedestrian Crossings"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – أعمال تخطيط الطرق وعبور المشاة]]",
-        "en": "[[NEEDS_CLIENT: short description – Road Marking & Pedestrian Crossings]]"
+        "ar": "تنفيذ علامات الطرق الأرضية وخطوط عبور المشاة وفق الاشتراطات المرورية.",
+        "en": "Road surface markings and pedestrian crossings in line with traffic regulations.",
+        "draft": true
       },
       "sourceNameEn": "Road Planning & Pedestrian Crossings"
     },
@@ -70,8 +75,9 @@
         "en": "Guiding & Warning Signs Installation"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – أعمال تركيب اللافتات الإرشادية والتحذيرية]]",
-        "en": "[[NEEDS_CLIENT: short description – Guiding & Warning Signs Installation]]"
+        "ar": "توريد وتركيب اللافتات المرورية الإرشادية والتحذيرية على الطرق والمحاور.",
+        "en": "Supply and installation of directional and warning traffic signs on roads and corridors.",
+        "draft": true
       }
     },
     {
@@ -82,8 +88,9 @@
         "en": "Building Construction"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – أعمال الإنشاءات للمباني]]",
-        "en": "[[NEEDS_CLIENT: short description – Building Construction]]"
+        "ar": "تنفيذ الأعمال الإنشائية والخرسانية للمباني بمختلف أنواعها.",
+        "en": "Structural and concrete works for buildings of all types.",
+        "draft": true
       }
     },
     {
@@ -94,8 +101,9 @@
         "en": "Curbstone & Interlock Installation"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – تركيب بردورة وإنترلوك]]",
-        "en": "[[NEEDS_CLIENT: short description – Curbstone & Interlock Installation]]"
+        "ar": "توريد وتركيب البردورات وبلاط الإنترلوك للأرصفة والممرات والساحات.",
+        "en": "Supply and installation of curbstones and interlock paving for sidewalks, walkways and open areas.",
+        "draft": true
       }
     },
     {
@@ -106,8 +114,9 @@
         "en": "Concrete Slopes & New Jersey Barriers"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – أعمال الميول الخرسانية والنيوجيرسي]]",
-        "en": "[[NEEDS_CLIENT: short description – Concrete Slopes & New Jersey Barriers]]"
+        "ar": "تنفيذ الميول الخرسانية للطرق وتوريد وتركيب حواجز النيوجيرسي الخرسانية.",
+        "en": "Concrete slope works for roads, plus supply and installation of New Jersey concrete barriers.",
+        "draft": true
       }
     },
     {
@@ -118,8 +127,9 @@
         "en": "Bridge & Barrier Painting"
       },
       "description": {
-        "ar": "[[NEEDS_CLIENT: short description – أعمال دهانات الكباري والنيوجيرسي]]",
-        "en": "[[NEEDS_CLIENT: short description – Bridge & Barrier Painting]]"
+        "ar": "تنفيذ أعمال الدهانات الواقية والتحذيرية للكباري وحواجز النيوجيرسي.",
+        "en": "Protective and warning paint works for bridges and New Jersey barriers.",
+        "draft": true
       }
     }
   ]

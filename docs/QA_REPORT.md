@@ -505,6 +505,31 @@ The 10 service description drafts were **not** in the client batch, so descripti
 
 Lighthouse was not re-run for this content-only batch. The markup change is one link and one card, with no new images, scripts or fonts.
 
+## 15c. Re-run after adding the draft service descriptions (2026-09-15)
+
+**What changed**
+- The 10 service descriptions supplied by the developer (Arabic and English) were added to `src/data/services.json` with `"draft": true`, for client review.
+- They now show under each service card on `/` and `/en/`; the flag has no visible effect.
+- The build lists all 10 as "Draft service descriptions awaiting client review".
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass; 32 unique markers hidden in production (was 52) |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 73 markers rendered (was 93) |
+| JS syntax (12 files) | ✅ pass |
+| HTML validation (9 pages) | Same 9 accepted findings as §3 |
+| Horizontal overflow, 9 pages × 6 widths | **0 / 54** |
+| Console / network errors | **0** |
+| Tap targets < 44 px (27 page/width combinations) | **0** |
+| axe-core WCAG 2.2 AA + best practice (18 runs) | **0 violations** (includes contrast of the new description text, `#4B5563` on white, 7.56:1) |
+| Focus not obscured (470 focus stops) | 0 fully hidden; 3 partly covered (AAA only) |
+| Contact form (7 scenarios × 2 languages), video, keyboard, redirects/headers | ✅ all pass |
+| Visual review of the services section | 390 px and 1440 px, both languages: 5-column desktop grid aligned; 2-column phone cards taller but readable; no clipping or overflow |
+
+Lighthouse was not re-run: the change is 20 short text paragraphs, with no new assets or scripts.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

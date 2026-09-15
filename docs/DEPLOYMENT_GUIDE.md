@@ -35,7 +35,7 @@
 ### Waiting on the company
 The site works without these items; any missing ones are simply hidden. Details are in §3–§6:
 - [ ] Photos for the 23 projects that have none
-- [ ] Service descriptions (10, Arabic and English) and the list of material types
+- [ ] Review of the 10 draft service descriptions (already on the site, flagged `"draft": true`) and the list of material types
 - [ ] Written address and working hours (service area and map link are done)
 - [ ] About page: profile, photo, trust information (optional)
 - [ ] Legal company name, social links confirmation, SVG logo, high-resolution hero photo
@@ -66,7 +66,7 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 
 ## 3. What I need from the company
 
-> **Status after client batch 1 (2026-09-15):** rows 4, 6, 7, 8 and 14 are resolved and row 2 is partly resolved (map link done). The Arabic client list `CLIENT_REQUESTS.md` now has 37 remaining items.
+> **Status after client batch 1 (2026-09-15):** rows 4, 6, 7, 8 and 14 are resolved and row 2 is partly resolved (map link done). Row 5 has draft descriptions on the site awaiting client review. The Arabic client list `CLIENT_REQUESTS.md` has 37 remaining items.
 
 > A client-ready **Arabic** version of these requests is in [`CLIENT_REQUESTS.md`](CLIENT_REQUESTS.md). It lists all 64 items, numbered, grouped by page, with image sizes and `projects-inventory.xlsx` row numbers.
 

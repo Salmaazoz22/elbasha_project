@@ -13,6 +13,7 @@
 - اعتمدنا الأسماء الإنجليزية التي أكدتموها لـ7 مشاريع.
 - نطاق العمل: «جميع محافظات الجمهورية».
 - أضفنا رابط موقع الشركة على خرائط Google («عرض على الخريطة») في صفحة التواصل وأسفل كل الصفحات.
+- أضفنا **أوصافًا مقترحة** للخدمات العشر بالعربية والإنجليزية، وتظهر الآن تحت اسم كل خدمة. **نرجو مراجعتها** (البند 1).
 
 **ما زلنا نحتاج البنود الـ37 التالية.** إلى أن تصلنا، لا يظهر في الموقع أي قسم ينقصه معلومات، ولا نضع أي نصوص أو صور افتراضية مكانها.
 
@@ -40,7 +41,22 @@
 
 | رقم البند | المطلوب | مكان الظهور | الصيغة المقترحة |
 |---|---|---|---|
-| 1 | **وصف مختصر لكل خدمة من الخدمات العشر** بالعربية والإنجليزية، مع ذكر **أنواع المواد** التي تورّدها الشركة ضمن خدمة «توريد المواد». الخدمات: بناء الطرق، توريد المواد، البنية التحتية، مصانع الطوب، أعمال تخطيط الطرق وعبور المشاة، أعمال تركيب اللافتات الإرشادية والتحذيرية، أعمال الإنشاءات للمباني، تركيب بردورة وإنترلوك، أعمال الميول الخرسانية والنيوجيرسي، أعمال دهانات الكباري والنيوجيرسي. | الصفحة الرئيسية ← «خدماتنا» (يظهر الوصف تحت اسم كل خدمة، باللغتين) | لكل خدمة جملة أو جملتان، من 15 إلى 35 كلمة، بالعربية والإنجليزية؛ وقائمة بأنواع المواد |
+| 1 | **مراجعة الأوصاف المقترحة للخدمات العشر** (الجدول أدناه) بالعربية والإنجليزية، وإبلاغنا بالموافقة أو التعديلات المطلوبة. **وكذلك ذكر أنواع المواد** التي تورّدها الشركة ضمن خدمة «توريد المواد». | الصفحة الرئيسية ← «خدماتنا» (يظهر الوصف تحت اسم كل خدمة، باللغتين) | لكل خدمة: «موافق»، أو النص المعدّل مع رقم الخدمة (مثل 1.3)؛ وقائمة بأنواع المواد |
+
+**الأوصاف المقترحة الحالية** (تظهر الآن في الموقع):
+
+| رقم الخدمة | الخدمة | الوصف المقترح بالعربية | الوصف المقترح بالإنجليزية |
+|---|---|---|---|
+| 1.1 | بناء الطرق<br><bdi>Road Construction</bdi> | تنفيذ أعمال الطرق من التمهيد والتسوية وطبقات الأساس حتى الرصف الأسفلتي، وفق المواصفات الفنية المعتمدة. | <bdi>Full road works from grading and base layers to asphalt paving, executed to approved technical specifications.</bdi> |
+| 1.2 | توريد المواد<br><bdi>Material Supply</bdi> | توريد مواد البناء والطرق اللازمة لمواقع التنفيذ في مواعيدها وبالكميات المطلوبة. | <bdi>Supplying construction and road-building materials to project sites on schedule and in the required quantities.</bdi> |
+| 1.3 | البنية التحتية<br><bdi>Infrastructure</bdi> | تنفيذ أعمال البنية التحتية المصاحبة للطرق، مثل شبكات تصريف المياه والحفر والردم والأعمال الخرسانية. | <bdi>Infrastructure works accompanying roads, including drainage networks, excavation and backfilling, and concrete works.</bdi> |
+| 1.4 | مصانع الطوب<br><bdi>Brick Factories</bdi> | تنفيذ الأعمال الإنشائية والمدنية لمصانع الطوب، من الأساسات حتى التشطيب. | <bdi>Civil and structural works for brick factories, from foundations through to finishing.</bdi> |
+| 1.5 | أعمال تخطيط الطرق وعبور المشاة<br><bdi>Road Marking & Pedestrian Crossings</bdi> | تنفيذ علامات الطرق الأرضية وخطوط عبور المشاة وفق الاشتراطات المرورية. | <bdi>Road surface markings and pedestrian crossings in line with traffic regulations.</bdi> |
+| 1.6 | أعمال تركيب اللافتات الإرشادية والتحذيرية<br><bdi>Guiding & Warning Signs Installation</bdi> | توريد وتركيب اللافتات المرورية الإرشادية والتحذيرية على الطرق والمحاور. | <bdi>Supply and installation of directional and warning traffic signs on roads and corridors.</bdi> |
+| 1.7 | أعمال الإنشاءات للمباني<br><bdi>Building Construction</bdi> | تنفيذ الأعمال الإنشائية والخرسانية للمباني بمختلف أنواعها. | <bdi>Structural and concrete works for buildings of all types.</bdi> |
+| 1.8 | تركيب بردورة وإنترلوك<br><bdi>Curbstone & Interlock Installation</bdi> | توريد وتركيب البردورات وبلاط الإنترلوك للأرصفة والممرات والساحات. | <bdi>Supply and installation of curbstones and interlock paving for sidewalks, walkways and open areas.</bdi> |
+| 1.9 | أعمال الميول الخرسانية والنيوجيرسي<br><bdi>Concrete Slopes & New Jersey Barriers</bdi> | تنفيذ الميول الخرسانية للطرق وتوريد وتركيب حواجز النيوجيرسي الخرسانية. | <bdi>Concrete slope works for roads, plus supply and installation of New Jersey concrete barriers.</bdi> |
+| 1.10 | أعمال دهانات الكباري والنيوجيرسي<br><bdi>Bridge & Barrier Painting</bdi> | تنفيذ أعمال الدهانات الواقية والتحذيرية للكباري وحواجز النيوجيرسي. | <bdi>Protective and warning paint works for bridges and New Jersey barriers.</bdi> |
 
 ## ثانيًا: صفحة «مشاريعنا»
 
