@@ -29,7 +29,10 @@
   "common": {
     "newTab": "(opens in a new tab)",
     "viewAllProjects": "View all projects",
-    "projectsCount": { "one": "1 project", "other": "{n} projects" }
+    "projectsCount": {
+      "one": "1 project",
+      "other": "{n} projects"
+    }
   },
   "meta": {
     "home": {
@@ -57,9 +60,7 @@
     "eyebrow": "General supplies · Contracting · Infrastructure",
     "title": "El Basha for General Supplies & Contracting",
     "lead": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects.",
-    "imageAlt": "A motor grader levelling a road on a work site",
-    "headlinePendingConfirmation": "Roads and bridges construction",
-    "headlineMarker": "[[NEEDS_CLIENT: confirm hero headline \"Roads and bridges construction\" — does the company construct bridges, or paint them?]]"
+    "imageAlt": "A motor grader levelling a road on a work site"
   },
   "home": {
     "servicesEyebrow": "What we do",
@@ -96,10 +97,10 @@
     "otherPhones": "Other numbers",
     "emailTitle": "Email",
     "socialTitle": "Follow us",
-    "addressTitle": "Address",
+    "addressTitle": "Location",
     "hoursTitle": "Working hours",
     "areaTitle": "Service area",
-    "mapLink": "Open location on the map"
+    "mapLink": "View on map"
   },
   "form": {
     "title": "Send a message",

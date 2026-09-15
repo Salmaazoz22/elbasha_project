@@ -39,22 +39,24 @@
       "category": "roads",
       "name": {
         "ar": "طريق أسيوط الغربي بوابة أسيوط أكتوبر",
-        "en": "Asyut Western Road - Asyut Gate October"
+        "en": "Asyut Western Road – October Gate, Asyut"
       },
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm English name of project 1 (\"Asyut Gate October\")]]",
       "image": null,
-      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Asyut Gate October]]"
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Asyut Gate October]]",
+      "sourceNameEn": "Asyut Western Road - Asyut Gate October",
+      "nameConfirmedByClient": "2026-09-15"
     },
     {
       "n": 2,
       "category": "roads",
       "name": {
         "ar": "طريق أسيوط الغربي الصوامع ومرور الفيوم",
-        "en": "Asyut Western Road - Fayoum Silos & Checkpoint"
+        "en": "Asyut Western Road – Fayoum Silos & Traffic Checkpoint"
       },
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm English name of project 2 (\"Checkpoint\" for \"مرور الفيوم\")]]",
       "image": null,
-      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Fayoum Silos & Checkpoint]]"
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Asyut Western Road - Fayoum Silos & Checkpoint]]",
+      "sourceNameEn": "Asyut Western Road - Fayoum Silos & Checkpoint",
+      "nameConfirmedByClient": "2026-09-15"
     },
     {
       "n": 3,
@@ -83,12 +85,12 @@
         "ar": "مشروع مستقبل مصر",
         "en": "Future of Egypt Project"
       },
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm English name of project 5 (\"Future of Egypt Project\")]]",
       "image": "project-future-of-egypt",
       "alt": {
         "ar": "جريدر يمهّد طريقًا في منطقة صحراوية",
         "en": "A motor grader levelling a road in the desert"
-      }
+      },
+      "nameConfirmedByClient": "2026-09-15"
     },
     {
       "n": 6,
@@ -97,9 +99,9 @@
         "ar": "محور الطالبية",
         "en": "Talbia Axis"
       },
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm spelling \"Talbia\" (project 6)]]",
       "image": null,
-      "photoNeeded": "[[NEEDS_CLIENT: photo – Talbia Axis]]"
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Talbia Axis]]",
+      "nameConfirmedByClient": "2026-09-15"
     },
     {
       "n": 7,
@@ -235,9 +237,9 @@
         "en": "October West Sumed Development & Maintenance"
       },
       "sourceNameEn": "October West Sumed Maintenance",
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm spelling \"Sumed\" (project 18)]]",
       "image": null,
-      "photoNeeded": "[[NEEDS_CLIENT: photo – October West Sumed Development & Maintenance]]"
+      "photoNeeded": "[[NEEDS_CLIENT: photo – October West Sumed Development & Maintenance]]",
+      "nameConfirmedByClient": "2026-09-15"
     },
     {
       "n": 19,
@@ -302,11 +304,12 @@
       "category": "brick-factories",
       "name": {
         "ar": "مصنع الطوب في العاصمة R1 وR2",
-        "en": "Brick Factory - New Capital (R1 & R2)"
+        "en": "Brick Factory – New Capital (R1 & R2)"
       },
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm \"New Capital\" for \"العاصمة\" (project 24)]]",
       "image": null,
-      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - New Capital (R1 & R2)]]"
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - New Capital (R1 & R2)]]",
+      "sourceNameEn": "Brick Factory - New Capital (R1 & R2)",
+      "nameConfirmedByClient": "2026-09-15"
     },
     {
       "n": 25,
@@ -333,11 +336,12 @@
       "category": "brick-factories",
       "name": {
         "ar": "مصنع الطوب في مدينة 15 مايو",
-        "en": "Brick Factory - 15 May City"
+        "en": "Brick Factory – 15th of May City"
       },
-      "nameToConfirm": "[[NEEDS_CLIENT: confirm \"15 May City\" spelling (project 27)]]",
       "image": null,
-      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - 15 May City]]"
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - 15 May City]]",
+      "sourceNameEn": "Brick Factory - 15 May City",
+      "nameConfirmedByClient": "2026-09-15"
     }
   ]
 }

@@ -125,6 +125,7 @@ function footer(ctx) {
         ${c.secondaryPhones.map((p) => html`<li><a href="tel:${p.tel}">${icon('phone', { size: 18 })}${phone(p.display)}</a></li>`)}
         <li><a href="mailto:${c.email}">${icon('mail', { size: 18 })}${email(c.email)}</a></li>
         ${needs(ctx, c.address[lang], () => html`<li>${icon('map-pin', { size: 18 })}<span>${c.address[lang]}</span></li>`)}
+        ${needs(ctx, c.mapUrl, () => html`<li><a href="${c.mapUrl}" target="_blank" rel="noopener">${icon('map-pin', { size: 18 })}<span>${t.contact.mapLink}</span><span class="visually-hidden">${t.common.newTab}</span></a></li>`)}
       </ul>
     </div>
     <div class="site-footer__col">

@@ -176,6 +176,11 @@ if (report.size) {
   console.log(`${drafts ? 'Shown' : 'Hidden'} blocks awaiting client input (${report.size} unique [[NEEDS_CLIENT]] markers):`);
   for (const m of [...report].sort()) console.log(`  - ${m}`);
 }
+const draftDescriptions = services.filter((s) => s.description?.draft).map((s) => s.name.en);
+if (draftDescriptions.length) {
+  console.log(`Draft service descriptions awaiting client review (draft: true): ${draftDescriptions.length}`);
+  for (const n of draftDescriptions) console.log(`  - ${n}`);
+}
 if (!existsSync(join(OUT, 'index.html'))) fail('dist/index.html was not generated');
 
 function loadDotEnv(file) {

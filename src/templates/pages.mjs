@@ -1,5 +1,5 @@
 // Page bodies. Each returns { title, description, body, indexable, scripts? }.
-import { email, html, icon, ltr, needs, phone, raw, slot } from './lib.mjs';
+import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
   picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand,
 } from './components.mjs';
@@ -23,7 +23,6 @@ export function home(ctx) {
       ${whatsappButton(ctx, { className: 'btn btn--primary btn--lg' })}
       ${callButton(ctx, { className: 'btn btn--outline-light btn--lg', showNumber: true })}
     </div>
-    ${slot(ctx, t.hero.headlineMarker)}
   </div>
 </section>
 
@@ -197,11 +196,12 @@ ${pageHero(ctx, { title: t.contact.title, lead: t.contact.lead })}
           <p class="contact-card__value contact-card__value--email"><a href="mailto:${c.email}">${email(c.email)}</a></p>
         </div>
       </div>
-      ${needs(ctx, c.address[lang], () => html`<div class="contact-card" data-reveal>
+      ${!isMarker(c.address[lang]) || !isMarker(c.mapUrl) || ctx.drafts ? html`<div class="contact-card" data-reveal>
         <span class="contact-card__icon">${icon('map-pin', { size: 26 })}</span>
-        <div><h3 class="contact-card__title">${t.contact.addressTitle}</h3><p>${c.address[lang]}</p>
-        ${needs(ctx, c.mapUrl, () => html`<a href="${c.mapUrl}" target="_blank" rel="noopener">${t.contact.mapLink}<span class="visually-hidden">${t.common.newTab}</span></a>`)}</div>
-      </div>`)}
+        <div><h3 class="contact-card__title">${t.contact.addressTitle}</h3>
+        ${needs(ctx, c.address[lang], () => html`<p>${c.address[lang]}</p>`)}
+        ${needs(ctx, c.mapUrl, () => html`<a href="${c.mapUrl}" target="_blank" rel="noopener">${icon('external-link', { size: 18 })}<span>${t.contact.mapLink}</span><span class="visually-hidden">${t.common.newTab}</span></a>`)}</div>
+      </div>` : ''}
       ${needs(ctx, c.hours[lang], () => html`<div class="contact-card" data-reveal>
         <span class="contact-card__icon">${icon('clock', { size: 26 })}</span>
         <div><h3 class="contact-card__title">${t.contact.hoursTitle}</h3><p>${c.hours[lang]}</p></div>

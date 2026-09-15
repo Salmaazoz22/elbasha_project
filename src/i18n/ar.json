@@ -29,7 +29,12 @@
   "common": {
     "newTab": "(يفتح في نافذة جديدة)",
     "viewAllProjects": "عرض كل المشاريع",
-    "projectsCount": { "one": "مشروع واحد", "two": "مشروعان", "few": "{n} مشاريع", "many": "{n} مشروعًا" }
+    "projectsCount": {
+      "one": "مشروع واحد",
+      "two": "مشروعان",
+      "few": "{n} مشاريع",
+      "many": "{n} مشروعًا"
+    }
   },
   "meta": {
     "home": {
@@ -57,9 +62,7 @@
     "eyebrow": "التوريدات العامة · المقاولات · البنية التحتية",
     "title": "الباشا للتوريدات العمومية والمقاولات",
     "lead": "شركة الباشا المصرية متخصصة في التوريدات العامة، خدمات المقاولات، ومشاريع البنية التحتية.",
-    "imageAlt": "جريدر أثناء تمهيد طريق في أحد مواقع العمل",
-    "headlinePendingConfirmation": "تشييد الطرق والكباري",
-    "headlineMarker": "[[NEEDS_CLIENT: confirm hero headline \"تشييد الطرق والكباري\" — does the company construct bridges, or paint them?]]"
+    "imageAlt": "جريدر أثناء تمهيد طريق في أحد مواقع العمل"
   },
   "home": {
     "servicesEyebrow": "مجالات العمل",
@@ -96,10 +99,10 @@
     "otherPhones": "أرقام أخرى",
     "emailTitle": "البريد الإلكتروني",
     "socialTitle": "تابعنا",
-    "addressTitle": "العنوان",
+    "addressTitle": "الموقع",
     "hoursTitle": "مواعيد العمل",
     "areaTitle": "نطاق العمل",
-    "mapLink": "افتح الموقع على الخريطة"
+    "mapLink": "عرض على الخريطة"
   },
   "form": {
     "title": "أرسل رسالة",

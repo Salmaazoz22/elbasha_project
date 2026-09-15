@@ -22,18 +22,24 @@
     },
     "whatsappUrl": "https://wa.me/201116111015",
     "secondaryPhones": [
-      { "tel": "+201014165151", "display": "+20 101 416 5151" },
-      { "tel": "+201006992768", "display": "+20 100 699 2768" }
+      {
+        "tel": "+201014165151",
+        "display": "+20 101 416 5151"
+      },
+      {
+        "tel": "+201006992768",
+        "display": "+20 100 699 2768"
+      }
     ],
     "email": "elbasha.constructions@gmail.com",
     "address": {
       "ar": "[[NEEDS_CLIENT: company address in Arabic]]",
       "en": "[[NEEDS_CLIENT: company address in English]]"
     },
-    "mapUrl": "[[NEEDS_CLIENT: Google Maps link to the office]]",
+    "mapUrl": "https://www.google.com/maps?q=29.9739548,31.315296&z=17&hl=en",
     "serviceArea": {
-      "ar": "[[NEEDS_CLIENT: governorates / regions served (Arabic)]]",
-      "en": "[[NEEDS_CLIENT: governorates / regions served (English)]]"
+      "ar": "جميع محافظات الجمهورية",
+      "en": "All governorates of Egypt"
     },
     "hours": {
       "ar": "[[NEEDS_CLIENT: working days and hours (Arabic)]]",
@@ -41,15 +47,24 @@
     }
   },
   "social": [
-    { "id": "facebook", "label": "Facebook", "url": "https://www.facebook.com/share/1b3x72sW7X/" },
-    { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/company/elbashaconstructions/" }
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/1b3x72sW7X/"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/elbashaconstructions/"
+    }
   ],
   "form": {
     "endpoint": "https://formspree.io/f/mjkeplye"
   },
-  "domain": "[[NEEDS_CLIENT: production domain name]]",
+  "domain": null,
   "structuredData": {
     "_readme": "Keep disabled until legalName, address and serviceArea are real values and SITE_URL is the production domain.",
     "enabled": false
-  }
+  },
+  "_domainNote": "No custom domain yet (client, 2026-09-15). The site is deployed on the free *.pages.dev URL; set SITE_URL to that URL. See docs/DEPLOYMENT_GUIDE.md §10 when a domain is added."
 }
