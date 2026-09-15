@@ -6,6 +6,7 @@ Nothing in this folder is copied to `dist/`, so nothing here is published.
 | Folder | Contents |
 |---|---|
 | `images/` | Original logo, favicon and project photos. `npm run media` generates optimised web versions into `src/assets/img/` and `src/public/`. |
+| `images/client-photos/` | Byte-identical copies of the client photos used on the site (numbers as in `docs/photo-triage.xlsx`). |
 | `video/` | `Final.mp4` (70.5 MiB, 1920×864, 3:12): the first copy of the company edit, kept for history. No longer used by the scripts. |
 
 **Video masters outside git.** Since 2026-09-16 `npm run video` reads the higher-quality masters from the client delivery:

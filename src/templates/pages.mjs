@@ -1,7 +1,7 @@
 // Page bodies. Each returns { title, description, body, indexable, scripts? }.
 import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
-  picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand,
+  backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand,
 } from './components.mjs';
 import { socialLinks } from './layout.mjs';
 
@@ -29,8 +29,11 @@ export function home(ctx) {
 <section class="section" id="services" aria-labelledby="services-title">
   <div class="container">
     ${sectionHead(ctx, { eyebrow: t.home.servicesEyebrow, title: t.home.servicesTitle, id: 'services-title' })}
+    <ul class="services-featured" role="list">
+      ${ctx.services.filter((s) => s.image).map((s) => serviceCard(ctx, s))}
+    </ul>
     <ul class="services-grid" role="list">
-      ${ctx.services.map((s) => serviceCard(ctx, s))}
+      ${ctx.services.filter((s) => !s.image).map((s) => serviceCard(ctx, s))}
     </ul>
   </div>
 </section>
@@ -73,8 +76,9 @@ ${ctaBand(ctx)}`;
   return { title: t.meta.home.title, description: t.meta.home.description, body, indexable: true };
 }
 
-function pageHero(ctx, { title, lead, extra = '' }) {
-  return html`<section class="page-hero" aria-labelledby="page-title">
+function pageHero(ctx, { title, lead, extra = '', image }) {
+  return html`<section class="page-hero${image ? ' page-hero--photo' : ''}" aria-labelledby="page-title">
+  ${image ? backdrop(ctx, image, { eager: true }) : ''}
   <div class="container">
     <h1 class="page-hero__title" id="page-title">${title}</h1>
     ${lead ? html`<p class="page-hero__lead">${lead}</p>` : ''}
@@ -93,7 +97,7 @@ export function projects(ctx) {
     </ul>
   </nav>`;
   const body = html`
-${pageHero(ctx, { title: t.projects.title, lead: t.projects.lead, extra: jump })}
+${pageHero(ctx, { title: t.projects.title, lead: t.projects.lead, extra: jump, image: 'bg-projects' })}
 ${groups.map((g, i) => html`
 <section class="section${i % 2 ? ' section--tint' : ''} project-group" id="${g.id}" aria-labelledby="${g.id}-title">
   <div class="container">
@@ -114,7 +118,7 @@ ${ctaBand(ctx)}`;
 export function about(ctx) {
   const { t, lang } = ctx;
   const body = html`
-${pageHero(ctx, { title: t.about.title })}
+${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
 <section class="section" aria-labelledby="about-intro-title">
   <div class="container about-intro">
     <div class="about-intro__text" data-reveal>

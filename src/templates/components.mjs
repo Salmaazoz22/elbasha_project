@@ -46,12 +46,24 @@ export function callButton(ctx, { className = 'btn btn--outline-light', label = 
 
 export function serviceCard(ctx, s) {
   const lang = ctx.lang;
+  const content = html`<h3 class="service-card__title">${s.name[lang]}</h3>
+    ${needs(ctx, s.description[lang], () => html`<p class="service-card__text">${s.description[lang]}</p>`)}
+    ${lang === 'en' && s.nameToConfirm ? slot(ctx, s.nameToConfirm) : ''}`;
+  if (s.image) {
+    return html`<li class="service-card service-card--photo" data-reveal>
+    ${picture(ctx, s.image, { alt: s.imageAlt[lang], sizes: '(min-width: 75em) 284px, (min-width: 62em) 23vw, 50vw', className: 'service-card__media' })}
+    <div class="service-card__body">${content}</div>
+  </li>`;
+  }
   return html`<li class="service-card" data-reveal>
     <span class="service-card__icon">${icon(s.icon, { size: 28 })}</span>
-    <h3 class="service-card__title">${s.name[lang]}</h3>
-    ${needs(ctx, s.description[lang], () => html`<p class="service-card__text">${s.description[lang]}</p>`)}
-    ${lang === 'en' && s.nameToConfirm ? slot(ctx, s.nameToConfirm) : ''}
+    ${content}
   </li>`;
+}
+
+/** Full-bleed decorative photo behind a section; the section's own overlay keeps text contrast. */
+export function backdrop(ctx, key, { eager = false } = {}) {
+  return picture(ctx, key, { alt: '', sizes: '100vw', className: 'backdrop', eager });
 }
 
 export function projectCard(ctx, p, { headingLevel = 3, sizes = '(min-width: 75em) 280px, (min-width: 48em) 45vw, 100vw' } = {}) {
@@ -85,6 +97,7 @@ export function projectsCount(ctx, n) {
 export function ctaBand(ctx) {
   const t = ctx.t.cta;
   return html`<section class="cta-band" aria-labelledby="cta-title">
+    ${backdrop(ctx, 'bg-cta')}
     <div class="container cta-band__inner" data-reveal>
       <div class="cta-band__text">
         <h2 id="cta-title" class="cta-band__title">${t.bandTitle}</h2>

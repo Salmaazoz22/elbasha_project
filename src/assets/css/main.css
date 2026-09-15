@@ -820,6 +820,48 @@ bdi {
     linear-gradient(225deg, var(--navy-950), var(--navy-700));
 }
 
+/* Photo variant: the gradients move onto an overlay above the photo (navy 0.84–0.9). Worst case, over a pure white
+   area of the photo: lead text #e5e9f2 5.8:1, white 7:1. */
+.page-hero--photo {
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--navy-950);
+  color: #e5e9f2;
+}
+
+.page-hero--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 20rem at 100% 0%, rgb(240 120 32 / 0.14), transparent 60%),
+    linear-gradient(135deg, rgb(11 27 63 / 0.9), rgb(18 48 112 / 0.84));
+}
+
+[dir="rtl"] .page-hero--photo::before {
+  background:
+    radial-gradient(60rem 20rem at 0% 0%, rgb(240 120 32 / 0.14), transparent 60%),
+    linear-gradient(225deg, rgb(11 27 63 / 0.9), rgb(18 48 112 / 0.84));
+}
+
+/* ---------- Backdrop photo (page hero, CTA band) ---------- */
+.backdrop,
+.backdrop img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backdrop {
+  z-index: -2;
+}
+
+.backdrop img {
+  object-fit: cover;
+}
+
 .page-hero__title {
   color: var(--white);
   font-size: clamp(2rem, 1.4rem + 2.6vw, 3rem);
@@ -832,6 +874,27 @@ bdi {
 }
 
 /* ---------- Services ---------- */
+.services-featured {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+  padding: 0;
+}
+
+@media (min-width: 48em) {
+  .services-featured {
+    gap: var(--space-4);
+    margin-block-end: var(--space-4);
+  }
+}
+
+@media (min-width: 62em) {
+  .services-featured {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -844,12 +907,6 @@ bdi {
   .services-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-4);
-  }
-}
-
-@media (min-width: 62em) {
-  .services-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -884,6 +941,30 @@ bdi {
 .service-card:nth-child(3n + 2) .service-card__icon {
   background: rgb(240 120 32 / 0.12);
   color: var(--orange-700);
+}
+
+.service-card--photo {
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.service-card__media {
+  aspect-ratio: 4 / 3;
+  background: var(--sand-100);
+}
+
+.service-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: clamp(0.875rem, 3vw, 1.25rem);
 }
 
 .service-card__title {
@@ -1153,17 +1234,30 @@ bdi {
 
 /* ---------- CTA band ---------- */
 .cta-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding-block: clamp(3rem, 6vw, 4.5rem);
-  background:
-    radial-gradient(40rem 16rem at 0% 100%, rgb(240 120 32 / 0.22), transparent 70%),
-    var(--navy-600);
+  background: var(--navy-600);
   color: #e5e9f2;
 }
 
-[dir="rtl"] .cta-band {
+/* Navy overlay (0.88) above the lazy backdrop photo. Worst case, over a pure white area of the photo:
+   text #e5e9f2 5.1:1 (in the orange corner), white 6.9:1. */
+.cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background:
-    radial-gradient(40rem 16rem at 100% 100%, rgb(240 120 32 / 0.22), transparent 70%),
-    var(--navy-600);
+    radial-gradient(40rem 16rem at 0% 100%, rgb(240 120 32 / 0.2), transparent 70%),
+    rgb(24 64 152 / 0.88);
+}
+
+[dir="rtl"] .cta-band::before {
+  background:
+    radial-gradient(40rem 16rem at 100% 100%, rgb(240 120 32 / 0.2), transparent 70%),
+    rgb(24 64 152 / 0.88);
 }
 
 .cta-band__inner {
@@ -1226,6 +1320,14 @@ bdi {
   flex-wrap: wrap;
   gap: var(--space-3);
   margin-block-start: var(--space-8);
+}
+
+/* Stacked on phones: side by side, the two buttons fit in one row with the fallback font but not with Cairo,
+   so they wrapped when the web font arrived (layout shift). */
+@media (max-width: 29.99em) {
+  .about-intro__actions .btn {
+    width: 100%;
+  }
 }
 
 .about-intro__aside {

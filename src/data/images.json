@@ -223,6 +223,230 @@
       }
     ]
   },
+  "service-road-construction": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-road-construction-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-road-construction-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-road-construction-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-road-construction-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-road-construction-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-road-construction-960.jpg"
+      }
+    ]
+  },
+  "service-material-supply": {
+    "width": 1200,
+    "height": 900,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-material-supply-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-material-supply-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-material-supply-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-material-supply-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-material-supply-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-material-supply-960.jpg"
+      }
+    ]
+  },
+  "service-curbstone-interlock": {
+    "width": 1040,
+    "height": 780,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-curbstone-interlock-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-curbstone-interlock-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-curbstone-interlock-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-curbstone-interlock-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-curbstone-interlock-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-curbstone-interlock-960.jpg"
+      }
+    ]
+  },
+  "service-slopes-barriers": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-slopes-barriers-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-slopes-barriers-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-slopes-barriers-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-slopes-barriers-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-slopes-barriers-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-slopes-barriers-960.jpg"
+      }
+    ]
+  },
+  "bg-cta": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 640,
+        "file": "img/bg-cta-640.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-cta-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-cta-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 640,
+        "file": "img/bg-cta-640.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-cta-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-cta-1280.jpg"
+      }
+    ]
+  },
+  "bg-projects": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 640,
+        "file": "img/bg-projects-640.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-projects-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-projects-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 640,
+        "file": "img/bg-projects-640.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-projects-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-projects-1280.jpg"
+      }
+    ]
+  },
+  "bg-about": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 640,
+        "file": "img/bg-about-640.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-about-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-about-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 640,
+        "file": "img/bg-about-640.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-about-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-about-1280.jpg"
+      }
+    ]
+  },
   "logo": {
     "width": 168,
     "height": 112,

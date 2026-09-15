@@ -1,5 +1,5 @@
 {
-  "_readme": "Services as provided in the original site and source-assets/notes (now archived). Descriptions are client input: replace a [[NEEDS_CLIENT]] marker with 1-2 sentences to show it on the live site. Descriptions written as drafts for client review get \"draft\": true inside the description object (e.g. {\"ar\": \"...\", \"en\": \"...\", \"draft\": true}); the flag has no visible effect, the build lists them so they can be found for review.",
+  "_readme": "Services as provided in the original site and source-assets/notes (now archived). Descriptions are client input: replace a [[NEEDS_CLIENT]] marker with 1-2 sentences to show it on the live site. Descriptions written as drafts for client review get \"draft\": true inside the description object (e.g. {\"ar\": \"...\", \"en\": \"...\", \"draft\": true}); the flag has no visible effect, the build lists them so they can be found for review. A service with \"image\" (an images.json key) and \"imageAlt\" is shown as a photo card in the first row of the home services section; the photo shows the type of work only, never a project.",
   "services": [
     {
       "id": "road-construction",
@@ -12,6 +12,11 @@
         "ar": "تنفيذ أعمال الطرق من التمهيد والتسوية وطبقات الأساس حتى الرصف الأسفلتي، وفق المواصفات الفنية المعتمدة.",
         "en": "Full road works from grading and base layers to asphalt paving, executed to approved technical specifications.",
         "draft": true
+      },
+      "image": "service-road-construction",
+      "imageAlt": {
+        "ar": "جريدر يسوّي طبقة من التربة الحمراء في طريق تحت الإنشاء",
+        "en": "Motor grader levelling red earth on a road under construction"
       }
     },
     {
@@ -25,6 +30,11 @@
         "ar": "توريد مواد البناء والطرق اللازمة لمواقع التنفيذ في مواعيدها وبالكميات المطلوبة.",
         "en": "Supplying construction and road-building materials to project sites on schedule and in the required quantities.",
         "draft": true
+      },
+      "image": "service-material-supply",
+      "imageAlt": {
+        "ar": "شاحنة قلاب تفرغ حمولة من مواد الردم في موقع طريق",
+        "en": "Dump truck unloading fill material at a road site"
       }
     },
     {
@@ -104,6 +114,11 @@
         "ar": "توريد وتركيب البردورات وبلاط الإنترلوك للأرصفة والممرات والساحات.",
         "en": "Supply and installation of curbstones and interlock paving for sidewalks, walkways and open areas.",
         "draft": true
+      },
+      "image": "service-curbstone-interlock",
+      "imageAlt": {
+        "ar": "بلاط إنترلوك مرصوف بين صفين من البردورة",
+        "en": "Interlock paving laid between two rows of curbstones"
       }
     },
     {
@@ -117,6 +132,11 @@
         "ar": "تنفيذ الميول الخرسانية للطرق وتوريد وتركيب حواجز النيوجيرسي الخرسانية.",
         "en": "Concrete slope works for roads, plus supply and installation of New Jersey concrete barriers.",
         "draft": true
+      },
+      "image": "service-slopes-barriers",
+      "imageAlt": {
+        "ar": "ألواح ميول خرسانية على جانب جسر طريق",
+        "en": "Concrete slope panels on the side of a road embankment"
       }
     },
     {

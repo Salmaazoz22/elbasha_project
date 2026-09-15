@@ -51,6 +51,21 @@ await responsive('project-amr-ibn-al-as-axis', 'محور_عمرو_بنالعاص
 await responsive('project-october-western-sector', 'الطريق_الغربي_اكتوبر.jpg', { crop: { left: 0, top: 500, width: 1200, height: 900 }, widths: [480, 800, 1200] });
 await responsive('project-wadi-el-natrun', 'وادي_النطرون.jpg', { crop: { left: 0, top: 300, width: 720, height: 540 }, widths: [480, 720] });
 
+// ---------- Client photos, batch 1 (source-assets/images/client-photos, numbers as in docs/photo-triage.xlsx) ----------
+// Only items rated A/B with no faces, stamps, police/military sites or third-party branding (docs/MEDIA_PROPOSAL.md).
+// Not attributed to any project until the client confirms which project each photo shows.
+// Service cards, 4:3.
+await responsive('service-road-construction', 'client-photos/photo-177.jpg', { crop: { left: 320, top: 0, width: 960, height: 720 }, widths: [480, 720, 960] });
+await responsive('service-material-supply', 'client-photos/photo-120.jpg', { crop: { left: 0, top: 250, width: 1200, height: 900 }, widths: [480, 720, 960] });
+// Starts below the two workers standing near the pallets (y < 780).
+await responsive('service-curbstone-interlock', 'client-photos/photo-014.jpg', { crop: { left: 160, top: 820, width: 1040, height: 780 }, widths: [480, 720, 960] });
+// Starts below the sun.
+await responsive('service-slopes-barriers', 'client-photos/photo-160.jpg', { crop: { left: 0, top: 400, width: 960, height: 720 }, widths: [480, 720, 960] });
+// Backgrounds under a navy overlay (≥ 0.75 behind text), so a lower quality is invisible. 1280×720 sources, never upscaled.
+await responsive('bg-cta', 'client-photos/photo-184.jpg', { widths: [640, 960, 1280], quality: 55 });
+await responsive('bg-projects', 'client-photos/photo-164.jpg', { widths: [640, 960, 1280], quality: 55 });
+await responsive('bg-about', 'client-photos/photo-177.jpg', { widths: [640, 960, 1280], quality: 55 });
+
 // ---------- Logo: drop the dark 9 px band on the right edge, make the outer white transparent ----------
 {
   const { data, info } = await sharp(join(SRC, 'logo.png'))
