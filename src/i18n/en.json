@@ -98,6 +98,8 @@
     "title": "About Us",
     "intro": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects. We are committed to delivering quality and excellence in every project we handle.",
     "expertiseTitle": "Our Expertise",
+    "equipmentTitle": "Our Equipment",
+    "equipmentLead": "Machines at work on our sites. The photos are from the sites themselves, and each label describes only what is visible in the frame.",
     "profile": "[[NEEDS_CLIENT: company profile – 2-4 sentences (history, scope, equipment, classification) only if the company wants them published]]",
     "photoMarker": "[[NEEDS_CLIENT: about photo – team on site, equipment fleet or office, 3:2, min 1600×1067. A site photo is shown in the meantime]]",
     "photoAlt": "A motor grader levelling the road bed with a surveyor standing to one side",

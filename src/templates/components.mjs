@@ -139,6 +139,27 @@ export function gallery(ctx) {
 </dialog>`;
 }
 
+/**
+ * Equipment strip: a lazy 4:3 scroll-snap row of machines working on the company's own sites.
+ * Labels name only what is in the frame — no counts, no fleet size and no makers' names.
+ */
+export function equipmentStrip(ctx) {
+  const { t, lang } = ctx;
+  const { items } = ctx.equipment;
+  return html`
+<section class="section equipment" aria-labelledby="equipment-title">
+  <div class="container">
+    ${sectionHead(ctx, { title: t.about.equipmentTitle, lead: t.about.equipmentLead, id: 'equipment-title' })}
+    <ul class="equipment__row" role="list">
+      ${items.map((it) => html`<li class="equipment__item" data-reveal>
+        ${picture(ctx, `equipment-${it.n}`, { alt: it.alt[lang], sizes: '(min-width: 62em) 22vw, (min-width: 36em) 40vw, 70vw', className: 'equipment__media' })}
+        <p class="equipment__label">${it.label[lang]}</p>
+      </li>`)}
+    </ul>
+  </div>
+</section>`;
+}
+
 export function projectsCount(ctx, n) {
   return plural(ctx.t.common.projectsCount, n, ctx.lang);
 }

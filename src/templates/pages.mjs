@@ -2,6 +2,7 @@
 import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
   backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand, gallery,
+  equipmentStrip,
 } from './components.mjs';
 import { socialLinks } from './layout.mjs';
 
@@ -150,6 +151,7 @@ ${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
     ${slot(ctx, t.about.trustMarker)}
   </div>
 </section>
+${equipmentStrip(ctx)}
 ${ctaBand(ctx)}`;
   return { title: t.meta.about.title, description: t.meta.about.description, body, indexable: true };
 }

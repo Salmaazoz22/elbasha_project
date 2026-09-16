@@ -1,5 +1,5 @@
 {
-  "_readme": "Site photo gallery on the projects page. Every item comes from the client's batch 1 (numbers as in docs/photo-triage.xlsx) and is rated A or B with no identifiable faces, no camera stamps, no police or military sites and no third-party branding. \"alt\" describes what is visible only — never a project name. \"project\" is empty on purpose: it takes the project number from projects-inventory.xlsx once the client confirms which project each photo shows, and only then may the photo also appear on a project card.",
+  "_readme": "Site photo gallery on the projects page. Every item comes from the client's batch 1 (numbers as in docs/photo-triage.xlsx) and is rated A or B, with no camera stamps, no police or military sites and no third-party branding. Faces appear only where the client confirmed publishing permission (client answers batch 2, 2026-09-16). \"alt\" describes what is visible only — never a project name. \"project\" is empty on purpose: it takes the project number from projects-inventory.xlsx once the client confirms which project each photo shows, and only then may the photo also appear on a project card.",
   "subjects": [
     { "id": "roads", "name": { "ar": "الطرق والتسوية", "en": "Roads & grading" } },
     { "id": "curb", "name": { "ar": "البردورة والإنترلوك", "en": "Curb & interlock" } },
@@ -59,6 +59,15 @@
       "alt": {
         "ar": "طريق ترابي ممهد بمحاذاة حاجز خرساني",
         "en": "A graded earth road running alongside a concrete barrier"
+      }
+    },
+    {
+      "n": 162,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "لقطة علوية لتقاطع طرق وكوبري منحنٍ بين أراضٍ زراعية",
+        "en": "An aerial view of a road junction and a curved bridge among farmland"
       }
     },
     {
@@ -134,6 +143,15 @@
       }
     },
     {
+      "n": 95,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "عاملان يركّبان بلاط إنترلوك سداسي ويدقّانه بالمطرقة",
+        "en": "Two workers laying hexagonal interlock pavers and bedding them with a mallet"
+      }
+    },
+    {
       "n": 160,
       "subject": "slopes",
       "project": "",
@@ -149,24 +167,6 @@
       "alt": {
         "ar": "حواجز نيوجيرسي خرسانية ممتدة بجانب طريق",
         "en": "A run of New Jersey concrete barriers beside a road"
-      }
-    },
-    {
-      "n": 172,
-      "subject": "equipment",
-      "project": "",
-      "alt": {
-        "ar": "جريدر متوقف في موقع عمل",
-        "en": "A motor grader standing at a work site"
-      }
-    },
-    {
-      "n": 180,
-      "subject": "equipment",
-      "project": "",
-      "alt": {
-        "ar": "جريدر أثناء تسوية طبقة التربة",
-        "en": "A motor grader levelling a layer of soil"
       }
     },
     {

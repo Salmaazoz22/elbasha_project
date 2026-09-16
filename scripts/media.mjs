@@ -74,10 +74,28 @@ await responsive('bg-about', 'client-photos/photo-177.jpg', { widths: [640, 960,
 await responsive('about-photo', 'client-photos/photo-178.jpg', { widths: [480, 760, 1280] });
 
 // ---------- Site gallery (projects page). Thumbnails are 4:3 centre crops; the lightbox uses the full frame. ----------
-for (const n of [178, 184, 169, 12, 142, 136, 1, 101, 102, 45, 38, 108, 66, 32, 160, 152, 172, 180, 182, 126, 130, 134]) {
+for (const n of [178, 184, 169, 12, 142, 136, 1, 101, 102, 45, 38, 108, 66, 32, 95, 160, 152, 182, 126, 130, 134]) {
   const file = `client-photos/photo-${String(n).padStart(3, '0')}.jpg`;
   await responsive(`gallery-${n}`, file, { widths: [400, 760], quality: 68, ratio: 4 / 3 });
   await responsive(`gallery-${n}-full`, file, { widths: [760, 1280], quality: 72 });
+}
+
+// Photo 162 gets the same gallery treatment but is cropped first: the photographer's watermark sits in the top
+// band (x 745-862, y 42-142 of the 1600x1200 frame), so the top 155 px come off. The client confirmed the company
+// owns the photo and may publish it (answers batch 2, 2026-09-16); the crop only removes the third-party mark.
+{
+  const file = 'client-photos/photo-162.jpg';
+  const crop = { left: 0, top: 155, width: 1600, height: 1045 };
+  await responsive('gallery-162', file, { crop, widths: [400, 760], quality: 68, ratio: 4 / 3 });
+  await responsive('gallery-162-full', file, { crop, widths: [760, 1280], quality: 72 });
+}
+
+// ---------- Equipment strip (About page): small 4:3 cards in a scroll-snap row, lazy ----------
+// The client confirmed the machines in the batch are company-owned (answers batch 2, 2026-09-16), which is what
+// the «معداتنا» wording needs. Labels describe only what is visible: no counts, no fleet size, no brand names.
+for (const n of [172, 180, 83, 36]) {
+  const file = `client-photos/photo-${String(n).padStart(3, '0')}.jpg`;
+  await responsive(`equipment-${n}`, file, { widths: [320, 640], quality: 68, ratio: 4 / 3 });
 }
 
 // ---------- Logo: drop the dark 9 px band on the right edge, make the outer white transparent ----------

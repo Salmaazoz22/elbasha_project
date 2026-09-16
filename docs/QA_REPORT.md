@@ -576,11 +576,50 @@ Two regressions found during the build and fixed before committing:
 - **/about/ CLS 0.095.** The two buttons under the company paragraph fit on one row with the fallback font but wrap once Cairo loads. They now stack below 30em, and CLS is 0 again. (The same shift appeared in one pre-media run, so it was an existing flake this change made reliable.)
 - **Home mobile 84–90.** The phone poster (86 KB) loads next to the hero image; re-encoded at quality 60 (58 KB), which brought LCP back from 2.73 s to 2.40 s.
 
+## 15e. Re-run after client answers batch 2 (2026-09-16)
+
+**What changed** — the equipment strip (idea 6), two gallery swaps, and the client-facing documents.
+Full detail in `docs/MEDIA_PROPOSAL.md` §6.
+
+- **«معداتنا» / "Our Equipment"** on the About page, below "Our Expertise": four photo cards (172, 180, 83, 36) in a
+  scroll-snap row. 8 images, 320 and 640 px wide, WebP + JPEG, all lazy — 6.8–34 KB each.
+- **Gallery:** 172 and 180 moved out into the strip; **95** (face now cleared) and **162** (cropped) took their
+  place, so it holds at 22 items and no photo appears twice on the site.
+- **Photo 162 cropped:** the top 155 px come off to remove the photographer's mark. 165 was not published — its mark
+  cannot be cropped without losing the bridge railing.
+- **Not published: photos 9, 34 and 43.** Face permission was granted, but all three are the October New police
+  district, which the standing police/military exclusion still covers. They became item 36 of `CLIENT_REQUESTS.md`.
+- **Documents:** `CLIENT_REQUESTS.md` 37 → 36 items (social links and the hero image answered; the police question
+  added), `photo-triage.xlsx` gained a "Client clearance (batch 2)" column, and `photo-triage.pdf` stopped asking the
+  settled questions — its last page is now the one open question.
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL = https://elbasha-website.pages.dev); 9 pages, 315 files, 35.5 MiB; 33 unique markers hidden |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 73 markers rendered |
+| Horizontal overflow, 8 pages × 320/360/390/768/1280/1920 px | **0 / 48** — `scrollWidth === clientWidth` everywhere |
+| Equipment row at 390 px | Scrolls inside itself: 4 cards, 251 px each, label visible, nothing clipped. It does not push the page |
+| RTL / LTR | The row uses logical scrolling, so it runs right-to-left in Arabic with no extra rules; verified in both languages |
+| Section rhythm | The strip sits on the sand background between the white "Our Expertise" section and the CTA band, so the alternation is preserved; cards are white to read as cards |
+| Photo review | 95, 162 (cropped), 83 and 36 re-checked at full size. 83 shows both workers from behind; 95 shows one face, cleared by the client; 36's operator is small and turned away. No stamps, no plates, no police sites, no third-party branding |
+
+**Lighthouse — not re-run.** The strip adds 8 lazy images below the fold on one page, none of them the LCP element,
+and no new script, font or stylesheet. The gallery swap is two images in, two out, at the same sizes and quality. The
+§15d numbers stand. Re-measure if the strip ever moves above the fold.
+
+**Tooling note.** `scripts/docs-pdf.mjs` is new: it renders a docs Markdown file to the client-facing A4 PDF with the
+site's own Cairo fonts (`npm run docs:pdf`, which installs `puppeteer-core` on demand the way `npm run media`
+installs sharp). The PDFs stay git-ignored. `media-work/analysis/build_pdf.mjs` also stopped depending on a scratch
+font download, and its masthead now points at `source-assets/images/logo.png` — the `logo-large.png` it used was
+removed in `a7e615c`, so the cover had been rendering without a logo.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.
 
-Since 2026-09-16 it also carries the client's own photos and video: see §15d and `docs/MEDIA_PROPOSAL.md` §5 for what is published and what is still waiting on the client.
+Since 2026-09-16 it also carries the client's own photos and video: see §15d, §15e and `docs/MEDIA_PROPOSAL.md` §5–§6 for what is published and what is still waiting on the client.
 
 **Before launch:**
 - Set `SITE_URL` to the real domain.

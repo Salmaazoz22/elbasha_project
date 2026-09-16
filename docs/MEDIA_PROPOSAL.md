@@ -1,6 +1,6 @@
 # Al-Basha — Media Proposal (client photos & videos, batch 1)
 
-**Date:** 2026-09-15 · **Updated:** 2026-09-16 · **Status:** ideas 1–4 are built (client approval 2026-09-16); ideas 5–7 are still pending. See [§5 Build log](#5-build-log--what-was-built-2026-09-16) for exactly what shipped, what changed against this proposal, and what is still waiting on the client.
+**Date:** 2026-09-15 · **Updated:** 2026-09-16 (client answers batch 2) · **Status:** ideas 1–4 and 6 are built; idea 5 is deferred and idea 7 still waits on the client's project numbers. See [§5 Build log](#5-build-log--what-was-built-2026-09-16) for exactly what shipped, what changed against this proposal, and what is still waiting on the client.
 **Source:** `incoming-photos&videos/` (git-ignored, originals untouched). Working copies are in `media-work/` (git-ignored).
 **Companion files:**
 - [`media-mapping.csv`](media-mapping.csv) — new names ↔ original names, sizes, SHA-256
@@ -289,7 +289,7 @@ Phone (≤ 48em)                 Desktop
 └──────┴──────┴──────┘
 ```
 
-### Idea 6 — Equipment / capabilities strip · **P2** · ⛔ skipped, blocked on a client fact
+### Idea 6 — Equipment / capabilities strip · **P2** · ✅ built (2026-09-16)
 
 **What it needs:**
 
@@ -305,7 +305,24 @@ Phone (≤ 48em)                 Desktop
 
 **What it adds:** a quick visual of capability.
 
-**Blocker:** captions like «معداتنا» (our equipment) would be a **business claim**. We don't know whether the company owns these machines or rents them. This needs `[[NEEDS_CLIENT: are these machines company-owned?]]`, and until then the strip can't be built with ownership wording.
+**Blocker (resolved 2026-09-16):** captions like «معداتنا» (our equipment) are a **business claim**, so the strip
+needed to know whether the company owns these machines or rents them. The client confirmed in answers batch 2 that
+the equipment in the photo and video batch is **company-owned**, which is what allows the «معداتنا» / "Our Equipment"
+wording. Labels still describe only what is in the frame: no counts, no fleet size and no maker's name, even where
+one is legible on the machine.
+
+**What was actually built, and why it differs from the table above:** four photo cards — **172** (grader), **180**
+(grader with the operator in the cab), **83** (wheel loader) and **36** (plate compactor) — in a scroll-snap row on
+the **About** page, below "Our Expertise". The proposal's other sources did not survive a second look:
+
+- **Frames from video-025 and video-039** were dropped. Those masters are **848×478**, and the extracted frames are
+  960×542 upscales — too soft next to a 1280×720 photo. `ffmpeg` is also no longer installed on the build machine,
+  so fresh frames could not be pulled anyway.
+- **126 (bulldozer), 134 (excavator), 120 (dump truck) and 124 (mixer)** were left out: 126 and 134 are already
+  gallery items, 120 is already the material-supply service card, and 124 was dropped during the gallery build for
+  identifiable faces, a "CIFA" logo and a readable plate.
+- **172 and 180 moved out of the gallery** into the strip, so no photo appears twice on the site. The gallery stayed
+  at 22 items because 95 and the cropped 162 took their place.
 
 **Performance cost:** 7 small images (≈20–30 KB each), lazy, in a horizontal scroll-snap row with no JavaScript.
 
@@ -417,11 +434,55 @@ because side by side they fit with the fallback font but wrap once Cairo loads (
 |---|---|---|
 | 1 | Photos on the 23 empty project cards (idea 7) | The client's project numbers in `photo-triage.pdf` |
 | 2 | Filling the `"project"` field of the 22 gallery items | Same answers |
-| 3 | Equipment / capabilities strip (idea 6) | Whether the machines are company-owned or rented |
-| 4 | Clip wall from the short videos (idea 5) | Client decision; also needs face permission for video-031 |
-| 5 | Putting the cut 2.4–5.96 s back into the phone reel | Permission from the worker shown |
-| 6 | The six flagged face items (009, 034, 043, 083, 095, video-031) | Publishing permission |
+| 3 | Clip wall from the short videos (idea 5) | Deferred by the client on 2026-09-16; the sources are 848×478 and `ffmpeg` is no longer installed |
+| 4 | Putting the cut 2.4–5.96 s back into the phone reel | Permission from the worker shown |
+| 5 | Photos 9, 34 and 43 (October New police district) | **New question, item 36 of `CLIENT_REQUESTS.md`.** Face permission was granted but does not cover the site |
+| 6 | Photo 165 | Published only if cropped, and the mark cannot be cropped cleanly — see below |
 | 7 | 154 / 156 / 158 | Only usable cropped; confirm the crops are acceptable |
-| 8 | 162, 165, video-016 | Who owns the watermark / the third-party logo |
-| 9 | A proper About photo (team, fleet or office) | Client; photo 178 is the interim |
-| 10 | Whether photo 120's tipper is the company's own truck | Client |
+| 8 | A proper About photo (team, fleet or office) | Client; photo 178 is the interim |
+| 9 | Whether photo 120's tipper is the company's own truck | Client |
+
+---
+
+## 6. Build log — client answers batch 2 (2026-09-16)
+
+The client answered five things: video-046 and its aerial footage are the company's own; all equipment in the batch
+is company-owned; the six face items are cleared for publishing; 162 and 165 are company work with publishing
+rights (crop the photographer's mark if it can be done cleanly); video-016's "SG" logo is a partner contractor and
+is cleared; and the Facebook and LinkedIn links on the site are correct and complete.
+
+| What shipped | Detail |
+|---|---|
+| Equipment strip (idea 6) | «معداتنا» / "Our Equipment" on the About page: photos 172, 180, 83 and 36 in a scroll-snap row |
+| Gallery additions | **95** (worker bedding hexagonal pavers, face now cleared) and **162** (aerial interchange, cropped) |
+| Gallery removals | **172** and **180** moved into the equipment strip, so the gallery holds at 22 items |
+| Hero | Unchanged. The client confirmed video-046 and its aerial shots are the company's own, so the current stills stay and the request for a replacement hero image was dropped from `CLIENT_REQUESTS.md` |
+
+### Judgement calls, and why
+
+- **Photos 9, 34 and 43 were not published, despite the face permission.** All three were taken at one site: the
+  October New police district. Photo 9 shows the building signed «منطقة شرطة المصانع» and «مأمورية أكتوبر الجديدة»
+  with the Ministry of Interior emblem, a marked "شرطة مصر / EGYPTIAN POLICE" vehicle and a uniformed officer; 34
+  shows the same vehicle and compound; 43 is the same walkway, barrel, worker and officer. The standing exclusion is
+  **police and military sites**, and permission from the workers does not lift it. They are now item 36 of
+  `CLIENT_REQUESTS.md`, which asks whether the authority itself has cleared the work, and for alternative photos of
+  the same curb-and-interlock work at another site.
+- **162 was cropped; 165 was not published.** On 162 the "AT Photography" mark sits in the top band (x 745–862,
+  y 42–142 of the 1600×1200 frame) over distant fields, so the top 155 px come off and the composition is untouched.
+  On 165 the same mark sits mid-right **over the bridge railing**: removing it costs ~12% of the width and the
+  railing sweep with it. The client's own rule was "crop it out if it can be done cleanly, otherwise leave it out".
+- **video-016 was cleared but not used.** The only place a short clip would go is the idea-5 clip wall, which is not
+  built, so it has no home yet. Same for video-031, whose faces are also now cleared.
+- **The triage records observation, not permission.** `faces` and `text` in `photo-triage.xlsx` still say what is
+  actually in each frame; a new **"Client clearance (batch 2)"** column carries the permission, and the client-facing
+  `photo-triage.pdf` simply stops asking the settled questions. Its last page now asks the one open question.
+
+### Checks after this batch
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass |
+| Horizontal overflow, 8 pages × 320/360/390/768/1280/1920 px | ✅ `scrollWidth === clientWidth` everywhere |
+| Equipment row at 390 px | ✅ scrolls inside itself (4 cards, 251 px each); it does not push the page |
+| Lighthouse | Not re-run. See the note in `QA_REPORT.md` §15e |

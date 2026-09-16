@@ -1532,6 +1532,64 @@ bdi {
   color: var(--white);
 }
 
+/* Equipment strip (About): a scroll-snap row on phones, a four-up grid from 48em.
+   Logical scrolling means the row runs right-to-left in Arabic without extra rules. */
+.equipment__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 70%;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0 0 var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+
+.equipment__item {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+}
+
+.equipment__media,
+.equipment__media img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+}
+
+.equipment__media {
+  display: block;
+}
+
+.equipment__label {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+@media (min-width: 36em) {
+  .equipment__row {
+    grid-auto-columns: 40%;
+  }
+}
+
+@media (min-width: 48em) {
+  .equipment__row {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-bottom: 0;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+}
+
 /* ---------- Contact ---------- */
 .contact-layout {
   display: grid;
