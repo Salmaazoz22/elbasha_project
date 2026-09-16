@@ -1,8 +1,9 @@
 // Local preview server for dist/ that behaves like the static host:
 // case-sensitive paths, /dir → /dir/ redirects, 404.html, _headers, _redirects, gzip/brotli, Range requests.
-//   node scripts/serve.mjs [--drafts] [--port 4173] [--no-compress]
+//   node scripts/serve.mjs [--drafts] [--port 4173] [--host 0.0.0.0] [--no-compress]
 import { createServer } from 'node:http';
 import { createReadStream, existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { networkInterfaces } from 'node:os';
 import { extname, join, resolve } from 'node:path';
 import { brotliCompressSync, gzipSync } from 'node:zlib';
 
@@ -10,6 +11,7 @@ const ROOT = resolve(import.meta.dirname, '..');
 const args = process.argv.slice(2);
 const OUT = join(ROOT, args.includes('--drafts') ? 'dist-drafts' : 'dist');
 const PORT = Number(args[args.indexOf('--port') + 1]) || 4173;
+const HOST = args.includes('--host') ? args[args.indexOf('--host') + 1] : '127.0.0.1';
 const COMPRESS = !args.includes('--no-compress');
 
 if (!existsSync(OUT)) {
@@ -128,6 +130,13 @@ createServer((req, res) => {
     return;
   }
   send(req, res, 404, join(OUT, '404.html'));
-}).listen(PORT, '127.0.0.1', () => {
+}).listen(PORT, HOST, () => {
   console.log(`Previewing ${OUT} at http://127.0.0.1:${PORT}/ (compression ${COMPRESS ? 'on' : 'off'})`);
+  if (HOST !== '127.0.0.1') {
+    for (const addresses of Object.values(networkInterfaces())) {
+      for (const address of addresses ?? []) {
+        if (address.family === 'IPv4' && !address.internal) console.log(`  on this network: http://${address.address}:${PORT}/`);
+      }
+    }
+  }
 });

@@ -16,6 +16,7 @@ npm run build           # build dist/ and run all checks (links, headings, image
 npm run preview         # serve dist/ like the host → http://127.0.0.1:4173
 npm run build:drafts    # build dist-drafts/ showing every [[NEEDS_CLIENT: …]] marker for client review
 npm run preview -- --drafts --port 4174
+npm run preview -- --drafts --host 0.0.0.0   # also serve on the LAN, to review on a phone → http://<laptop-ip>:4173 (needs an inbound firewall rule for the port)
 ```
 
 Set `SITE_URL` (see `.env.example`) to generate canonical and hreflang tags, social-preview URLs and `sitemap.xml`:
