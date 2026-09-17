@@ -615,6 +615,34 @@ installs sharp). The PDFs stay git-ignored. `media-work/analysis/build_pdf.mjs` 
 font download, and its masthead now points at `source-assets/images/logo.png` — the `logo-large.png` it used was
 removed in `a7e615c`, so the cover had been rendering without a logo.
 
+## 15f. Re-run after client answers batch 3 (2026-09-17)
+
+**What changed**
+
+- **Founded 2010:** added to the About intro in both languages (`about.intro`) and to `site.brand.foundingDate`,
+  which the Organization JSON-LD emits as `foundingDate`. There is no "years of experience" counter, as the client asked.
+- **Working hours:** «الأحد – الخميس، 10 صباحًا – 5 مساءً» / "Sunday – Thursday, 10:00 AM – 5:00 PM" in
+  `site.contact.hours`. They now show on the Contact page card and, new in this batch, in the footer contact list on every page.
+  `hours.schema` = `Su-Th 10:00-17:00` feeds `openingHours`. Structured data as a whole is still **disabled**
+  (`structuredData.enabled: false`) until the legal name and address arrive, so neither field is in the live HTML yet.
+- **Project 28**, «مصنع الطوب في القطامية بالأسمرات» / "Brick Factory – Katameya (Al-Asmarat)", under Brick Factories:
+  a name-only card with a photo marker. `projects-inventory.xlsx` row 29 was added and its totals updated (28 projects, 24 without a photo).
+  The photo-triage PDF reads its project list from `projects.json`, so it lists #28 too.
+- **Documents:** `CLIENT_REQUESTS.md` 36 → 35 items. The two working-hours items were removed, a photo request for
+  project 28 was added as item 25, and founding year was dropped from the profile item's examples. All items were renumbered.
+  Both PDFs were regenerated. No older PDF copies were left in `docs/`.
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL unset in this run); 9 pages, 314 files, 35.5 MiB; 32 unique markers hidden (−2 hours, +1 project-28 photo) |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 73 markers rendered |
+| Horizontal overflow, Contact/About/Projects × AR/EN × 375/1280 px | 0 / 10 pages overflow |
+| Footer hours line | One line, clock icon aligned, in the screenshots checked (AR at 375 px, EN at 1280 px) |
+| Projects page | 28 cards; #28 renders like the other name-only cards |
+| Console errors | none |
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

@@ -165,6 +165,8 @@ function structuredData(ctx, key) {
     email: c.email,
     address: c.address.en,
     areaServed: c.serviceArea.en,
+    foundingDate: site.brand.foundingDate,
+    openingHours: c.hours.schema,
     sameAs: site.social.map((s) => s.url),
   }).replace(/</g, '\\u003c');
 }

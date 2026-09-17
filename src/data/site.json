@@ -13,7 +13,8 @@
       "ar": "للتوريدات العمومية والمقاولات",
       "en": "General Supplies & Contracting"
     },
-    "legalName": "[[NEEDS_CLIENT: official legal company name in Arabic and English]]"
+    "legalName": "[[NEEDS_CLIENT: official legal company name in Arabic and English]]",
+    "foundingDate": "2010"
   },
   "contact": {
     "primaryPhone": {
@@ -42,8 +43,9 @@
       "en": "All governorates of Egypt"
     },
     "hours": {
-      "ar": "[[NEEDS_CLIENT: working days and hours (Arabic)]]",
-      "en": "[[NEEDS_CLIENT: working days and hours (English)]]"
+      "ar": "الأحد – الخميس، 10 صباحًا – 5 مساءً",
+      "en": "Sunday – Thursday, 10:00 AM – 5:00 PM",
+      "schema": "Su-Th 10:00-17:00"
     }
   },
   "social": [

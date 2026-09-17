@@ -342,6 +342,17 @@
       "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - 15 May City]]",
       "sourceNameEn": "Brick Factory - 15 May City",
       "nameConfirmedByClient": "2026-09-15"
+    },
+    {
+      "n": 28,
+      "category": "brick-factories",
+      "name": {
+        "ar": "مصنع الطوب في القطامية بالأسمرات",
+        "en": "Brick Factory – Katameya (Al-Asmarat)"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - Katameya (Al-Asmarat)]]",
+      "addedByClient": "2026-09-17"
     }
   ]
 }
