@@ -1,5 +1,5 @@
 {
-  "_readme": "Site photo gallery on the projects page. Every item comes from the client's batch 1 (numbers as in docs/photo-triage.xlsx) and is rated A or B, with no camera stamps, no police or military sites and no third-party branding. Faces appear only where the client confirmed publishing permission (client answers batch 2, 2026-09-16). \"alt\" describes what is visible only — never a project name. \"project\" is empty on purpose: it takes the project number from projects-inventory.xlsx once the client confirms which project each photo shows, and only then may the photo also appear on a project card.",
+  "_readme": "Site photo gallery on the projects page. Every item comes from the client's batch 1 (numbers as in docs/photo-triage.xlsx) and is rated A or B, with no camera stamps and no third-party branding. Police or military sites are excluded, except photos 9, 34 and 43 (October New police district): the client confirmed the authority cleared publishing (answers batch 4, 2026-09-17), and they are cropped to keep police signage and the marked vehicles out of frame. Faces appear only where the client confirmed publishing permission (client answers batch 2, 2026-09-16). \"alt\" describes what is visible only — never a project name. \"project\" is empty on purpose: it takes the project number from projects-inventory.xlsx once the client confirms which project each photo shows, and only then may the photo also appear on a project card.",
   "subjects": [
     { "id": "roads", "name": { "ar": "الطرق والتسوية", "en": "Roads & grading" } },
     { "id": "curb", "name": { "ar": "البردورة والإنترلوك", "en": "Curb & interlock" } },
@@ -68,6 +68,33 @@
       "alt": {
         "ar": "لقطة علوية لتقاطع طرق وكوبري منحنٍ بين أراضٍ زراعية",
         "en": "An aerial view of a road junction and a curved bridge among farmland"
+      }
+    },
+    {
+      "n": 43,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "ممر إنترلوك أحمر ورمادي طويل بين بردورتين وطبلية إنترلوك على جانبه",
+        "en": "A long red and grey interlock walkway between two curbs, with a pallet of blocks beside it"
+      }
+    },
+    {
+      "n": 9,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "عمال يرصّون بلوكات الإنترلوك من طبلية بجانب ممر مكتمل",
+        "en": "Workers taking interlock blocks from a pallet beside a finished walkway"
+      }
+    },
+    {
+      "n": 34,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "عامل يركّب بلوكات الإنترلوك عند طرف ممر قيد التنفيذ",
+        "en": "A worker setting interlock blocks at the edge of a walkway under construction"
       }
     },
     {

@@ -1527,6 +1527,150 @@
       }
     ]
   },
+  "gallery-9": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-9-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-9-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-9-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-9-760.jpg"
+      }
+    ]
+  },
+  "gallery-9-full": {
+    "width": 840,
+    "height": 630,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-9-full-760.webp"
+      },
+      {
+        "w": 840,
+        "file": "img/gallery-9-full-840.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-9-full-760.jpg"
+      },
+      {
+        "w": 840,
+        "file": "img/gallery-9-full-840.jpg"
+      }
+    ]
+  },
+  "gallery-34": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-34-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-34-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-34-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-34-760.jpg"
+      }
+    ]
+  },
+  "gallery-34-full": {
+    "width": 1036,
+    "height": 777,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-34-full-760.webp"
+      },
+      {
+        "w": 1036,
+        "file": "img/gallery-34-full-1036.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-34-full-760.jpg"
+      },
+      {
+        "w": 1036,
+        "file": "img/gallery-34-full-1036.jpg"
+      }
+    ]
+  },
+  "gallery-43": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-43-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-43-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-43-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-43-760.jpg"
+      }
+    ]
+  },
+  "gallery-43-full": {
+    "width": 936,
+    "height": 702,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-43-full-760.webp"
+      },
+      {
+        "w": 936,
+        "file": "img/gallery-43-full-936.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-43-full-760.jpg"
+      },
+      {
+        "w": 936,
+        "file": "img/gallery-43-full-936.jpg"
+      }
+    ]
+  },
   "equipment-172": {
     "width": 640,
     "height": 480,

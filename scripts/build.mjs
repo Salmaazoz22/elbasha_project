@@ -145,29 +145,31 @@ writeFileSync(join(OUT, 'site.webmanifest'), JSON.stringify({
   ],
 }, null, 2) + '\n');
 
-// ---------- Structured data (disabled until real data exists) ----------
+// ---------- Structured data (home page; needs SITE_URL for its absolute URLs) ----------
+// The address is left out until the client sends it; everything else it carries is confirmed client data.
 function structuredData(ctx, key) {
-  if (key !== 'home' || !site.structuredData?.enabled) return null;
-  const c = site.contact;
-  const required = [site.brand.legalName, c.address.en, c.serviceArea.en];
-  if (required.some(isMarker) || !SITE_URL) {
-    fail('structuredData.enabled is true but legalName/address/serviceArea are still [[NEEDS_CLIENT]] or SITE_URL is unset.');
+  if (key !== 'home' || !site.structuredData?.enabled || !SITE_URL) return null;
+  const { brand, contact: c } = site;
+  const other = ctx.lang === 'ar' ? 'en' : 'ar';
+  if ([brand.legalName[ctx.lang], c.serviceArea.en].some(isMarker)) {
+    fail('structuredData.enabled is true but legalName/serviceArea are still [[NEEDS_CLIENT]].');
   }
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'GeneralContractor',
-    name: site.brand.legalName,
-    alternateName: [site.brand.name.ar, site.brand.name.en],
-    url: `${SITE_URL}/`,
+    name: brand.name[ctx.lang],
+    legalName: brand.legalName[ctx.lang],
+    alternateName: brand.name[other],
+    url: `${SITE_URL}${PAGES[0].path[ctx.lang]}`,
     logo: `${SITE_URL}/icon-512.png`,
     image: `${SITE_URL}/${images.og.file}`,
     telephone: c.primaryPhone.tel,
     email: c.email,
-    address: c.address.en,
+    address: isMarker(c.address.en) ? undefined : c.address.en,
     areaServed: c.serviceArea.en,
-    foundingDate: site.brand.foundingDate,
+    foundingDate: brand.foundingDate,
     openingHours: c.hours.schema,
-    sameAs: site.social.map((s) => s.url),
+    sameAs: site.social.map((x) => x.url),
   }).replace(/</g, '\\u003c');
 }
 
@@ -175,7 +177,7 @@ function structuredData(ctx, key) {
 const files = walk(OUT);
 const total = files.reduce((n, f) => n + statSync(f).size, 0);
 console.log(`Built ${drafts ? 'DRAFTS' : 'production'} site → ${relative(ROOT, OUT)} (${files.length} files, ${(total / 1048576).toFixed(1)} MiB)`);
-if (!SITE_URL) console.warn('⚠ SITE_URL is not set: canonical, hreflang, og:url/og:image and sitemap.xml were omitted. Set it for production (see .env.example).');
+if (!SITE_URL) console.warn('⚠ SITE_URL is not set: canonical, hreflang, og:url/og:image, JSON-LD and sitemap.xml were omitted. Set it for production (see .env.example).');
 if (report.size) {
   console.log(`${drafts ? 'Shown' : 'Hidden'} blocks awaiting client input (${report.size} unique [[NEEDS_CLIENT]] markers):`);
   for (const m of [...report].sort()) console.log(`  - ${m}`);

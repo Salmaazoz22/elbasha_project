@@ -13,7 +13,11 @@
       "ar": "للتوريدات العمومية والمقاولات",
       "en": "General Supplies & Contracting"
     },
-    "legalName": "[[NEEDS_CLIENT: official legal company name in Arabic and English]]",
+    "legalName": {
+      "ar": "الباشا للتوريدات العمومية والمقاولات",
+      "en": "El Basha for General Supplies & Contracting",
+      "_note": "Confirmed by the client (answers batch 4, 2026-09-17): the legal name is the name already on the site."
+    },
     "foundingDate": "2010"
   },
   "contact": {
@@ -65,8 +69,8 @@
   },
   "domain": null,
   "structuredData": {
-    "_readme": "Keep disabled until legalName, address and serviceArea are real values and SITE_URL is the production domain.",
-    "enabled": false
+    "_readme": "JSON-LD on the home page. Emitted only when SITE_URL is set (production); the address is added automatically once contact.address is a real value.",
+    "enabled": true
   },
   "_domainNote": "No custom domain yet (client, 2026-09-15). The site is deployed on the free *.pages.dev URL; set SITE_URL to that URL. See docs/DEPLOYMENT_GUIDE.md §10 when a domain is added."
 }

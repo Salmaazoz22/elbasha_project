@@ -129,7 +129,6 @@ ${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
     <div class="about-intro__text" data-reveal>
       <h2 class="visually-hidden" id="about-intro-title">${ctx.site.brand.name[lang]}</h2>
       <p class="about-intro__lead">${t.about.intro}</p>
-      ${needs(ctx, t.about.profile, () => html`<p class="about-intro__profile">${t.about.profile}</p>`)}
       <div class="about-intro__actions">
         ${whatsappButton(ctx, { className: 'btn btn--primary' })}
         <a class="btn btn--outline" href="${ctx.url('projects', lang)}">${t.common.viewAllProjects}</a>
@@ -148,7 +147,6 @@ ${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
       ${ctx.services.map((s) => html`<li class="expertise-list__item" data-reveal>
         <span class="expertise-list__icon">${icon(s.icon, { size: 22 })}</span><span>${s.name[lang]}</span></li>`)}
     </ul>
-    ${slot(ctx, t.about.trustMarker)}
   </div>
 </section>
 ${equipmentStrip(ctx)}

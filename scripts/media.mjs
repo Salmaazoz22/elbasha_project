@@ -56,7 +56,8 @@ await responsive('project-october-western-sector', 'الطريق_الغربي_ا
 await responsive('project-wadi-el-natrun', 'وادي_النطرون.jpg', { crop: { left: 0, top: 300, width: 720, height: 540 }, widths: [480, 720] });
 
 // ---------- Client photos, batch 1 (source-assets/images/client-photos, numbers as in docs/photo-triage.xlsx) ----------
-// Only items rated A/B with no faces, stamps, police/military sites or third-party branding (docs/MEDIA_PROPOSAL.md).
+// Only items rated A/B with no faces, stamps, police/military sites or third-party branding (docs/MEDIA_PROPOSAL.md),
+// except where the client has since cleared them (see the gallery notes below).
 // Not attributed to any project until the client confirms which project each photo shows.
 // Service cards, 4:3.
 await responsive('service-road-construction', 'client-photos/photo-177.jpg', { crop: { left: 320, top: 0, width: 960, height: 720 }, widths: [480, 720, 960] });
@@ -88,6 +89,24 @@ for (const n of [178, 184, 169, 12, 142, 136, 1, 101, 102, 45, 38, 108, 66, 32, 
   const crop = { left: 0, top: 155, width: 1600, height: 1045 };
   await responsive('gallery-162', file, { crop, widths: [400, 760], quality: 68, ratio: 4 / 3 });
   await responsive('gallery-162-full', file, { crop, widths: [760, 1280], quality: 72 });
+}
+
+// Photos 9, 34 and 43 are the October New police district. The client confirmed the authority cleared publishing
+// (answers batch 4, 2026-09-17); the crops still keep police signage, emblems and the marked vehicles out of frame.
+// Both armoured vans in the background read "EGYPTIAN POLICE". All three crops are 4:3, so the thumbnail and the
+// lightbox show the same picture.
+//   9: below the station signs, emblems and flags (y < 250) and right of the van's marking (x 397-435); only an
+//      unmarked panel of the van remains. The officer stands among the workers and cannot be cropped without them.
+//  34: below the van (y < 170); the bending worker and the walkway carry the frame.
+//  43: below the van, the officer and the workers (y < 255): the finished walkway on its own.
+for (const [n, crop] of [
+  [9, { left: 440, top: 250, width: 840, height: 630 }],
+  [34, { left: 150, top: 180, width: 1036, height: 777 }],
+  [43, { left: 100, top: 255, width: 936, height: 702 }],
+]) {
+  const file = `client-photos/photo-${String(n).padStart(3, '0')}.jpg`;
+  await responsive(`gallery-${n}`, file, { crop, widths: [400, 760], quality: 68, ratio: 4 / 3 });
+  await responsive(`gallery-${n}-full`, file, { crop, widths: [760, 1280], quality: 72 });
 }
 
 // ---------- Equipment strip (About page): small 4:3 cards in a scroll-snap row, lazy ----------

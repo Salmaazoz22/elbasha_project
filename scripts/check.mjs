@@ -120,6 +120,9 @@ for (const [file, html] of docs) {
   }
 
   if (/lorem ipsum/i.test(html)) err(file, 'contains "lorem ipsum"');
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    try { JSON.parse(m[1]); } catch { err(file, 'JSON-LD does not parse (HTML-escaped?)'); }
+  }
   const markers = (html.match(/\[\[NEEDS_CLIENT/g) || []).length;
   markerCount += markers;
   if (markers && !drafts) err(file, `${markers} [[NEEDS_CLIENT]] marker(s) leaked into the production build`);

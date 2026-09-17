@@ -540,6 +540,6 @@ I will not guess on any of these. Until answered, the implementation will use vi
 
 ---
 
-**Status (2026-09-16):** Phases 4–6 are complete; see `docs/QA_REPORT.md` and `docs/DEPLOYMENT_GUIDE.md`. §15 items 1, 3, 4, 5, 7, 8, 11, 15 and 16 are resolved (9 partly). Still **NEEDS CLIENT INPUT**: 2, 6, 9 (address, profile — hours answered in batch 3), 10, 12, 13, 14, 17 (review of draft descriptions + material types), 18, 19, and the media items 20–23 added after the photo build. The client-ready list is docs/CLIENT_REQUESTS.md (37 items after batch 1); the photo questions are in docs/photo-triage.pdf and docs/MEDIA_PROPOSAL.md §5.
+**Status (2026-09-16):** Phases 4–6 are complete; see `docs/QA_REPORT.md` and `docs/DEPLOYMENT_GUIDE.md`. §15 items 1, 3, 4, 5, 7, 8, 11, 15 and 16 are resolved (9 partly). Still **NEEDS CLIENT INPUT**: 2, 6, 9 (address only — hours answered in batch 3, profile and legal name in batch 4; trust signals deferred by the client), 10, 12, 13, 14, 17 (review of draft descriptions + material types), 18, 19, and the media items 20–23 added after the photo build. The client-ready list is docs/CLIENT_REQUESTS.md (37 items after batch 1); the photo questions are in docs/photo-triage.pdf and docs/MEDIA_PROPOSAL.md §5.
 
 **Media build (2026-09-16):** hero video and stills, photo service cards, section backgrounds, the site gallery and the About photo are live — commits `33afc73`, `8c76cca`, `edd79cd`, `a7e615c`. Item 19 is now only partly open: the hero is still a video still, but at a higher bitrate from the 1080p master.

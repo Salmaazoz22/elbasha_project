@@ -72,17 +72,17 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 
 | # | Item | Why | Where to put it |
 |---|---|---|---|
-| 1 | **Official legal company name** (Arabic and English) | Footer, social previews, structured data | `src/data/site.json` → `brand.legalName` |
+| 1 | ~~Official legal company name~~ | — | ✅ Resolved 2026-09-17: the name already on the site (`site.json` → `brand.legalName`) |
 | 2 | **Address** (Arabic and English) + **Google Maps link** | Contact page and footer; enables structured data | `site.json` → `contact.address`, `contact.mapUrl` |
-| 3 | **Working days and hours** | Contact page | `site.json` → `contact.hours` |
+| 3 | ~~Working days and hours~~ ✅ Resolved 2026-09-17 | Contact page and footer | `site.json` → `contact.hours` |
 | 4 | **Service area** (governorates / regions) | Contact page; structured data | `site.json` → `contact.serviceArea` |
 | 5 | **1–2 sentence description per service** (10 services) | Service cards | `src/data/services.json` → `description` |
 | 6 | **Hero headline:** confirm "تشييد الطرق والكباري / Roads and bridges construction". Does the company build bridges, or paint them? | Home headline (the company name is shown until confirmed) | If confirmed: put the headline in `hero.title` in `src/i18n/ar.json` and `en.json`, and delete the `headlineMarker` line |
 | 7 | **English names to confirm:** projects 1, 2, 5, 6, 18, 24, 27, plus the service "Road Planning" vs "Road Marking" | Published names of public projects | `projects-inventory.xlsx`; then edit `name.en` in `projects.json` / `services.json` and delete that item's `nameToConfirm` line |
 | 8 | **Review of the 14 corrected English names** (already applied) | Client sign-off | `projects-inventory.xlsx`, column "Corrected English name" |
 | 9 | **Permission to publish** the Amr Ibn Al-As Axis photo (timestamp cropped out; people visible) and the October Western Sector photo (workers visible) | Privacy / consent | Reply by email; nothing to edit if approved |
-| 10 | **Company profile** (optional): history, scope, equipment, classification | About page | `src/i18n/ar.json` / `en.json` → `about.profile` (replace the marker with the text; the paragraph appears automatically) |
-| 11 | **Trust information** (optional, only if real): clients/owners with permission, certificates, contractor classification | About page | New content; ask the developer |
+| 10 | ~~Company profile~~ | — | ✅ Resolved 2026-09-17: the client's text replaced `about.intro`; the separate profile slot was removed |
+| 11 | **Trust information** — *deferred by the client (2026-09-17), not pending* (optional, only if real): clients/owners with permission, certificates, contractor classification | About page | New content; ask the developer |
 | 12 | **Canonical social links:** is `facebook.com/share/1b3x72sW7X/` the link to keep? Any Instagram / YouTube / TikTok? | Footer and contact page | `site.json` → `social` |
 | 13 | **Analytics:** wanted or not? Cloudflare Web Analytics is free and cookie-free. | Visitor statistics | Cloudflare dashboard (no code needed) |
 | 14 | ~~Unused originals~~ | — | ✅ Resolved 2026-09-15: moved to the git-ignored `/archive` folder at the repository root (local only; also in git history at tag `original-upload`) |
@@ -373,8 +373,9 @@ curl -sI "https://SITE$(curl -s https://SITE/ | grep -o '/assets/css/main\.[0-9a
 3. Run `npm run video` (both), or `npm run video -- highlight` / `npm run video -- reel` for one. Then run `npm run media` so the hero images pick up new stills. This needs ffmpeg with libvpx-vp9, libx264 and libwebp; set `FFMPEG` to its path if it isn't on your PATH.
 4. Keep each output **under 25 MiB** (Cloudflare's limit) and ideally **5–8 MB**. The build check fails if a file is over 25 MiB.
 
-### Turning on structured data (after the client provides the data)
-- Fill in `brand.legalName`, `contact.address` and `contact.serviceArea` in `site.json`, and set `SITE_URL` to the real domain.
-- Then set `"structuredData": { "enabled": true }`.
-- The build refuses to enable it while any of those fields are still markers.
-- Validate afterwards with Google's [Rich Results Test](https://search.google.com/test/rich-results).
+### Structured data
+- On since 2026-09-17 (`"structuredData": { "enabled": true }`): a `GeneralContractor` JSON-LD block on both home pages.
+- It is emitted only when `SITE_URL` is set, so preview builds carry none.
+- `contact.address` is added automatically once it is a real value; until then the block has no address.
+- The build refuses to run while `brand.legalName` or `contact.serviceArea` is a marker, and `check.mjs` fails if a JSON-LD block does not parse.
+- Validate after each deploy with Google's [Rich Results Test](https://search.google.com/test/rich-results).

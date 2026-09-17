@@ -643,6 +643,51 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 | Projects page | 28 cards; #28 renders like the other name-only cards |
 | Console errors | none |
 
+## 15g. Re-run after client answers batch 4 (2026-09-17)
+
+**What changed**
+
+- **Legal name** = the name already on the site. `brand.legalName` is now `{ar, en}`. It is used in the footer copyright
+  line and in the JSON-LD `legalName`; `og:site_name` already shows the same string.
+- **Structured data is on.** A `GeneralContractor` block on both home pages carries name, legalName, alternateName,
+  a URL for each language, logo, image, phone, email, areaServed, foundingDate, openingHours and sameAs. It has no address until the client sends one.
+  It is emitted only when `SITE_URL` is set. **Latent bug fixed:** the layout HTML-escaped the JSON (`&quot;`), so the block would never have
+  parsed; it is now emitted with `raw()` (`<` is already escaped to `<`). `check.mjs` now fails on any JSON-LD that does not parse.
+  The new check was tested against a deliberately escaped copy, and it failed as expected.
+- **About intro** replaced with the client's text in both languages. The separate `about.profile` slot, its marker and
+  its CSS are gone. There was no draft flag on the intro to remove (the `draft: true` flags belong to the service descriptions,
+  which are still awaiting review).
+- **Trust signals** deferred by the client: the drafts slot and `about.trustMarker` were removed. `CLIENT_REQUESTS.md` lists
+  them under «بنود مؤجلة», outside the numbered items.
+- **Photos 9, 34, 43** (October New police district, authority clearance confirmed by the client) were added to the gallery
+  as the first three curb and interlock items. All three crops are 4:3. A zoom showed that the armoured vans in the background of all
+  three read **"EGYPTIAN POLICE"**; the first crops had kept them in frame, so they were redone:
+  - 9: 840×630 from (440, 250). The station signs, emblems, flags and the van's marking are out; an unmarked panel of the van and the
+    officer standing among the workers remain, since removing him would cut the workers.
+  - 34: 1036×777 from (150, 180). The van, the green vehicle and the door emblem are out.
+  - 43: 936×702 from (100, 255). The officer, the van and the workers are out, leaving the finished walkway.
+  Gallery: 25 items (curb 12).
+- **Logo:** `logo.pdf` is **not vector**. It is a Photoshop-exported PDF whose page is one 1299×945 CMYK JPEG plus a 102×21
+  "CamScanner" stamp image. It has no path operators and no Illustrator private data. The current logo was kept, and the request stays open
+  (asking for the designer's SVG/AI/EPS).
+- **Documents:** `CLIENT_REQUESTS.md` 35 → 31 items (profile, legal name and police photos answered; trust signals deferred;
+  logo item reworded). `photo-triage.pdf` lost its police-question page (18 pages), and `photo-triage.xlsx` records the clearance.
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL = https://elbasha.pages.dev); 9 pages, 339 files, 36.7 MiB; 30 unique markers hidden |
+| JSON-LD | Parses on `/` and `/en/`; `url` is `/` and `/en/` respectively; absent on inner pages and without SITE_URL |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 69 markers rendered |
+| Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
+| Gallery lightbox, curb filter, AR + EN | Items 1–3 are photos 43, 9 and 34, with correct captions ("1 of 12" … "3 of 12"); no police markings visible |
+| About intro | Reads cleanly at 375 px (AR) and 1280 px (EN); no layout change beyond the longer paragraph |
+| Console errors / failed requests | none |
+| `npm run media` | Deterministic: only the 24 new gallery files changed |
+
+**Lighthouse — not re-run.** The change adds 3 lazy gallery images below the fold and one JSON-LD block of about 0.6 KB on the home pages.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

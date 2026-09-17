@@ -96,14 +96,12 @@
   },
   "about": {
     "title": "About Us",
-    "intro": "Founded in 2010, El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects. We are committed to delivering quality and excellence in every project we handle.",
+    "intro": "Founded in 2010, El Basha for General Supplies & Contracting delivers road and infrastructure works, bridges and axes, development and maintenance projects, and brick factory construction, alongside the supply of construction materials. The company operates its own fleet of heavy equipment and executes projects across all governorates of Egypt.",
     "expertiseTitle": "Our Expertise",
     "equipmentTitle": "Our Equipment",
     "equipmentLead": "Machines at work on our sites. The photos are from the sites themselves, and each label describes only what is visible in the frame.",
-    "profile": "[[NEEDS_CLIENT: company profile – 2-4 sentences (history, scope, equipment, classification) only if the company wants them published]]",
     "photoMarker": "[[NEEDS_CLIENT: about photo – team on site, equipment fleet or office, 3:2, min 1600×1067. A site photo is shown in the meantime]]",
-    "photoAlt": "A motor grader levelling the road bed with a surveyor standing to one side",
-    "trustMarker": "[[NEEDS_CLIENT: trust signals – clients/owners (with permission), certificates, contractor classification. Leave empty if none.]]"
+    "photoAlt": "A motor grader levelling the road bed with a surveyor standing to one side"
   },
   "contact": {
     "title": "Contact Us",

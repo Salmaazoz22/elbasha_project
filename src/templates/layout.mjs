@@ -1,5 +1,5 @@
 // Document shell: <head> metadata, header, footer and mobile contact bar.
-import { email, html, icon, ltr, needs, phone } from './lib.mjs';
+import { email, html, icon, ltr, needs, phone, raw } from './lib.mjs';
 import { whatsappButton } from './components.mjs';
 
 const NAV = [
@@ -55,7 +55,7 @@ function head(ctx, page) {
   <noscript><link rel="stylesheet" href="${ctx.asset('css/nojs.css')}"></noscript>
   <script src="${ctx.asset('js/main.js')}" defer></script>
   ${page.scripts?.map((s) => html`<script src="${ctx.asset(s)}" defer></script>`)}
-  ${page.structuredData ? html`<script type="application/ld+json">${page.structuredData}</script>` : ''}
+  ${page.structuredData ? html`<script type="application/ld+json">${raw(page.structuredData)}</script>` : ''}
 </head>`;
 }
 
@@ -139,7 +139,7 @@ function footer(ctx) {
   </div>
   <div class="site-footer__bottom">
     <div class="container">
-      <p>© <span data-year>${ctx.year}</span> ${site.brand.name[lang]}. ${t.footer.rights}</p>
+      <p>© <span data-year>${ctx.year}</span> ${site.brand.legalName[lang]}. ${t.footer.rights}</p>
     </div>
   </div>
 </footer>`;
