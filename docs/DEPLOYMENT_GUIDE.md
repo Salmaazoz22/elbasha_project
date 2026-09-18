@@ -2,6 +2,8 @@
 
 **Phase:** 6 · **Date:** 2026-09-15 · **Hosting:** Cloudflare Pages (free plan) · **Form:** Formspree (free plan)
 
+**Live site:** <https://elbasha-contracting.com> (custom domain since 2026-09-19). The Pages project address `https://elbasha-contracting.pages.dev` still serves the same build.
+
 **Code and docs:**
 - Code is on branch `improve/production-ready` (not pushed yet).
 - Quality results: [`QA_REPORT.md`](QA_REPORT.md).
@@ -27,10 +29,11 @@
 
 ### Do before or at launch
 - [ ] Push the branch and merge it into `main` (§8, step 1).
-- [ ] Create the Cloudflare Pages project and set `SITE_URL` (§8).
+- [x] Create the Cloudflare Pages project and set `SITE_URL` (§8). Live on `elbasha-contracting.pages.dev` since 2026-09-18.
 - [ ] Verify the recipient email in the Formspree dashboard, then send **one real test message** (§11).
 - [ ] Run the post-deploy checks in §11 on a real iPhone and a real Android phone.
-- [ ] **No custom domain for now** (client, 2026-09-15): launch on the free `*.pages.dev` URL with `SITE_URL` set to that URL. When a domain is added later, follow §10.
+- [x] **Custom domain `elbasha-contracting.com`** connected on 2026-09-19 and `SITE_URL` switched to it (§10, "Current setup"). The client launched on `*.pages.dev` first, as decided on 2026-09-15.
+- [ ] (Optional) Redirect `elbasha-contracting.pages.dev` → `https://elbasha-contracting.com` with a Bulk Redirect, and add `www` (§10, "After the domain is active", step 5).
 
 ### Waiting on the company
 The site works without these items; any missing ones are simply hidden. Details are in §3–§6:
@@ -121,7 +124,9 @@ This is the Images Needed table from `AUDIT_REPORT.md` §7.2, with the current s
 
 ## 6. What domain information I need
 
-> **Decision 2026-09-15:** no custom domain for now. The site launches on the free `*.pages.dev` address. The questions below apply when the client adds a domain later.
+> **Decision 2026-09-15:** no custom domain for now. The site launches on the free `*.pages.dev` address.
+>
+> **Update 2026-09-19:** the client bought `elbasha-contracting.com`. Its DNS is on Cloudflare, and the site is served from the root domain (§10, "Current setup"). The questions below are answered.
 
 - The **domain name**, if one is already owned, e.g. `elbasha-eg.com`. Or approval to launch on the free `*.pages.dev` address first.
 - **Where the domain is registered**, and who can log in to change DNS or nameservers.
@@ -183,7 +188,7 @@ Then on GitHub, open a pull request from `improve/production-ready` into `main`,
 
 | Field | Value |
 |---|---|
-| Project name | `elbasha-contracting`, which is live at **`https://elbasha-contracting.pages.dev`** (2026-09-18). `elbasha` / `elbasha.pages.dev` belongs to an unrelated business on another account, so never point anything at it. |
+| Project name | `elbasha-contracting`, which went live at **`https://elbasha-contracting.pages.dev`** (2026-09-18) and has the custom domain **`https://elbasha-contracting.com`** (2026-09-19). `elbasha` / `elbasha.pages.dev` belongs to an unrelated business on another account, so never point anything at it. |
 | Production branch | `main` |
 | Framework preset | **None** |
 | Build command | `npm run build` |
@@ -196,7 +201,7 @@ Open **Environment variables (advanced)** and add, for **Production**:
 
 | Name | Value | Purpose |
 |---|---|---|
-| `SITE_URL` | `https://elbasha-contracting.pages.dev` (the project URL, **no trailing slash**) | Absolute URLs for canonical, hreflang, Open Graph, `sitemap.xml` and `robots.txt` |
+| `SITE_URL` | `https://elbasha-contracting.com` (**no trailing slash**). It was `https://elbasha-contracting.pages.dev` until the custom domain was added on 2026-09-19. | Absolute URLs for canonical, hreflang, Open Graph, `sitemap.xml` and `robots.txt` |
 
 - **Node version:** nothing to set. The repository's `.node-version` file (`24`) selects Node 24 automatically; Cloudflare's default would be 22.16, which also works.
 - **Preview deployments:** leave `SITE_URL` unset. The build then skips canonical and sitemap tags, and Cloudflare adds `noindex` to previews anyway.
@@ -241,7 +246,18 @@ There are **no secret values**. `.env` files are git-ignored, and `.env.example`
 
 ## 10. Connecting a custom domain (DNS and SSL)
 
-> Not needed at launch (no domain yet, 2026-09-15). Kept for when the client registers or provides a domain.
+### Current setup (2026-09-19)
+
+| Item | Value |
+|---|---|
+| Domain | `elbasha-contracting.com`, root domain (Option A). DNS on Cloudflare (nameservers `brenda` / `rene.ns.cloudflare.com`). |
+| DNS record | CNAME `elbasha-contracting.com` → `elbasha-contracting.pages.dev`, created by Pages → **Custom domains** |
+| SSL | Issued automatically by Cloudflare |
+| `SITE_URL` (Production) | `https://elbasha-contracting.com` |
+| `www.elbasha-contracting.com` | Not set up yet (optional, see step 5 below) |
+| `elbasha-contracting.pages.dev` | Still serves the site; its canonical tags point to the `.com` |
+
+The steps below are the general procedure. They are kept for a second domain or a move.
 
 > **Order matters.** Always add the domain in the **Pages dashboard first**, then create DNS records. A CNAME that points at Pages before the domain is attached there fails with **error 522** (Cloudflare docs).
 
@@ -269,16 +285,23 @@ Cloudflare requires the root domain's DNS to be managed by Cloudflare.
 ### After the domain is active
 1. **Update `SITE_URL`:** Pages → **Settings** → **Variables and Secrets** → set it to `https://example.com`.
 2. **Rebuild:** **Deployments** → latest production deployment → **⋯** → **Retry deployment**. A variable change only takes effect after a new build.
+   - If the dashboard shows no **Retry deployment** option, push any commit to `main`. That starts a fresh production build, which reads the new value. This is how the switch to `.com` was deployed on 2026-09-19.
 3. **Check** that `https://example.com/robots.txt` and `/sitemap.xml` now show the new domain.
 4. **Tell Google:** add the domain in [Google Search Console](https://search.google.com/search-console) (verification via DNS TXT is easy on Cloudflare) and **submit `https://example.com/sitemap.xml`**.
-5. **The `*.pages.dev` address keeps working.** Every page's canonical tag points to the domain, so search engines index the domain. Optionally, redirect `pages.dev` to the domain with a Cloudflare **Bulk Redirect**.
-6. Optionally, record the domain in `src/data/site.json` → `domain`. It's informational only.
+5. **The `*.pages.dev` address keeps working.** Every page's canonical tag points to the domain, so search engines index the domain. Optionally, redirect `pages.dev` to the domain with a Cloudflare **Bulk Redirect**. `_redirects` can't do this, because it only matches paths, not hostnames.
+   1. **Account Home** → **Bulk Redirects** → **Create Bulk Redirect List**. Name it (e.g. `pagesdev-to-com`) → **Next** → **Manually add URL redirects**.
+   2. Source URL `elbasha-contracting.pages.dev`, target URL `https://elbasha-contracting.com`, status **301**.
+   3. **Edit parameters:** tick **Preserve query string**, **Subpath matching** and **Preserve path suffix**. Leave **Include subdomains** unticked, so preview deployments (`<hash>.elbasha-contracting.pages.dev`) keep working.
+   4. **Next** → **Save and Deploy**. Then create the **Bulk Redirect Rule** for that list → **Save and Deploy**.
+   5. For `www`, add `www.elbasha-contracting.com` in Pages → **Custom domains**. Then add a second entry to the same list: `www.elbasha-contracting.com` → `https://elbasha-contracting.com`, with the same parameters.
+   6. Check: `curl -sI https://elbasha-contracting.pages.dev/about/ | grep -iE "^HTTP|^location"` should show `301` and `location: https://elbasha-contracting.com/about/`.
+6. Optionally, record the domain in `src/data/site.json` → `domain`. It's informational only. It is set to `elbasha-contracting.com`.
 
 ---
 
 ## 11. How to verify the deployed website
 
-Replace `https://SITE` with your live address.
+Replace `https://SITE` with your live address: `https://elbasha-contracting.com`.
 
 ### A. Pages and redirects (2 minutes)
 

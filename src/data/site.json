@@ -80,10 +80,10 @@
   "form": {
     "endpoint": "https://formspree.io/f/mjkeplye"
   },
-  "domain": null,
+  "domain": "elbasha-contracting.com",
   "structuredData": {
     "_readme": "JSON-LD on the home page. Emitted only when SITE_URL is set (production). The address is a PostalAddress built from contact.address.postal in the page language.",
     "enabled": true
   },
-  "_domainNote": "No custom domain yet (client, 2026-09-15). The site is deployed on the free *.pages.dev URL; set SITE_URL to that URL. See docs/DEPLOYMENT_GUIDE.md §10 when a domain is added."
+  "_domainNote": "Custom domain elbasha-contracting.com since 2026-09-19 (the site launched on elbasha-contracting.pages.dev first). Informational only: the build reads the origin from the SITE_URL environment variable (https://elbasha-contracting.com in Cloudflare Pages). See docs/DEPLOYMENT_GUIDE.md §10."
 }
