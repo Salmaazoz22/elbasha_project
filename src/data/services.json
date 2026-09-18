@@ -10,8 +10,7 @@
       },
       "description": {
         "ar": "تنفيذ أعمال الطرق من التمهيد والتسوية وطبقات الأساس حتى الرصف الأسفلتي، وفق المواصفات الفنية المعتمدة.",
-        "en": "Full road works from grading and base layers to asphalt paving, executed to approved technical specifications.",
-        "draft": true
+        "en": "Full road works from grading and base layers to asphalt paving, executed to approved technical specifications."
       },
       "image": "service-road-construction",
       "imageAlt": {
@@ -28,8 +27,7 @@
       },
       "description": {
         "ar": "توريد مواد البناء والطرق اللازمة لمواقع التنفيذ في مواعيدها وبالكميات المطلوبة.",
-        "en": "Supplying construction and road-building materials to project sites on schedule and in the required quantities.",
-        "draft": true
+        "en": "Supplying construction and road-building materials to project sites on schedule and in the required quantities."
       },
       "image": "service-material-supply",
       "imageAlt": {
@@ -46,8 +44,7 @@
       },
       "description": {
         "ar": "تنفيذ أعمال البنية التحتية المصاحبة للطرق، مثل شبكات تصريف المياه والحفر والردم والأعمال الخرسانية.",
-        "en": "Infrastructure works accompanying roads, including drainage networks, excavation and backfilling, and concrete works.",
-        "draft": true
+        "en": "Infrastructure works accompanying roads, including drainage networks, excavation and backfilling, and concrete works."
       }
     },
     {
@@ -59,8 +56,7 @@
       },
       "description": {
         "ar": "تنفيذ الأعمال الإنشائية والمدنية لمصانع الطوب، من الأساسات حتى التشطيب.",
-        "en": "Civil and structural works for brick factories, from foundations through to finishing.",
-        "draft": true
+        "en": "Civil and structural works for brick factories, from foundations through to finishing."
       }
     },
     {
@@ -72,8 +68,7 @@
       },
       "description": {
         "ar": "تنفيذ علامات الطرق الأرضية وخطوط عبور المشاة وفق الاشتراطات المرورية.",
-        "en": "Road surface markings and pedestrian crossings in line with traffic regulations.",
-        "draft": true
+        "en": "Road surface markings and pedestrian crossings in line with traffic regulations."
       },
       "sourceNameEn": "Road Planning & Pedestrian Crossings"
     },
@@ -86,8 +81,7 @@
       },
       "description": {
         "ar": "توريد وتركيب اللافتات المرورية الإرشادية والتحذيرية على الطرق والمحاور.",
-        "en": "Supply and installation of directional and warning traffic signs on roads and corridors.",
-        "draft": true
+        "en": "Supply and installation of directional and warning traffic signs on roads and corridors."
       }
     },
     {
@@ -99,8 +93,7 @@
       },
       "description": {
         "ar": "تنفيذ الأعمال الإنشائية والخرسانية للمباني بمختلف أنواعها.",
-        "en": "Structural and concrete works for buildings of all types.",
-        "draft": true
+        "en": "Structural and concrete works for buildings of all types."
       }
     },
     {
@@ -112,8 +105,7 @@
       },
       "description": {
         "ar": "توريد وتركيب البردورات وبلاط الإنترلوك للأرصفة والممرات والساحات.",
-        "en": "Supply and installation of curbstones and interlock paving for sidewalks, walkways and open areas.",
-        "draft": true
+        "en": "Supply and installation of curbstones and interlock paving for sidewalks, walkways and open areas."
       },
       "image": "service-curbstone-interlock",
       "imageAlt": {
@@ -130,8 +122,7 @@
       },
       "description": {
         "ar": "تنفيذ الميول الخرسانية للطرق وتوريد وتركيب حواجز النيوجيرسي الخرسانية.",
-        "en": "Concrete slope works for roads, plus supply and installation of New Jersey concrete barriers.",
-        "draft": true
+        "en": "Concrete slope works for roads, plus supply and installation of New Jersey concrete barriers."
       },
       "image": "service-slopes-barriers",
       "imageAlt": {
@@ -148,8 +139,7 @@
       },
       "description": {
         "ar": "تنفيذ أعمال الدهانات الواقية والتحذيرية للكباري وحواجز النيوجيرسي.",
-        "en": "Protective and warning paint works for bridges and New Jersey barriers.",
-        "draft": true
+        "en": "Protective and warning paint works for bridges and New Jersey barriers."
       }
     }
   ]

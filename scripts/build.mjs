@@ -146,7 +146,7 @@ writeFileSync(join(OUT, 'site.webmanifest'), JSON.stringify({
 }, null, 2) + '\n');
 
 // ---------- Structured data (home page; needs SITE_URL for its absolute URLs) ----------
-// The address is left out until the client sends it; everything else it carries is confirmed client data.
+// Everything it carries is confirmed client data; the address is omitted while contact.address is still a marker.
 function structuredData(ctx, key) {
   if (key !== 'home' || !site.structuredData?.enabled || !SITE_URL) return null;
   const { brand, contact: c } = site;
@@ -165,7 +165,12 @@ function structuredData(ctx, key) {
     image: `${SITE_URL}/${images.og.file}`,
     telephone: c.primaryPhone.tel,
     email: c.email,
-    address: isMarker(c.address.en) ? undefined : c.address.en,
+    address: isMarker(c.address.en) ? undefined : {
+      '@type': 'PostalAddress',
+      streetAddress: c.address.postal.streetAddress[ctx.lang],
+      addressLocality: c.address.postal.addressLocality[ctx.lang],
+      addressCountry: c.address.postal.addressCountry,
+    },
     areaServed: c.serviceArea.en,
     foundingDate: brand.foundingDate,
     openingHours: c.hours.schema,

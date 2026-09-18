@@ -35,11 +35,11 @@
 ### Waiting on the company
 The site works without these items; any missing ones are simply hidden. Details are in §3–§6:
 - [ ] Photos for the 23 projects that have none
-- [ ] Review of the 10 draft service descriptions (already on the site, flagged `"draft": true`) and the list of material types
-- [ ] Written address and working hours (service area and map link are done)
+- [x] ~~Review of the 10 draft service descriptions~~ approved as written (client batch 5, 2026-09-18)
+- [x] ~~Written address and working hours~~ (hours: batch 3; address: batch 5, 2026-09-18)
 - [ ] About page: profile, photo, trust information (optional)
 - [ ] Legal company name, social links confirmation, SVG logo, high-resolution hero photo
-- [ ] Permission to publish two photos that show people
+- [x] ~~Permission to publish two photos that show people~~ granted (client batch 5, 2026-09-18)
 
 **Answered in client batch 1 (2026-09-15) and applied:** hero headline (company name), "Road Marking & Pedestrian Crossings", 7 English project names, service area, Google Maps link, no custom domain for now, unused originals archived.
 
@@ -73,14 +73,14 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 | # | Item | Why | Where to put it |
 |---|---|---|---|
 | 1 | ~~Official legal company name~~ | — | ✅ Resolved 2026-09-17: the name already on the site (`site.json` → `brand.legalName`) |
-| 2 | **Address** (Arabic and English) + **Google Maps link** | Contact page and footer; enables structured data | `site.json` → `contact.address`, `contact.mapUrl` |
+| 2 | ~~Address + Google Maps link~~ | — | ✅ Resolved 2026-09-18: `site.json` → `contact.address` (`ar`, `en`, and `postal` for the JSON-LD `PostalAddress`); map link since batch 1 |
 | 3 | ~~Working days and hours~~ ✅ Resolved 2026-09-17 | Contact page and footer | `site.json` → `contact.hours` |
 | 4 | **Service area** (governorates / regions) | Contact page; structured data | `site.json` → `contact.serviceArea` |
-| 5 | **1–2 sentence description per service** (10 services) | Service cards | `src/data/services.json` → `description` |
+| 5 | ~~1–2 sentence description per service~~ | — | ✅ Resolved 2026-09-18: the 10 drafts approved as written; `draft` flags removed from `services.json` |
 | 6 | **Hero headline:** confirm "تشييد الطرق والكباري / Roads and bridges construction". Does the company build bridges, or paint them? | Home headline (the company name is shown until confirmed) | If confirmed: put the headline in `hero.title` in `src/i18n/ar.json` and `en.json`, and delete the `headlineMarker` line |
 | 7 | **English names to confirm:** projects 1, 2, 5, 6, 18, 24, 27, plus the service "Road Planning" vs "Road Marking" | Published names of public projects | `projects-inventory.xlsx`; then edit `name.en` in `projects.json` / `services.json` and delete that item's `nameToConfirm` line |
 | 8 | **Review of the 14 corrected English names** (already applied) | Client sign-off | `projects-inventory.xlsx`, column "Corrected English name" |
-| 9 | **Permission to publish** the Amr Ibn Al-As Axis photo (timestamp cropped out; people visible) and the October Western Sector photo (workers visible) | Privacy / consent | Reply by email; nothing to edit if approved |
+| 9 | ~~Permission to publish the Amr Ibn Al-As Axis and October Western Sector photos~~ | — | ✅ Resolved 2026-09-18: granted; the `photoNote` markers were removed from `projects.json` |
 | 10 | ~~Company profile~~ | — | ✅ Resolved 2026-09-17: the client's text replaced `about.intro`; the separate profile slot was removed |
 | 11 | **Trust information** — *deferred by the client (2026-09-17), not pending* (optional, only if real): clients/owners with permission, certificates, contractor classification | About page | New content; ask the developer |
 | 12 | **Canonical social links:** is `facebook.com/share/1b3x72sW7X/` the link to keep? Any Instagram / YouTube / TikTok? | Footer and contact page | `site.json` → `social` |

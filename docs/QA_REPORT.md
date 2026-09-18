@@ -688,6 +688,39 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 
 **Lighthouse — not re-run.** The change adds 3 lazy gallery images below the fold and one JSON-LD block of about 0.6 KB on the home pages.
 
+## 15h. Re-run after client answers batch 5 (2026-09-18)
+
+**What changed**
+
+- **Written address**, Arabic and English, in `site.json` → `contact.address`. It is shown on the Contact card above the map
+  link and in the footer on every page. In the footer the map link now sits directly under the address, with an external-link
+  icon instead of a second pin. The footer contact rows are top-aligned, so the pin stays on the first line when the address wraps
+  (three lines in Arabic at 1280 px).
+- **JSON-LD address** is a `PostalAddress` in the page language: `streetAddress` = floor, building, landmark, district
+  (everything before the city), `addressLocality` = القاهرة / Cairo, `addressCountry` = `EG`. The source is `contact.address.postal`.
+- **Service descriptions:** all 10 approved as written. The `draft: true` flags are removed, and the build no longer lists them.
+- **Photo permission** for the Amr Ibn Al-As Axis and October Western Sector project photos is granted, so both `photoNote` markers were removed.
+  Neither photo was in client batch 1, so `photo-triage.xlsx` is unchanged.
+- **`scripts/docs-pdf.mjs` fix:** the page was loaded with `setContent()` (`about:blank`), which cannot load the `file://` Cairo
+  fonts, so every `CLIENT_REQUESTS.pdf` since batch 2 was set in Segoe UI. It now renders from a temporary HTML file, and the PDF embeds Cairo.
+- **Documents:** `CLIENT_REQUESTS.md` 31 → 26 items (items 1, 26–27 and 29–30 answered; renumbered 1–26; the logo item is marked optional).
+  It now also points to `photo-triage.pdf` for the project numbers of photos already sent. Both client PDFs were regenerated
+  (CLIENT_REQUESTS 4 pages, photo-triage 18 pages).
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL = https://elbasha.pages.dev); 9 pages, 339 files, 36.7 MiB; 26 unique markers hidden (was 30) |
+| `npm run build` without SITE_URL | ✅ pass; no JSON-LD emitted |
+| JSON-LD | Parses on `/` and `/en/`; `address` is a PostalAddress in Arabic and in English respectively |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 50 markers rendered (was 69) |
+| Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
+| Contact card + footer address, AR/EN × 375/1280 px | Wraps cleanly; icon on the first line; map link directly below; tap targets on the links still 44 px |
+| Console errors / failed requests | none |
+
+**Lighthouse — not re-run.** The change adds one short text line per page and a few hundred bytes of JSON-LD on the home pages.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

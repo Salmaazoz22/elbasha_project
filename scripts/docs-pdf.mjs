@@ -3,7 +3,8 @@
 // The PDFs themselves are git-ignored: they are generated from the Markdown and sent by WhatsApp or email.
 //   node scripts/docs-pdf.mjs [docs/CLIENT_REQUESTS.md ...]
 import puppeteer from 'puppeteer-core';
-import { existsSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { basename, join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -99,6 +100,9 @@ td:first-child{text-align:center;font-weight:700;color:#184098;white-space:nowra
 bdi{direction:ltr;unicode-bidi:isolate}
 `;
 
+// The page is loaded from a file:// URL, not with setContent(): an about:blank page may not load the
+// file:// fonts, and Chrome silently fell back to Segoe UI.
+const TMP = mkdtempSync(join(tmpdir(), 'docs-pdf-'));
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ['--allow-file-access-from-files', '--disable-gpu'] });
 try {
   for (const rel of docs) {
@@ -108,7 +112,9 @@ try {
     const html = `<!DOCTYPE html><html lang="${rtl ? 'ar' : 'en'}" dir="${rtl ? 'rtl' : 'ltr'}"><head><meta charset="utf-8">
 <title>${esc(basename(rel, '.md'))}</title><style>${CSS}</style></head><body>${render(md)}</body></html>`;
     const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: 'load', timeout: 120000 });
+    const htmlPath = join(TMP, `${basename(rel, '.md')}.html`);
+    writeFileSync(htmlPath, html);
+    await page.goto(pathToFileURL(htmlPath).href, { waitUntil: 'load', timeout: 120000 });
     await page.evaluate(() => document.fonts.ready);
     const out = join(ROOT, rel.replace(/\.md$/, '.pdf'));
     await page.pdf({
@@ -121,4 +127,5 @@ try {
   }
 } finally {
   await browser.close();
+  rmSync(TMP, { recursive: true, force: true });
 }

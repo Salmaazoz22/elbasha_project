@@ -38,8 +38,20 @@
     ],
     "email": "elbasha.constructions@gmail.com",
     "address": {
-      "ar": "[[NEEDS_CLIENT: company address in Arabic]]",
-      "en": "[[NEEDS_CLIENT: company address in English]]"
+      "ar": "الدور الرابع، عمارة رقم 10062، فوق البنك الأهلي، مدينة المعراج، زهراء المعادي، القاهرة",
+      "en": "4th Floor, Building 10062, above National Bank of Egypt, Al-Meraj City, Zahraa El Maadi, Cairo",
+      "postal": {
+        "streetAddress": {
+          "ar": "الدور الرابع، عمارة رقم 10062، فوق البنك الأهلي، مدينة المعراج، زهراء المعادي",
+          "en": "4th Floor, Building 10062, above National Bank of Egypt, Al-Meraj City, Zahraa El Maadi"
+        },
+        "addressLocality": {
+          "ar": "القاهرة",
+          "en": "Cairo"
+        },
+        "addressCountry": "EG"
+      },
+      "_note": "Sent by the client (answers batch 5, 2026-09-18). ar/en are shown on the Contact card and in the footer; postal feeds the JSON-LD PostalAddress."
     },
     "mapUrl": "https://www.google.com/maps?q=29.9739548,31.315296&z=17&hl=en",
     "serviceArea": {
@@ -69,7 +81,7 @@
   },
   "domain": null,
   "structuredData": {
-    "_readme": "JSON-LD on the home page. Emitted only when SITE_URL is set (production); the address is added automatically once contact.address is a real value.",
+    "_readme": "JSON-LD on the home page. Emitted only when SITE_URL is set (production). The address is a PostalAddress built from contact.address.postal in the page language.",
     "enabled": true
   },
   "_domainNote": "No custom domain yet (client, 2026-09-15). The site is deployed on the free *.pages.dev URL; set SITE_URL to that URL. See docs/DEPLOYMENT_GUIDE.md §10 when a domain is added."

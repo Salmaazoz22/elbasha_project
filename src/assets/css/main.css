@@ -1970,8 +1970,15 @@ textarea.field__input {
 
 .site-footer__contact li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-2);
+}
+
+/* Plain-text rows (address, hours) can wrap: keep the icon on the first line. */
+.site-footer__contact li > .icon {
+  flex-shrink: 0;
+  margin-block-start: 0.25rem;
+  margin-block-start: calc((1lh - 18px) / 2);
 }
 
 .site-footer .icon {
