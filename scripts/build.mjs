@@ -172,6 +172,7 @@ function structuredData(ctx, key) {
       addressLocality: c.address.postal.addressLocality[ctx.lang],
       addressCountry: c.address.postal.addressCountry,
     },
+    hasMap: isMarker(c.mapUrl) ? undefined : c.mapUrl,
     areaServed: c.serviceArea.en,
     foundingDate: brand.foundingDate,
     openingHours: c.hours.schema,

@@ -1,5 +1,5 @@
 // Document shell: <head> metadata, header, footer and mobile contact bar.
-import { email, html, icon, ltr, needs, phone, raw } from './lib.mjs';
+import { email, html, icon, isMarker, ltr, needs, phone, raw } from './lib.mjs';
 import { whatsappButton } from './components.mjs';
 
 const NAV = [
@@ -124,8 +124,9 @@ function footer(ctx) {
         <li><a href="tel:${c.primaryPhone.tel}">${icon('phone', { size: 18 })}${phone(c.primaryPhone.display)}</a></li>
         ${c.secondaryPhones.map((p) => html`<li><a href="tel:${p.tel}">${icon('phone', { size: 18 })}${phone(p.display)}</a></li>`)}
         <li><a href="mailto:${c.email}">${icon('mail', { size: 18 })}${email(c.email)}</a></li>
-        ${needs(ctx, c.address[lang], () => html`<li>${icon('map-pin', { size: 18 })}<span>${c.address[lang]}</span></li>`)}
-        ${needs(ctx, c.mapUrl, () => html`<li><a href="${c.mapUrl}" target="_blank" rel="noopener">${icon('external-link', { size: 18 })}<span>${t.contact.mapLink}</span><span class="visually-hidden">${t.common.newTab}</span></a></li>`)}
+        ${needs(ctx, c.address[lang], () => (isMarker(c.mapUrl)
+    ? html`<li>${icon('map-pin', { size: 18 })}<span>${c.address[lang]}</span></li>`
+    : html`<li><a class="site-footer__address" href="${c.mapUrl}" target="_blank" rel="noopener">${icon('map-pin', { size: 18 })}<span>${c.address[lang]}</span><span class="visually-hidden">${t.common.newTab}</span></a></li>`))}
         ${needs(ctx, c.hours[lang], () => html`<li>${icon('clock', { size: 18 })}<span>${c.hours[lang]}</span></li>`)}
       </ul>
     </div>

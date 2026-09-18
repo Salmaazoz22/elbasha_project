@@ -833,6 +833,26 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 DEPLOYMENT_GUIDE §11 D now includes the hero-film and Low Power Mode checks, to run on real devices.
 **Lighthouse — not re-run.** The hero still stays the LCP element, and the film only starts after load, from tablet width up.
 
+## 15l. Map link: dropped pin, address as the link text (2026-09-19)
+
+**What changed**
+
+- The bare coordinate link (`maps?q=29.9739548,31.315296`) opened the neighbouring business «شركة البارون». `contact.mapUrl` is now
+  the dropped-pin link `https://www.google.com/maps/search/?api=1&query=29.9739548,31.315296` (client, 2026-09-19).
+- **Contact card and footer:** the address itself is the link. The separate «عرض على الخريطة» / "View on map" link and its strings are
+  gone. On the card the address flows as text with the new-tab icon after its last word; in the footer the pin stays on the first line.
+- **JSON-LD:** `hasMap` carries the same URL (home pages, AR and EN).
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` (SITE_URL = https://elbasha-contracting.pages.dev), `build:drafts` | ✅ pass |
+| Map URL in `dist/` | New URL on 11 links (9 footers + 2 contact cards) and in 2 JSON-LD blocks; the old `?q=` link appears nowhere |
+| Link names, AR/EN × 375/1280 px | The full address + «(يفتح في نافذة جديدة)» / "(opens in a new tab)"; `target=_blank rel=noopener`; 51–122 px tall |
+| Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
+| Console errors | none |
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

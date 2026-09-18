@@ -183,7 +183,7 @@ Then on GitHub, open a pull request from `improve/production-ready` into `main`,
 
 | Field | Value |
 |---|---|
-| Project name | `elbasha` (this becomes `https://elbasha.pages.dev`; pick another name if it's taken) |
+| Project name | `elbasha-contracting`, which is live at **`https://elbasha-contracting.pages.dev`** (2026-09-18). `elbasha` / `elbasha.pages.dev` belongs to an unrelated business on another account, so never point anything at it. |
 | Production branch | `main` |
 | Framework preset | **None** |
 | Build command | `npm run build` |
@@ -196,7 +196,7 @@ Open **Environment variables (advanced)** and add, for **Production**:
 
 | Name | Value | Purpose |
 |---|---|---|
-| `SITE_URL` | `https://elbasha.pages.dev` (your actual project URL, **no trailing slash**) | Absolute URLs for canonical, hreflang, Open Graph, `sitemap.xml` and `robots.txt` |
+| `SITE_URL` | `https://elbasha-contracting.pages.dev` (the project URL, **no trailing slash**) | Absolute URLs for canonical, hreflang, Open Graph, `sitemap.xml` and `robots.txt` |
 
 - **Node version:** nothing to set. The repository's `.node-version` file (`24`) selects Node 24 automatically; Cloudflare's default would be 22.16, which also works.
 - **Preview deployments:** leave `SITE_URL` unset. The build then skips canonical and sitemap tags, and Cloudflare adds `noindex` to previews anyway.

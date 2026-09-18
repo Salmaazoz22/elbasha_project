@@ -126,8 +126,7 @@
     "socialTitle": "Follow us",
     "addressTitle": "Location",
     "hoursTitle": "Working hours",
-    "areaTitle": "Service area",
-    "mapLink": "View on map"
+    "areaTitle": "Service area"
   },
   "form": {
     "title": "Send a message",

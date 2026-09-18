@@ -53,7 +53,7 @@
       },
       "_note": "Sent by the client (answers batch 5, 2026-09-18). ar/en are shown on the Contact card and in the footer; postal feeds the JSON-LD PostalAddress."
     },
-    "mapUrl": "https://www.google.com/maps?q=29.9739548,31.315296&z=17&hl=en",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=29.9739548,31.315296",
     "serviceArea": {
       "ar": "جميع محافظات الجمهورية",
       "en": "All governorates of Egypt"
@@ -62,7 +62,8 @@
       "ar": "الأحد – الخميس، 10 صباحًا – 5 مساءً",
       "en": "Sunday – Thursday, 10:00 AM – 5:00 PM",
       "schema": "Su-Th 10:00-17:00"
-    }
+    },
+    "_mapNote": "Dropped-pin link at the office coordinates (client, 2026-09-19). The earlier bare \"?q=lat,lng\" link resolved to a neighbouring business. Used on the contact card and in the footer (the address is the link text) and as hasMap in the JSON-LD."
   },
   "social": [
     {

@@ -219,11 +219,12 @@ ${pageHero(ctx, { title: t.contact.title, lead: t.contact.lead })}
           <p class="contact-card__value contact-card__value--email"><a href="mailto:${c.email}">${email(c.email)}</a></p>
         </div>
       </div>
-      ${!isMarker(c.address[lang]) || !isMarker(c.mapUrl) || ctx.drafts ? html`<div class="contact-card" data-reveal>
+      ${!isMarker(c.address[lang]) || ctx.drafts ? html`<div class="contact-card" data-reveal>
         <span class="contact-card__icon">${icon('map-pin', { size: 26 })}</span>
         <div><h3 class="contact-card__title">${t.contact.addressTitle}</h3>
-        ${needs(ctx, c.address[lang], () => html`<p>${c.address[lang]}</p>`)}
-        ${needs(ctx, c.mapUrl, () => html`<a href="${c.mapUrl}" target="_blank" rel="noopener">${icon('external-link', { size: 18 })}<span>${t.contact.mapLink}</span><span class="visually-hidden">${t.common.newTab}</span></a>`)}</div>
+        ${needs(ctx, c.address[lang], () => (isMarker(c.mapUrl)
+    ? html`<p>${c.address[lang]}</p>`
+    : html`<a class="contact-card__address" href="${c.mapUrl}" target="_blank" rel="noopener"><span>${c.address[lang]}</span>${icon('external-link', { size: 18 })}<span class="visually-hidden">${t.common.newTab}</span></a>`))}</div>
       </div>` : ''}
       ${needs(ctx, c.hours[lang], () => html`<div class="contact-card" data-reveal>
         <span class="contact-card__icon">${icon('clock', { size: 26 })}</span>
