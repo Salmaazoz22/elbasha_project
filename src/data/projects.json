@@ -351,6 +351,75 @@
       "image": null,
       "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - Katameya (Al-Asmarat)]]",
       "addedByClient": "2026-09-17"
+    },
+    {
+      "n": 29,
+      "category": "brick-factories",
+      "name": {
+        "ar": "مصنع الطوب في السياحية أكتوبر",
+        "en": "Brick Factory – Al-Seyahia, 6th of October"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Brick Factory - Al-Seyahia, 6th of October]]",
+      "addedByClient": "2026-09-18"
+    },
+    {
+      "n": 30,
+      "category": "maintenance",
+      "name": {
+        "ar": "تطوير طريق الدولي الساحلي",
+        "en": "International Coastal Road Development"
+      },
+      "photos": [
+        {
+          "image": "project-30-grader",
+          "photo": 197,
+          "alt": {
+            "ar": "جريدر يسوّي طبقة التربة الحمراء بجانب الطريق القائم",
+            "en": "A motor grader levelling red earth beside the existing carriageway"
+          }
+        },
+        {
+          "image": "project-30-roadbed",
+          "photo": 202,
+          "alt": {
+            "ar": "ممر الطريق بعد التسوية ومعدات تعمل في نهايته",
+            "en": "The graded road bed with machines working at the far end"
+          }
+        },
+        {
+          "image": "project-30-tipper",
+          "photo": 199,
+          "alt": {
+            "ar": "مقطورة قلاب تفرّغ التربة على ممر الطريق",
+            "en": "A tipper trailer unloading earth onto the road bed"
+          }
+        }
+      ],
+      "addedByClient": "2026-09-18",
+      "photosFrom": "Client media batch 2 (incoming-photos&videos/batch2, 2026-09-18), sent for this project; numbers as in docs/photo-triage.xlsx"
+    },
+    {
+      "n": 31,
+      "category": "maintenance",
+      "name": {
+        "ar": "رفع كفاءة طريق محلة دمنة – المنصورة",
+        "en": "Mahallet Damana – Mansoura Road Upgrade"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Mahallet Damana - Mansoura Road Upgrade]]",
+      "addedByClient": "2026-09-18"
+    },
+    {
+      "n": 32,
+      "category": "maintenance",
+      "name": {
+        "ar": "رفع كفاءة طريق فارسكور – شربين – دمياط",
+        "en": "Faraskur – Sherbin – Damietta Road Upgrade"
+      },
+      "image": null,
+      "photoNeeded": "[[NEEDS_CLIENT: photo – Faraskur - Sherbin - Damietta Road Upgrade]]",
+      "addedByClient": "2026-09-18"
     }
   ]
 }

@@ -1,5 +1,6 @@
-// Site gallery on the projects page: subject filters and a <dialog> lightbox.
-// Without this file every thumbnail is still a link to the full-size photo and all photos are shown.
+// Site gallery on the projects page: subject filters and a <dialog> lightbox. The same viewer opens the photo set of
+// a project card ([data-lightbox-set]). Without this file every thumbnail is still a link to the full-size photo and
+// all photos are shown.
 (() => {
   'use strict';
   const grid = document.querySelector('[data-gallery-grid]');
@@ -25,7 +26,9 @@
   } catch (e) { /* keep the default */ }
 
   // ---------- filters ----------
+  // `visible` is the grid as filtered; `current` is what the viewer steps through (the grid or one card's set).
   let visible = [...links];
+  let current = visible;
   if (filters) {
     const chips = [...filters.querySelectorAll('[data-gallery-filter]')];
     filters.hidden = false;
@@ -45,24 +48,31 @@
   let opener = null;
 
   function show(i) {
-    index = (i + visible.length) % visible.length;
-    const link = visible[index];
+    index = (i + current.length) % current.length;
+    const link = current[index];
     const thumb = link.querySelector('img');
     img.src = link.href;
     img.srcset = link.dataset.srcset || '';
-    img.alt = thumb ? thumb.alt : '';
+    img.alt = link.dataset.alt || (thumb ? thumb.alt : '');
     caption.textContent = img.alt;
-    counter.textContent = strings.counter.replace('{n}', index + 1).replace('{total}', visible.length);
+    counter.textContent = strings.counter.replace('{n}', index + 1).replace('{total}', current.length);
   }
 
-  grid.addEventListener('click', (e) => {
+  function open(e, set) {
     const link = e.target.closest('[data-gallery-link]');
     if (!link || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     e.preventDefault();
     opener = link;
-    show(visible.indexOf(link));
+    current = set();
+    show(current.indexOf(link));
     dialog.showModal();
-  });
+  }
+
+  grid.addEventListener('click', (e) => open(e, () => visible));
+  for (const set of document.querySelectorAll('[data-lightbox-set]')) {
+    const setLinks = [...set.querySelectorAll('[data-gallery-link]')];
+    set.addEventListener('click', (e) => open(e, () => setLinks));
+  }
 
   dialog.querySelector('[data-lightbox-close]').addEventListener('click', () => dialog.close());
   dialog.querySelector('[data-lightbox-prev]').addEventListener('click', () => show(index - 1));

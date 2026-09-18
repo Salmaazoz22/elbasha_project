@@ -1,14 +1,15 @@
 // Page bodies. Each returns { title, description, body, indexable, scripts? }.
 import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
-  backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectsCount, ctaBand, gallery,
+  backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectPhotos, projectsCount, ctaBand, gallery,
   equipmentStrip,
 } from './components.mjs';
 import { socialLinks } from './layout.mjs';
 
 export function home(ctx) {
   const { t, lang } = ctx;
-  const featured = ctx.projects.filter((p) => p.image);
+  // The first four projects with photos, in project order: a full row at desktop width.
+  const featured = ctx.projects.filter((p) => projectPhotos(p).length).slice(0, 4);
   const video = (f) => ctx.asset(`video/${f}`);
   const body = html`
 <section class="hero" aria-labelledby="hero-title">
@@ -108,7 +109,7 @@ ${groups.map((g, i) => html`
       <p class="project-group__count">${projectsCount(ctx, g.items.length)}</p>
     </header>
     <div class="projects-grid">
-      ${g.items.map((p) => projectCard(ctx, p))}
+      ${g.items.map((p) => projectCard(ctx, p, { lightbox: true }))}
     </div>
   </div>
 </section>`)}

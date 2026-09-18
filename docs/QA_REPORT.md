@@ -721,6 +721,43 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 
 **Lighthouse — not re-run.** The change adds one short text line per page and a few hundred bytes of JSON-LD on the home pages.
 
+## 15i. Re-run after client answers batch 6 and media batch 2 (2026-09-18)
+
+**What changed**
+
+- **Four projects** (29 Brick Factories; 30, 31 and 32 Development & Maintenance) in `projects.json` and
+  `projects-inventory.xlsx` (rows 30–33, totals 32 / 5 with images / 27 without). 29, 31 and 32 are name-only cards.
+- **Project 30 photos:** six photos triaged as 197–202 (see `MEDIA_PROPOSAL.md` §7): 3 on the card, 2 in the
+  gallery, 1 rejected. New: a project card can carry a photo set, which opens in the gallery's lightbox. `gallery.js` now
+  steps through either the filtered grid or one card's set.
+- **Home page:** featured cards are now "the first four projects with photos", which keeps the same four as before.
+- **Sitemap:** unchanged, and nothing was needed. Projects have no pages of their own: they are cards on `/projects/` and
+  `/en/projects/`, and both are in `sitemap.xml`.
+- **Triage pipeline:** the police-site clearance from batch 4 had been patched into `triage.json` by hand. It is now
+  `POLICE_CLEARED` in `triage_notes.py`, so a rebuild reproduces it. The regenerated `photo-triage.xlsx` was diffed
+  against the committed one: the only changes are the 6 new rows, the Project # column, the Summary sheet and the
+  project list.
+- **Documents:** `CLIENT_REQUESTS.md` 26 → 29 items (photo requests for projects 29, 31, 32). Both client PDFs were regenerated.
+  `photo-triage.pdf` still asks about the same 92 items; its cover thanks the client for the project 30 photos, and the
+  32-project list was tightened to fit on one page (18 pages).
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL = https://elbasha.pages.dev); 9 pages, 371 files, 38.5 MiB; 29 unique markers hidden (was 26) |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass; 56 markers rendered (was 50) |
+| `npm run media` | Deterministic: only the 32 new image files and their `images.json` entries |
+| Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
+| Projects page, AR + EN | 32 cards (5 / 4 / 17 / 6 per category); 5 with photos; gallery 27 items |
+| Project 30 card | Badge "3 صور" / "3 photos"; the viewer steps 1 → 2 → 3 → 1 with the right captions; Esc returns focus to the card |
+| Gallery, roads filter | 9 items; tanker (198) opens as "8 of 9" with its caption |
+| Home | Same four featured projects as before |
+| Without JavaScript | The card links to the full-size lead JPEG; the 2 other links stay hidden |
+| Console errors / failed requests | none |
+
+**Lighthouse — not re-run.** The projects page gains 5 lazy images below the fold. The home page is unchanged.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

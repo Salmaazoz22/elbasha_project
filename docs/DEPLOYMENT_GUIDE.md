@@ -34,7 +34,7 @@
 
 ### Waiting on the company
 The site works without these items; any missing ones are simply hidden. Details are in §3–§6:
-- [ ] Photos for the 23 projects that have none
+- [ ] Photos for the 27 projects that have none (project 30 got its photos in client batch 6, 2026-09-18)
 - [x] ~~Review of the 10 draft service descriptions~~ approved as written (client batch 5, 2026-09-18)
 - [x] ~~Written address and working hours~~ (hours: batch 3; address: batch 5, 2026-09-18)
 - [ ] About page: profile, photo, trust information (optional)
@@ -49,7 +49,7 @@ The site works without these items; any missing ones are simply hidden. Details 
 
 | Area | Status |
 |---|---|
-| Pages | Home, Projects (all 27), About, Contact, and a 404 page. Each exists in Arabic (`/`, `/projects/`, `/about/`, `/contact/`) and English (`/en/...`). |
+| Pages | Home, Projects (all 32), About, Contact, and a 404 page. Each exists in Arabic (`/`, `/projects/`, `/about/`, `/contact/`) and English (`/en/...`). |
 | Content | All real company content from the original site, with the approved Arabic spelling fixes and English name corrections. No invented information. |
 | Contact channels | Primary number +20 111 611 1015 for calls and WhatsApp. Secondary numbers +20 101 416 5151 and +20 100 699 2768. Email elbasha.constructions@gmail.com. Facebook and LinkedIn. Formspree form. |
 | Media | 4 real project photos (responsive WebP + JPEG), hero images taken from the company video, compressed video, cleaned logo, favicons, social share image. |
@@ -59,7 +59,7 @@ The site works without these items; any missing ones are simply hidden. Details 
 
 Nothing technical blocks launch. What's still missing is client content, which the live site hides:
 - no fake text or placeholder images are shown;
-- the 23 projects without photos show a neutral branded tile instead of a photo;
+- the 27 projects without photos show a neutral branded tile instead of a photo;
 - sections like address or working hours simply don't appear until filled in.
 
 The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missing item on the pages themselves, run `npm run build:drafts` and then `npm run preview -- --drafts`.
@@ -307,7 +307,7 @@ curl -sI "https://SITE$(curl -s https://SITE/ | grep -o '/assets/css/main\.[0-9a
 - [ ] **☰ menu** opens and closes, and links work. The bottom **WhatsApp / Call** bar hides while the menu is open.
 - [ ] **Call** opens the dialer with **+20 111 611 1015**. **WhatsApp** opens a chat with **+20 111 611 1015**.
 - [ ] Scroll to the **video**: it plays silently; **Pause** stops it.
-- [ ] **Projects:** 4 photos load, 23 projects show the navy tile, and the category buttons jump to their sections.
+- [ ] **Projects:** 5 cards show photos (project 30 opens its 3 photos in the viewer), 27 projects show the navy tile, and the category buttons jump to their sections.
 - [ ] **Footer links:** secondary numbers, email (opens a mail app), Facebook and LinkedIn open correctly. Check Facebook by hand; it blocks automated checks.
 - [ ] No sideways scrolling on any page; text is readable without zooming.
 

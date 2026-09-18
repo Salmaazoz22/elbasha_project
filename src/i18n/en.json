@@ -78,12 +78,17 @@
     "title": "Our Projects",
     "lead": "Company projects in road and infrastructure, bridges and axes, development and maintenance, and brick factories.",
     "jumpLabel": "Project categories",
-    "photoPending": "No photo for this project yet"
+    "photoPending": "No photo for this project yet",
+    "photoCount": {
+      "one": "1 photo",
+      "other": "{n} photos"
+    },
+    "openPhotos": "View the project photos"
   },
   "gallery": {
     "eyebrow": "From our sites",
     "title": "Photos from the work sites",
-    "lead": "Photos taken by the team on site, grouped by type of work. They are not attributed to individual projects yet.",
+    "lead": "Photos taken by the team on site, grouped by type of work. Most of them are not attributed to individual projects yet.",
     "filterLabel": "Filter photos by type of work",
     "all": "All",
     "open": "View the full-size photo",

@@ -66,19 +66,42 @@ export function backdrop(ctx, key, { eager = false } = {}) {
   return picture(ctx, key, { alt: '', sizes: '100vw', className: 'backdrop', eager });
 }
 
-export function projectCard(ctx, p, { headingLevel = 3, sizes = '(min-width: 75em) 280px, (min-width: 48em) 45vw, 100vw' } = {}) {
+/** A project's card photos, lead first: a `photos` set, or the single `image` of the projects from the original site. */
+export const projectPhotos = (p) => p.photos ?? (p.image ? [{ image: p.image, alt: p.alt }] : []);
+
+/**
+ * Project card. With `lightbox` (the projects page, which has the gallery's <dialog>), a card with several photos shows
+ * the lead photo with a photo count and opens the whole set in the viewer; the other photos are hidden links that
+ * gallery.js reads. Without JavaScript the card links to the full-size lead photo.
+ */
+export function projectCard(ctx, p, { headingLevel = 3, sizes = '(min-width: 75em) 280px, (min-width: 48em) 45vw, 100vw', lightbox = false } = {}) {
   const lang = ctx.lang;
+  const photos = projectPhotos(p);
+  const [lead] = photos;
   const category = ctx.categories.find((c) => c.id === p.category);
   const title = headingLevel === 3
     ? html`<h3 class="project-card__title">${p.name[lang]}</h3>`
     : html`<h4 class="project-card__title">${p.name[lang]}</h4>`;
-  const media = p.image
-    ? picture(ctx, p.image, { alt: p.alt[lang], sizes, className: 'project-card__media' })
+  const full = (ph) => {
+    const img = ctx.images[ph.image];
+    return { href: ctx.asset(img.jpg[img.jpg.length - 1].file), srcset: img.webp.map((w) => `${ctx.asset(w.file)} ${w.w}w`).join(', ') };
+  };
+  const media = lead && lightbox && photos.length > 1
+    ? html`<div class="project-card__media" data-lightbox-set>
+        <a class="project-card__open" href="${full(lead).href}" data-gallery-link data-srcset="${full(lead).srcset}" data-alt="${lead.alt[lang]}">
+          ${picture(ctx, lead.image, { alt: lead.alt[lang], sizes })}
+          <span class="project-card__count">${icon('image', { size: 16 })}${plural(ctx.t.projects.photoCount, photos.length, lang)}</span>
+          <span class="visually-hidden">${ctx.t.projects.openPhotos}</span>
+        </a>
+        ${photos.slice(1).map((ph) => html`<a href="${full(ph).href}" data-gallery-link data-srcset="${full(ph).srcset}" data-alt="${ph.alt[lang]}" hidden></a>`)}
+      </div>`
+    : lead
+    ? picture(ctx, lead.image, { alt: lead.alt[lang], sizes, className: 'project-card__media' })
     : html`<div class="project-card__media project-card__placeholder">
         ${icon(category.icon, { size: 40 })}
         <span class="visually-hidden">${ctx.t.projects.photoPending}</span>
       </div>`;
-  return html`<article class="project-card${p.image ? '' : ' project-card--no-photo'}" data-reveal>
+  return html`<article class="project-card${lead ? '' : ' project-card--no-photo'}" data-reveal>
     ${media}
     <div class="project-card__body">
       <p class="project-card__category">${category.name[lang]}</p>

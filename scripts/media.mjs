@@ -109,6 +109,24 @@ for (const [n, crop] of [
   await responsive(`gallery-${n}-full`, file, { crop, widths: [760, 1280], quality: 72 });
 }
 
+// ---------- Client photos, batch 2: project 30 (International Coastal Road Development) ----------
+// Six 960x1280 portrait WhatsApp photos the client sent for project 30 (2026-09-18), numbered 197-202 in
+// docs/photo-triage.xlsx. All crops are 4:3 landscape bands, so the card, the thumbnail and the lightbox show the
+// same picture; at 960 px wide they are below the 1200x900 card spec, which is the best these sources allow.
+// Project card set (lead first). 202 stops at x=760 so the surveyor at the right edge is left out.
+await responsive('project-30-grader', 'client-photos/photo-197.jpg', { crop: { left: 0, top: 300, width: 960, height: 720 }, widths: [480, 800, 960] });
+await responsive('project-30-roadbed', 'client-photos/photo-202.jpg', { crop: { left: 0, top: 480, width: 760, height: 570 }, widths: [480, 760] });
+await responsive('project-30-tipper', 'client-photos/photo-199.jpg', { crop: { left: 0, top: 330, width: 960, height: 720 }, widths: [480, 800, 960] });
+// The rest of the usable photos go to the gallery (201 is rated C: the photographer's shadow is in every crop).
+for (const [n, crop] of [
+  [198, { left: 0, top: 340, width: 960, height: 720 }],
+  [200, { left: 0, top: 330, width: 960, height: 720 }],
+]) {
+  const file = `client-photos/photo-${n}.jpg`;
+  await responsive(`gallery-${n}`, file, { crop, widths: [400, 760], quality: 68, ratio: 4 / 3 });
+  await responsive(`gallery-${n}-full`, file, { crop, widths: [760, 1280], quality: 72 });
+}
+
 // ---------- Equipment strip (About page): small 4:3 cards in a scroll-snap row, lazy ----------
 // The client confirmed the machines in the batch are company-owned (answers batch 2, 2026-09-16), which is what
 // the «معداتنا» wording needs. Labels describe only what is visible: no counts, no fleet size, no brand names.

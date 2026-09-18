@@ -343,7 +343,8 @@ the **About** page, below "Our Expertise". The proposal's other sources did not 
 **What it adds:** real photos on project cards — the audit's main content gap.
 
 **Current state:**
-- No item can be placed yet.
+- **2026-09-18:** the first card is filled. The client sent media batch 2 for project 30, so it is attributed without guessing (§7).
+- No batch-1 item can be placed yet.
 - Roads photos probably belong to the Asyut Western Road / Future of Egypt / October projects, but that is a guess, and the rule says no guessing.
 - Several curb and interlock photos show police sites and must not be used, whatever project they belong to.
 
@@ -486,3 +487,37 @@ is cleared; and the Facebook and LinkedIn links on the site are correct and comp
 | Horizontal overflow, 8 pages × 320/360/390/768/1280/1920 px | ✅ `scrollWidth === clientWidth` everywhere |
 | Equipment row at 390 px | ✅ scrolls inside itself (4 cards, 251 px each); it does not push the page |
 | Lighthouse | Not re-run. See the note in `QA_REPORT.md` §15e |
+
+---
+
+## 7. Build log — media batch 2: project 30 (2026-09-18)
+
+With client answers batch 6 the client added projects 29–32 and sent six WhatsApp photos for **project 30,
+International Coastal Road Development** (`incoming-photos&videos/batch2/`). They were triaged with the batch-1
+method (same metrics, computed on a 1024 px thumbnail; same A/B/C scale) and numbered **197–202** in send order in
+`photo-triage.xlsx`, where the "Project #" column now reads 30 for all six.
+
+| # | What it shows | Rating | Use |
+|---|---|---|---|
+| 197 | Grader levelling red earth beside the live carriageway | A | **Project card, lead photo** |
+| 202 | The graded road bed, machines at the far end; a surveyor at the right edge | B | **Project card**, cropped to x < 760 so the surveyor (face in profile) is left out |
+| 199 | Tipper trailer unloading earth in a cloud of dust | A | **Project card** |
+| 198 | Water tanker wetting the subgrade | B | Gallery («الطرق والتسوية») |
+| 200 | Grader cut off by the left edge | B | Gallery («الطرق والتسوية») |
+| 201 | Graded road bed at sunset | C | Not used: the photographer's long shadow is in every 4:3 crop |
+
+- **No faces that need permission, no stamps or watermarks, no police or military sites** in anything published.
+  Operators in the grader cabs are silhouettes.
+- **Markings.** 197 carries the CAT/Caterpillar maker badge. 199 has decals on the tailgate (a religious phrase),
+  the trailer maker's marks and a fleet number on the second trailer. None of it is another company's branding, so
+  both are published. The markings are recorded in the triage in case the client objects.
+- **Sources are 960×1280 portrait.** Every crop is a 4:3 landscape band of 960×720 (202: 760×570), below the
+  1200×900 card spec. These are the best the sources allow. The originals, sent as documents, would be sharper;
+  `projects-inventory.xlsx` notes this as optional.
+- **A card with several photos.** `projects.json` gains `photos` (lead first). On the projects page the card shows the
+  lead photo with a "3 صور / 3 photos" badge, and opens the set in the gallery's viewer. Without JavaScript it links to
+  the full-size lead photo. Cards with one photo are unchanged, and the home page still shows the first four projects with photos.
+- **No photo appears twice:** the three card photos are not in the gallery. The gallery grows from 25 to 27 items, and its
+  lead now says most photos are *not yet* attributed. Its `project` field reads "30" for 198 and 200.
+- **`photo-triage.pdf`** leaves attributed items out of the "which project?" grid, so it still asks about the same 92
+  items. Its project list now runs to 32 and still fits on one page.

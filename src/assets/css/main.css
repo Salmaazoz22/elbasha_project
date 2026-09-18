@@ -1022,6 +1022,34 @@ bdi {
   transform: scale(1.04);
 }
 
+/* A card with a photo set: the lead photo opens the set in the gallery viewer. */
+.project-card__open,
+.project-card__open picture {
+  display: block;
+  height: 100%;
+}
+
+.project-card__open:focus-visible {
+  outline: 3px solid var(--orange-500);
+  outline-offset: -3px;
+}
+
+.project-card__count {
+  position: absolute;
+  inset-block-end: var(--space-3);
+  inset-inline-end: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  background: rgb(11 27 63 / 0.82);
+  color: var(--white);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 .project-card__placeholder {
   display: grid;
   place-items: center;
