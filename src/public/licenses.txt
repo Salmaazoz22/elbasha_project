@@ -1,0 +1,15 @@
+Third-party assets used on this website
+=======================================
+
+Cairo font — SIL Open Font License 1.1
+  Copyright 2009 The Cairo Project Authors (https://github.com/Gue3bara/Cairo)
+  Full licence: served with the font files (OFL-Cairo.txt)
+
+Lucide icons (lucide-static 1.46.0) — ISC License
+  Copyright (c) Lucide Icons and Contributors. https://lucide.dev/license
+
+Simple Icons (16.31.0) — CC0 1.0 Universal (WhatsApp, Facebook glyphs)
+  https://simpleicons.org  — brand marks remain trademarks of their owners.
+
+All photographs, video and the El Basha logo belong to El Basha for General
+Supplies & Contracting and may not be reused without permission.

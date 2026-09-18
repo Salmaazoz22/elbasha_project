@@ -1,0 +1,146 @@
+{
+  "_readme": "Services as provided in the original site and source-assets/notes (now archived). Descriptions are client input: replace a [[NEEDS_CLIENT]] marker with 1-2 sentences to show it on the live site. Descriptions written as drafts for client review get \"draft\": true inside the description object (e.g. {\"ar\": \"...\", \"en\": \"...\", \"draft\": true}); the flag has no visible effect, the build lists them so they can be found for review. A service with \"image\" (an images.json key) and \"imageAlt\" is shown as a photo card in the first row of the home services section; the photo shows the type of work only, never a project.",
+  "services": [
+    {
+      "id": "road-construction",
+      "icon": "route",
+      "name": {
+        "ar": "بناء الطرق",
+        "en": "Road Construction"
+      },
+      "description": {
+        "ar": "تنفيذ أعمال الطرق من التمهيد والتسوية وطبقات الأساس حتى الرصف الأسفلتي، وفق المواصفات الفنية المعتمدة.",
+        "en": "Full road works from grading and base layers to asphalt paving, executed to approved technical specifications."
+      },
+      "image": "service-road-construction",
+      "imageAlt": {
+        "ar": "جريدر يسوّي طبقة من التربة الحمراء في طريق تحت الإنشاء",
+        "en": "Motor grader levelling red earth on a road under construction"
+      }
+    },
+    {
+      "id": "material-supply",
+      "icon": "truck",
+      "name": {
+        "ar": "توريد المواد",
+        "en": "Material Supply"
+      },
+      "description": {
+        "ar": "توريد مواد البناء والطرق اللازمة لمواقع التنفيذ في مواعيدها وبالكميات المطلوبة.",
+        "en": "Supplying construction and road-building materials to project sites on schedule and in the required quantities."
+      },
+      "image": "service-material-supply",
+      "imageAlt": {
+        "ar": "شاحنة قلاب تفرغ حمولة من مواد الردم في موقع طريق",
+        "en": "Dump truck unloading fill material at a road site"
+      }
+    },
+    {
+      "id": "infrastructure",
+      "icon": "construction",
+      "name": {
+        "ar": "البنية التحتية",
+        "en": "Infrastructure"
+      },
+      "description": {
+        "ar": "تنفيذ أعمال البنية التحتية المصاحبة للطرق، مثل شبكات تصريف المياه والحفر والردم والأعمال الخرسانية.",
+        "en": "Infrastructure works accompanying roads, including drainage networks, excavation and backfilling, and concrete works."
+      }
+    },
+    {
+      "id": "brick-factories",
+      "icon": "brick-wall",
+      "name": {
+        "ar": "مصانع الطوب",
+        "en": "Brick Factories"
+      },
+      "description": {
+        "ar": "تنفيذ الأعمال الإنشائية والمدنية لمصانع الطوب، من الأساسات حتى التشطيب.",
+        "en": "Civil and structural works for brick factories, from foundations through to finishing."
+      }
+    },
+    {
+      "id": "road-marking",
+      "icon": "footprints",
+      "name": {
+        "ar": "أعمال تخطيط الطرق وعبور المشاة",
+        "en": "Road Marking & Pedestrian Crossings"
+      },
+      "description": {
+        "ar": "تنفيذ علامات الطرق الأرضية وخطوط عبور المشاة وفق الاشتراطات المرورية.",
+        "en": "Road surface markings and pedestrian crossings in line with traffic regulations."
+      },
+      "sourceNameEn": "Road Planning & Pedestrian Crossings"
+    },
+    {
+      "id": "signage",
+      "icon": "signpost",
+      "name": {
+        "ar": "أعمال تركيب اللافتات الإرشادية والتحذيرية",
+        "en": "Guiding & Warning Signs Installation"
+      },
+      "description": {
+        "ar": "توريد وتركيب اللافتات المرورية الإرشادية والتحذيرية على الطرق والمحاور.",
+        "en": "Supply and installation of directional and warning traffic signs on roads and corridors."
+      }
+    },
+    {
+      "id": "building-construction",
+      "icon": "building-2",
+      "name": {
+        "ar": "أعمال الإنشاءات للمباني",
+        "en": "Building Construction"
+      },
+      "description": {
+        "ar": "تنفيذ الأعمال الإنشائية والخرسانية للمباني بمختلف أنواعها.",
+        "en": "Structural and concrete works for buildings of all types."
+      }
+    },
+    {
+      "id": "curbstone-interlock",
+      "icon": "layout-grid",
+      "name": {
+        "ar": "تركيب بردورة وإنترلوك",
+        "en": "Curbstone & Interlock Installation"
+      },
+      "description": {
+        "ar": "توريد وتركيب البردورات وبلاط الإنترلوك للأرصفة والممرات والساحات.",
+        "en": "Supply and installation of curbstones and interlock paving for sidewalks, walkways and open areas."
+      },
+      "image": "service-curbstone-interlock",
+      "imageAlt": {
+        "ar": "بلاط إنترلوك مرصوف بين صفين من البردورة",
+        "en": "Interlock paving laid between two rows of curbstones"
+      }
+    },
+    {
+      "id": "slopes-barriers",
+      "icon": "fence",
+      "name": {
+        "ar": "أعمال الميول الخرسانية والنيوجيرسي",
+        "en": "Concrete Slopes & New Jersey Barriers"
+      },
+      "description": {
+        "ar": "تنفيذ الميول الخرسانية للطرق وتوريد وتركيب حواجز النيوجيرسي الخرسانية.",
+        "en": "Concrete slope works for roads, plus supply and installation of New Jersey concrete barriers."
+      },
+      "image": "service-slopes-barriers",
+      "imageAlt": {
+        "ar": "ألواح ميول خرسانية على جانب جسر طريق",
+        "en": "Concrete slope panels on the side of a road embankment"
+      }
+    },
+    {
+      "id": "painting",
+      "icon": "paint-roller",
+      "name": {
+        "ar": "أعمال دهانات الكباري والنيوجيرسي",
+        "en": "Bridge & Barrier Painting"
+      },
+      "description": {
+        "ar": "تنفيذ أعمال الدهانات الواقية والتحذيرية للكباري وحواجز النيوجيرسي.",
+        "en": "Protective and warning paint works for bridges and New Jersey barriers."
+      }
+    }
+  ]
+}

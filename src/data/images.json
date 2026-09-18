@@ -1,0 +1,1964 @@
+{
+  "hero-ar": {
+    "width": 1920,
+    "height": 864,
+    "webp": [
+      {
+        "w": 960,
+        "file": "img/hero-ar-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-ar-1280.webp"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-ar-1920.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 960,
+        "file": "img/hero-ar-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-ar-1280.jpg"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-ar-1920.jpg"
+      }
+    ]
+  },
+  "hero-ar-mobile": {
+    "width": 691,
+    "height": 864,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/hero-ar-mobile-480.webp"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-ar-mobile-691.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/hero-ar-mobile-480.jpg"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-ar-mobile-691.jpg"
+      }
+    ]
+  },
+  "hero-en": {
+    "width": 1920,
+    "height": 864,
+    "webp": [
+      {
+        "w": 960,
+        "file": "img/hero-en-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-en-1280.webp"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-en-1920.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 960,
+        "file": "img/hero-en-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/hero-en-1280.jpg"
+      },
+      {
+        "w": 1920,
+        "file": "img/hero-en-1920.jpg"
+      }
+    ]
+  },
+  "hero-en-mobile": {
+    "width": 691,
+    "height": 864,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/hero-en-mobile-480.webp"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-en-mobile-691.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/hero-en-mobile-480.jpg"
+      },
+      {
+        "w": 691,
+        "file": "img/hero-en-mobile-691.jpg"
+      }
+    ]
+  },
+  "project-future-of-egypt": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-future-of-egypt-480.webp"
+      },
+      {
+        "w": 800,
+        "file": "img/project-future-of-egypt-800.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/project-future-of-egypt-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-future-of-egypt-480.jpg"
+      },
+      {
+        "w": 800,
+        "file": "img/project-future-of-egypt-800.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/project-future-of-egypt-960.jpg"
+      }
+    ]
+  },
+  "project-amr-ibn-al-as-axis": {
+    "width": 796,
+    "height": 597,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-amr-ibn-al-as-axis-480.webp"
+      },
+      {
+        "w": 796,
+        "file": "img/project-amr-ibn-al-as-axis-796.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-amr-ibn-al-as-axis-480.jpg"
+      },
+      {
+        "w": 796,
+        "file": "img/project-amr-ibn-al-as-axis-796.jpg"
+      }
+    ]
+  },
+  "project-october-western-sector": {
+    "width": 1200,
+    "height": 900,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-october-western-sector-480.webp"
+      },
+      {
+        "w": 800,
+        "file": "img/project-october-western-sector-800.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/project-october-western-sector-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-october-western-sector-480.jpg"
+      },
+      {
+        "w": 800,
+        "file": "img/project-october-western-sector-800.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/project-october-western-sector-1200.jpg"
+      }
+    ]
+  },
+  "project-wadi-el-natrun": {
+    "width": 720,
+    "height": 540,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-wadi-el-natrun-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/project-wadi-el-natrun-720.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-wadi-el-natrun-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/project-wadi-el-natrun-720.jpg"
+      }
+    ]
+  },
+  "service-road-construction": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-road-construction-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-road-construction-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-road-construction-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-road-construction-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-road-construction-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-road-construction-960.jpg"
+      }
+    ]
+  },
+  "service-material-supply": {
+    "width": 1200,
+    "height": 900,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-material-supply-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-material-supply-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-material-supply-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-material-supply-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-material-supply-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-material-supply-960.jpg"
+      }
+    ]
+  },
+  "service-curbstone-interlock": {
+    "width": 1040,
+    "height": 780,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-curbstone-interlock-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-curbstone-interlock-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-curbstone-interlock-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-curbstone-interlock-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-curbstone-interlock-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-curbstone-interlock-960.jpg"
+      }
+    ]
+  },
+  "service-slopes-barriers": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/service-slopes-barriers-480.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/service-slopes-barriers-720.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/service-slopes-barriers-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/service-slopes-barriers-480.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/service-slopes-barriers-720.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/service-slopes-barriers-960.jpg"
+      }
+    ]
+  },
+  "bg-cta": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 640,
+        "file": "img/bg-cta-640.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-cta-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-cta-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 640,
+        "file": "img/bg-cta-640.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-cta-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-cta-1280.jpg"
+      }
+    ]
+  },
+  "bg-projects": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 640,
+        "file": "img/bg-projects-640.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-projects-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-projects-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 640,
+        "file": "img/bg-projects-640.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-projects-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-projects-1280.jpg"
+      }
+    ]
+  },
+  "bg-about": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 640,
+        "file": "img/bg-about-640.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-about-960.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-about-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 640,
+        "file": "img/bg-about-640.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/bg-about-960.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/bg-about-1280.jpg"
+      }
+    ]
+  },
+  "about-photo": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/about-photo-480.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/about-photo-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/about-photo-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/about-photo-480.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/about-photo-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/about-photo-1280.jpg"
+      }
+    ]
+  },
+  "gallery-178": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-178-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-178-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-178-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-178-760.jpg"
+      }
+    ]
+  },
+  "gallery-178-full": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-178-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-178-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-178-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-178-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-184": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-184-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-184-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-184-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-184-760.jpg"
+      }
+    ]
+  },
+  "gallery-184-full": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-184-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-184-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-184-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-184-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-169": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-169-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-169-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-169-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-169-760.jpg"
+      }
+    ]
+  },
+  "gallery-169-full": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-169-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-169-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-169-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-169-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-12": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-12-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-12-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-12-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-12-760.jpg"
+      }
+    ]
+  },
+  "gallery-12-full": {
+    "width": 960,
+    "height": 1280,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-12-full-760.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-12-full-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-12-full-760.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-12-full-960.jpg"
+      }
+    ]
+  },
+  "gallery-142": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-142-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-142-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-142-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-142-760.jpg"
+      }
+    ]
+  },
+  "gallery-142-full": {
+    "width": 1600,
+    "height": 1200,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-142-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-142-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-142-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-142-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-136": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-136-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-136-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-136-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-136-760.jpg"
+      }
+    ]
+  },
+  "gallery-136-full": {
+    "width": 1200,
+    "height": 1600,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-136-full-760.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-136-full-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-136-full-760.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-136-full-1200.jpg"
+      }
+    ]
+  },
+  "gallery-1": {
+    "width": 720,
+    "height": 540,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-1-400.webp"
+      },
+      {
+        "w": 720,
+        "file": "img/gallery-1-720.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-1-400.jpg"
+      },
+      {
+        "w": 720,
+        "file": "img/gallery-1-720.jpg"
+      }
+    ]
+  },
+  "gallery-1-full": {
+    "width": 720,
+    "height": 1280,
+    "webp": [
+      {
+        "w": 720,
+        "file": "img/gallery-1-full-720.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 720,
+        "file": "img/gallery-1-full-720.jpg"
+      }
+    ]
+  },
+  "gallery-101": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-101-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-101-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-101-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-101-760.jpg"
+      }
+    ]
+  },
+  "gallery-101-full": {
+    "width": 1200,
+    "height": 1600,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-101-full-760.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-101-full-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-101-full-760.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-101-full-1200.jpg"
+      }
+    ]
+  },
+  "gallery-102": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-102-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-102-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-102-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-102-760.jpg"
+      }
+    ]
+  },
+  "gallery-102-full": {
+    "width": 1280,
+    "height": 957,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-102-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-102-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-102-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-102-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-45": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-45-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-45-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-45-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-45-760.jpg"
+      }
+    ]
+  },
+  "gallery-45-full": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-45-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-45-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-45-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-45-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-38": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-38-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-38-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-38-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-38-760.jpg"
+      }
+    ]
+  },
+  "gallery-38-full": {
+    "width": 1200,
+    "height": 1600,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-38-full-760.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-38-full-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-38-full-760.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-38-full-1200.jpg"
+      }
+    ]
+  },
+  "gallery-108": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-108-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-108-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-108-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-108-760.jpg"
+      }
+    ]
+  },
+  "gallery-108-full": {
+    "width": 899,
+    "height": 1599,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-108-full-760.webp"
+      },
+      {
+        "w": 899,
+        "file": "img/gallery-108-full-899.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-108-full-760.jpg"
+      },
+      {
+        "w": 899,
+        "file": "img/gallery-108-full-899.jpg"
+      }
+    ]
+  },
+  "gallery-66": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-66-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-66-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-66-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-66-760.jpg"
+      }
+    ]
+  },
+  "gallery-66-full": {
+    "width": 1600,
+    "height": 900,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-66-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-66-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-66-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-66-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-32": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-32-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-32-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-32-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-32-760.jpg"
+      }
+    ]
+  },
+  "gallery-32-full": {
+    "width": 1200,
+    "height": 1600,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-32-full-760.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-32-full-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-32-full-760.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-32-full-1200.jpg"
+      }
+    ]
+  },
+  "gallery-95": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-95-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-95-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-95-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-95-760.jpg"
+      }
+    ]
+  },
+  "gallery-95-full": {
+    "width": 1600,
+    "height": 900,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-95-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-95-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-95-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-95-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-160": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-160-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-160-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-160-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-160-760.jpg"
+      }
+    ]
+  },
+  "gallery-160-full": {
+    "width": 960,
+    "height": 1280,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-160-full-760.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-160-full-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-160-full-760.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-160-full-960.jpg"
+      }
+    ]
+  },
+  "gallery-152": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-152-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-152-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-152-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-152-760.jpg"
+      }
+    ]
+  },
+  "gallery-152-full": {
+    "width": 1200,
+    "height": 1600,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-152-full-760.webp"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-152-full-1200.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-152-full-760.jpg"
+      },
+      {
+        "w": 1200,
+        "file": "img/gallery-152-full-1200.jpg"
+      }
+    ]
+  },
+  "gallery-182": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-182-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-182-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-182-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-182-760.jpg"
+      }
+    ]
+  },
+  "gallery-182-full": {
+    "width": 1280,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-182-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-182-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-182-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-182-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-126": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-126-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-126-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-126-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-126-760.jpg"
+      }
+    ]
+  },
+  "gallery-126-full": {
+    "width": 1600,
+    "height": 1200,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-126-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-126-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-126-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-126-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-130": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-130-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-130-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-130-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-130-760.jpg"
+      }
+    ]
+  },
+  "gallery-130-full": {
+    "width": 1600,
+    "height": 1200,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-130-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-130-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-130-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-130-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-134": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-134-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-134-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-134-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-134-760.jpg"
+      }
+    ]
+  },
+  "gallery-134-full": {
+    "width": 1600,
+    "height": 900,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-134-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-134-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-134-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-134-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-162": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-162-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-162-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-162-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-162-760.jpg"
+      }
+    ]
+  },
+  "gallery-162-full": {
+    "width": 1600,
+    "height": 1045,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-162-full-760.webp"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-162-full-1280.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-162-full-760.jpg"
+      },
+      {
+        "w": 1280,
+        "file": "img/gallery-162-full-1280.jpg"
+      }
+    ]
+  },
+  "gallery-9": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-9-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-9-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-9-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-9-760.jpg"
+      }
+    ]
+  },
+  "gallery-9-full": {
+    "width": 840,
+    "height": 630,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-9-full-760.webp"
+      },
+      {
+        "w": 840,
+        "file": "img/gallery-9-full-840.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-9-full-760.jpg"
+      },
+      {
+        "w": 840,
+        "file": "img/gallery-9-full-840.jpg"
+      }
+    ]
+  },
+  "gallery-34": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-34-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-34-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-34-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-34-760.jpg"
+      }
+    ]
+  },
+  "gallery-34-full": {
+    "width": 1036,
+    "height": 777,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-34-full-760.webp"
+      },
+      {
+        "w": 1036,
+        "file": "img/gallery-34-full-1036.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-34-full-760.jpg"
+      },
+      {
+        "w": 1036,
+        "file": "img/gallery-34-full-1036.jpg"
+      }
+    ]
+  },
+  "gallery-43": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-43-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-43-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-43-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-43-760.jpg"
+      }
+    ]
+  },
+  "gallery-43-full": {
+    "width": 936,
+    "height": 702,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-43-full-760.webp"
+      },
+      {
+        "w": 936,
+        "file": "img/gallery-43-full-936.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-43-full-760.jpg"
+      },
+      {
+        "w": 936,
+        "file": "img/gallery-43-full-936.jpg"
+      }
+    ]
+  },
+  "project-30-grader": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-30-grader-480.webp"
+      },
+      {
+        "w": 800,
+        "file": "img/project-30-grader-800.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/project-30-grader-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-30-grader-480.jpg"
+      },
+      {
+        "w": 800,
+        "file": "img/project-30-grader-800.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/project-30-grader-960.jpg"
+      }
+    ]
+  },
+  "project-30-roadbed": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-30-roadbed-480.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/project-30-roadbed-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-30-roadbed-480.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/project-30-roadbed-760.jpg"
+      }
+    ]
+  },
+  "project-30-tipper": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 480,
+        "file": "img/project-30-tipper-480.webp"
+      },
+      {
+        "w": 800,
+        "file": "img/project-30-tipper-800.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/project-30-tipper-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 480,
+        "file": "img/project-30-tipper-480.jpg"
+      },
+      {
+        "w": 800,
+        "file": "img/project-30-tipper-800.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/project-30-tipper-960.jpg"
+      }
+    ]
+  },
+  "gallery-198": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-198-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-198-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-198-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-198-760.jpg"
+      }
+    ]
+  },
+  "gallery-198-full": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-198-full-760.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-198-full-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-198-full-760.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-198-full-960.jpg"
+      }
+    ]
+  },
+  "gallery-200": {
+    "width": 760,
+    "height": 570,
+    "webp": [
+      {
+        "w": 400,
+        "file": "img/gallery-200-400.webp"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-200-760.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 400,
+        "file": "img/gallery-200-400.jpg"
+      },
+      {
+        "w": 760,
+        "file": "img/gallery-200-760.jpg"
+      }
+    ]
+  },
+  "gallery-200-full": {
+    "width": 960,
+    "height": 720,
+    "webp": [
+      {
+        "w": 760,
+        "file": "img/gallery-200-full-760.webp"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-200-full-960.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 760,
+        "file": "img/gallery-200-full-760.jpg"
+      },
+      {
+        "w": 960,
+        "file": "img/gallery-200-full-960.jpg"
+      }
+    ]
+  },
+  "equipment-172": {
+    "width": 640,
+    "height": 480,
+    "webp": [
+      {
+        "w": 320,
+        "file": "img/equipment-172-320.webp"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-172-640.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 320,
+        "file": "img/equipment-172-320.jpg"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-172-640.jpg"
+      }
+    ]
+  },
+  "equipment-180": {
+    "width": 640,
+    "height": 480,
+    "webp": [
+      {
+        "w": 320,
+        "file": "img/equipment-180-320.webp"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-180-640.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 320,
+        "file": "img/equipment-180-320.jpg"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-180-640.jpg"
+      }
+    ]
+  },
+  "equipment-83": {
+    "width": 640,
+    "height": 480,
+    "webp": [
+      {
+        "w": 320,
+        "file": "img/equipment-83-320.webp"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-83-640.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 320,
+        "file": "img/equipment-83-320.jpg"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-83-640.jpg"
+      }
+    ]
+  },
+  "equipment-36": {
+    "width": 640,
+    "height": 480,
+    "webp": [
+      {
+        "w": 320,
+        "file": "img/equipment-36-320.webp"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-36-640.webp"
+      }
+    ],
+    "jpg": [
+      {
+        "w": 320,
+        "file": "img/equipment-36-320.jpg"
+      },
+      {
+        "w": 640,
+        "file": "img/equipment-36-640.jpg"
+      }
+    ]
+  },
+  "logo": {
+    "width": 168,
+    "height": 112,
+    "png": "img/logo.png"
+  },
+  "og": {
+    "width": 1200,
+    "height": 630,
+    "file": "og-image.jpg"
+  }
+}

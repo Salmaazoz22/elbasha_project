@@ -1,0 +1,254 @@
+{
+  "_readme": "Site photo gallery on the projects page. Every item comes from the client's media batches 1 and 2 (numbers as in docs/photo-triage.xlsx) and is rated A or B, with no camera stamps and no third-party branding. Police or military sites are excluded, except photos 9, 34 and 43 (October New police district): the client confirmed the authority cleared publishing (answers batch 4, 2026-09-17), and they are cropped to keep police signage and the marked vehicles out of frame. Faces appear only where the client confirmed publishing permission (client answers batch 2, 2026-09-16). \"alt\" describes what is visible only — never a project name. \"project\" holds the project number from projects-inventory.xlsx once the client has confirmed which project a photo shows; only then may that project's photos appear on its card. Batch 1 is still unattributed (empty). Photos 198 and 200 come from the client's media batch 2 (2026-09-18), which was sent for project 30: the best three photos of that batch are on the project 30 card (projects.json \"photos\"), and no photo is both on a card and in the gallery.",
+  "subjects": [
+    { "id": "roads", "name": { "ar": "الطرق والتسوية", "en": "Roads & grading" } },
+    { "id": "curb", "name": { "ar": "البردورة والإنترلوك", "en": "Curb & interlock" } },
+    { "id": "slopes", "name": { "ar": "الميول والحواجز", "en": "Slopes & barriers" } },
+    { "id": "equipment", "name": { "ar": "المعدات", "en": "Equipment" } }
+  ],
+  "items": [
+    {
+      "n": 178,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "جريدر يسوّي ممر الطريق ومساح يقف على جانبه",
+        "en": "A motor grader levelling the road bed with a surveyor standing to one side"
+      }
+    },
+    {
+      "n": 184,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "طريق ترابي ممهد يمتد حتى الأفق وجريدر في نهايته",
+        "en": "A graded earth road running to the horizon with a grader at the far end"
+      }
+    },
+    {
+      "n": 169,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "طريق ترابي واسع بعد التسوية بين تباب رملية",
+        "en": "A wide graded earth road between sand hills"
+      }
+    },
+    {
+      "n": 12,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "أرض ممهدة حديثًا تظهر عليها آثار عجلات المعدات",
+        "en": "Freshly graded ground showing equipment tracks"
+      }
+    },
+    {
+      "n": 142,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "ممر ترابي قيد التنفيذ بمحاذاة طريق أسفلتي مفتوح للمرور",
+        "en": "An earth carriageway under construction beside an asphalt road in use"
+      }
+    },
+    {
+      "n": 136,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "طريق ترابي ممهد بمحاذاة حاجز خرساني",
+        "en": "A graded earth road running alongside a concrete barrier"
+      }
+    },
+    {
+      "n": 162,
+      "subject": "roads",
+      "project": "",
+      "alt": {
+        "ar": "لقطة علوية لتقاطع طرق وكوبري منحنٍ بين أراضٍ زراعية",
+        "en": "An aerial view of a road junction and a curved bridge among farmland"
+      }
+    },
+    {
+      "n": 198,
+      "subject": "roads",
+      "project": "30",
+      "alt": {
+        "ar": "سيارة مياه ترش طبقة التربة قبل الدمك",
+        "en": "A water tanker wetting the earth layer before compaction"
+      }
+    },
+    {
+      "n": 200,
+      "subject": "roads",
+      "project": "30",
+      "alt": {
+        "ar": "جريدر يسوّي تربة رملية تحت سماء صافية",
+        "en": "A motor grader levelling sandy ground under a clear sky"
+      }
+    },
+    {
+      "n": 43,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "ممر إنترلوك أحمر ورمادي طويل بين بردورتين وطبلية إنترلوك على جانبه",
+        "en": "A long red and grey interlock walkway between two curbs, with a pallet of blocks beside it"
+      }
+    },
+    {
+      "n": 9,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "عمال يرصّون بلوكات الإنترلوك من طبلية بجانب ممر مكتمل",
+        "en": "Workers taking interlock blocks from a pallet beside a finished walkway"
+      }
+    },
+    {
+      "n": 34,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "عامل يركّب بلوكات الإنترلوك عند طرف ممر قيد التنفيذ",
+        "en": "A worker setting interlock blocks at the edge of a walkway under construction"
+      }
+    },
+    {
+      "n": 1,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "ممر إنترلوك منفذ على جانب طريق مع مواد مجهزة في الموقع",
+        "en": "An interlock walkway laid beside a road, with materials staged on site"
+      }
+    },
+    {
+      "n": 101,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "تركيب بلاط الإنترلوك بجوار بردورة مركّبة حديثًا",
+        "en": "Interlock pavers being laid next to newly installed curbstones"
+      }
+    },
+    {
+      "n": 102,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "ساحة مرصوفة بالإنترلوك بعد الانتهاء من التنفيذ",
+        "en": "A finished interlock-paved open area"
+      }
+    },
+    {
+      "n": 45,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "ممر إنترلوك على جانب طريق قبل الغروب",
+        "en": "An interlock walkway beside a road before sunset"
+      }
+    },
+    {
+      "n": 38,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "أعمال بردورة وإنترلوك على جانب طريق",
+        "en": "Curbstone and interlock work along a roadside"
+      }
+    },
+    {
+      "n": 108,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "ممر إنترلوك بلونين مكتمل بمحاذاة طريق",
+        "en": "A finished two-colour interlock walkway beside a road"
+      }
+    },
+    {
+      "n": 66,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "بردورات وبلاط إنترلوك مجهزة في الموقع",
+        "en": "Curbstones and interlock pavers stacked on site"
+      }
+    },
+    {
+      "n": 32,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "بردورة وإنترلوك منفذان بجوار حائط دبش",
+        "en": "Curb and interlock laid beside a stone wall"
+      }
+    },
+    {
+      "n": 95,
+      "subject": "curb",
+      "project": "",
+      "alt": {
+        "ar": "عاملان يركّبان بلاط إنترلوك سداسي ويدقّانه بالمطرقة",
+        "en": "Two workers laying hexagonal interlock pavers and bedding them with a mallet"
+      }
+    },
+    {
+      "n": 160,
+      "subject": "slopes",
+      "project": "",
+      "alt": {
+        "ar": "ألواح ميول خرسانية على جانب الطريق",
+        "en": "Concrete slope panels along the side of a road"
+      }
+    },
+    {
+      "n": 152,
+      "subject": "slopes",
+      "project": "",
+      "alt": {
+        "ar": "حواجز نيوجيرسي خرسانية ممتدة بجانب طريق",
+        "en": "A run of New Jersey concrete barriers beside a road"
+      }
+    },
+    {
+      "n": 182,
+      "subject": "equipment",
+      "project": "",
+      "alt": {
+        "ar": "جريدر يعمل على طريق ترابي",
+        "en": "A motor grader working on an earth road"
+      }
+    },
+    {
+      "n": 126,
+      "subject": "equipment",
+      "project": "",
+      "alt": {
+        "ar": "بلدوزر يزيل الأتربة في أرض صحراوية",
+        "en": "A bulldozer clearing ground in the desert"
+      }
+    },
+    {
+      "n": 130,
+      "subject": "equipment",
+      "project": "",
+      "alt": {
+        "ar": "بلدوزر يعمل على مسار طريق جديد",
+        "en": "A bulldozer working on the line of a new road"
+      }
+    },
+    {
+      "n": 134,
+      "subject": "equipment",
+      "project": "",
+      "alt": {
+        "ar": "حفار يشق خندقًا بمحاذاة الطريق",
+        "en": "An excavator digging a trench alongside the road"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Normalise text files to LF in the repository (the host builds on Linux).
+* text=auto eol=lf
+
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.ico binary
+*.mp4 binary
+*.webm binary
+*.woff2 binary
+*.xlsx binary

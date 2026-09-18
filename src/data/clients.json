@@ -1,0 +1,201 @@
+{
+  "_readme": "Clients & partners (client answers batch 7, 2026-09-18). The client confirmed that every company listed agreed to be named. Order is the client's: well-known groups first, then the rest as listed; \"n\" is the number used in CLIENT_REQUESTS.md. Names are shown as text in the page language only. Never draw, fetch or approximate a company logo: a logo may be added only from a file the company itself sends. The English spellings are the client's and are awaiting their confirmation (optional request in CLIENT_REQUESTS.md, especially 7 and 11-23). The wording around the list stays neutral (\"Proud to have worked with\"): no claims about the nature or size of the work.",
+  "items": [
+    {
+      "n": 1,
+      "name": {
+        "ar": "أوراسكوم",
+        "en": "Orascom"
+      }
+    },
+    {
+      "n": 2,
+      "name": {
+        "ar": "أبناء حسن علام",
+        "en": "Hassan Allam Sons"
+      }
+    },
+    {
+      "n": 3,
+      "name": {
+        "ar": "مجموعة طلعت مصطفى",
+        "en": "Talaat Moustafa Group"
+      }
+    },
+    {
+      "n": 4,
+      "name": {
+        "ar": "إعمار مصر",
+        "en": "Emaar Misr"
+      }
+    },
+    {
+      "n": 5,
+      "name": {
+        "ar": "هايد بارك",
+        "en": "Hyde Park"
+      }
+    },
+    {
+      "n": 6,
+      "name": {
+        "ar": "الخرافي",
+        "en": "Kharafi"
+      }
+    },
+    {
+      "n": 7,
+      "name": {
+        "ar": "مدن",
+        "en": "Modon"
+      }
+    },
+    {
+      "n": 8,
+      "name": {
+        "ar": "الشروق صن رايز",
+        "en": "El Shorouk Sunrise"
+      }
+    },
+    {
+      "n": 9,
+      "name": {
+        "ar": "رمال للتطوير العقاري",
+        "en": "Ramal Real Estate Development"
+      }
+    },
+    {
+      "n": 10,
+      "name": {
+        "ar": "IGI",
+        "en": "IGI"
+      }
+    },
+    {
+      "n": 11,
+      "name": {
+        "ar": "السعداء جروب",
+        "en": "El Saadaa Group"
+      }
+    },
+    {
+      "n": 12,
+      "name": {
+        "ar": "الشعفار",
+        "en": "El Shaafar"
+      }
+    },
+    {
+      "n": 13,
+      "name": {
+        "ar": "المراسم",
+        "en": "El Marasem"
+      }
+    },
+    {
+      "n": 14,
+      "name": {
+        "ar": "الرابح",
+        "en": "El Rabeh"
+      }
+    },
+    {
+      "n": 15,
+      "name": {
+        "ar": "الصفا",
+        "en": "El Safa"
+      }
+    },
+    {
+      "n": 16,
+      "name": {
+        "ar": "الحمد",
+        "en": "El Hamd"
+      }
+    },
+    {
+      "n": 17,
+      "name": {
+        "ar": "الشريف",
+        "en": "El Sherif"
+      }
+    },
+    {
+      "n": 18,
+      "name": {
+        "ar": "مصر الهادي",
+        "en": "Misr El Hady"
+      }
+    },
+    {
+      "n": 19,
+      "name": {
+        "ar": "جسور الوادي",
+        "en": "Gosour El Wadi"
+      }
+    },
+    {
+      "n": 20,
+      "name": {
+        "ar": "الشركة العربية",
+        "en": "The Arab Company"
+      }
+    },
+    {
+      "n": 21,
+      "name": {
+        "ar": "الشرق",
+        "en": "El Sharq"
+      }
+    },
+    {
+      "n": 22,
+      "name": {
+        "ar": "السعيد",
+        "en": "El Saeed"
+      }
+    },
+    {
+      "n": 23,
+      "name": {
+        "ar": "النور",
+        "en": "El Nour"
+      }
+    },
+    {
+      "n": 24,
+      "name": {
+        "ar": "كونكريت",
+        "en": "Concrete"
+      }
+    },
+    {
+      "n": 25,
+      "name": {
+        "ar": "كونكورد",
+        "en": "Concord"
+      }
+    },
+    {
+      "n": 26,
+      "name": {
+        "ar": "إيكو",
+        "en": "ECO"
+      }
+    },
+    {
+      "n": 27,
+      "name": {
+        "ar": "المليحي",
+        "en": "El Melehy"
+      }
+    },
+    {
+      "n": 28,
+      "name": {
+        "ar": "الفهد",
+        "en": "El Fahd"
+      }
+    }
+  ]
+}

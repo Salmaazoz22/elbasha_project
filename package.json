@@ -1,0 +1,19 @@
+{
+  "name": "elbasha-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static bilingual (Arabic-first) website for El Basha for General Supplies & Contracting.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/check.mjs",
+    "build:drafts": "node scripts/build.mjs --drafts && node scripts/check.mjs --drafts",
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "media": "npm install --no-save --no-package-lock sharp@0.35.4 && node scripts/media.mjs",
+    "docs:pdf": "npm install --no-save --no-package-lock puppeteer-core@25.11.0 && node scripts/docs-pdf.mjs",
+    "video": "node scripts/video.mjs"
+  }
+}

@@ -1,0 +1,8 @@
+# Old URLs from the first version of the site → new pages (301 permanent).
+/HTML/index.html      /           301
+/HTML/About.html      /about/     301
+/HTML/about.html      /about/     301
+/HTML/services.html   /projects/  301
+/HTML/contact.html    /contact/   301
+/HTML                 /           301
+/HTML/                /           301

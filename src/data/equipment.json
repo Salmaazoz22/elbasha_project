@@ -1,0 +1,37 @@
+{
+  "_readme": "Equipment strip on the About page (idea 6 in docs/MEDIA_PROPOSAL.md). The client confirmed on 2026-09-16 that the machines in the client photo batch are company-owned, which is what lets the section be titled «معداتنا» / \"Our Equipment\". \"label\" and \"alt\" describe only what is visible in the frame: no counts, no fleet size and no brand names, even where a maker's name is legible on the machine.",
+  "items": [
+    {
+      "n": 172,
+      "label": { "ar": "جريدر", "en": "Motor grader" },
+      "alt": {
+        "ar": "جريدر عن قرب واقف على طريق ممهّد",
+        "en": "A close view of a motor grader standing on a graded road"
+      }
+    },
+    {
+      "n": 180,
+      "label": { "ar": "جريدر بكابينة السائق", "en": "Grader with the operator in the cab" },
+      "alt": {
+        "ar": "جريدر من الجانب والسائق في الكابينة",
+        "en": "A motor grader seen from the side with its operator in the cab"
+      }
+    },
+    {
+      "n": 83,
+      "label": { "ar": "لودر", "en": "Wheel loader" },
+      "alt": {
+        "ar": "لودر يحمل رصّة بلاط إنترلوك على الشوكة وعاملان يوجّهانها",
+        "en": "A wheel loader carrying a pallet of interlock pavers on its forks, steadied by two workers"
+      }
+    },
+    {
+      "n": 36,
+      "label": { "ar": "هراس صفيحة", "en": "Plate compactor" },
+      "alt": {
+        "ar": "عامل يشغّل هراس صفيحة لدمك الرمل قبل تركيب البلاط",
+        "en": "A worker running a plate compactor over sand before the pavers go down"
+      }
+    }
+  ]
+}

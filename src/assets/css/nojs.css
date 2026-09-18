@@ -1,0 +1,25 @@
+/* Loaded only inside <noscript>: without JavaScript the mobile menu cannot be toggled,
+   so show every link in the header instead of the collapsed menu. */
+@media (max-width: 61.99em) {
+  .nav-toggle {
+    display: none !important;
+  }
+
+  .site-nav {
+    position: static !important;
+    display: flex !important;
+    flex-basis: 100%;
+    padding: 0 0 var(--space-4) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .site-nav__list {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+
+  .site-nav__link {
+    width: auto !important;
+  }
+}

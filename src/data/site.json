@@ -1,0 +1,88 @@
+{
+  "_readme": "Single source of truth for company and contact details. Values containing [[NEEDS_CLIENT: ...]] are hidden on the live site and shown as visible markers in the drafts build (npm run build:drafts).",
+  "brand": {
+    "name": {
+      "ar": "الباشا للتوريدات العمومية والمقاولات",
+      "en": "El Basha for General Supplies & Contracting"
+    },
+    "shortName": {
+      "ar": "الباشا",
+      "en": "El Basha"
+    },
+    "tagline": {
+      "ar": "للتوريدات العمومية والمقاولات",
+      "en": "General Supplies & Contracting"
+    },
+    "legalName": {
+      "ar": "الباشا للتوريدات العمومية والمقاولات",
+      "en": "El Basha for General Supplies & Contracting",
+      "_note": "Confirmed by the client (answers batch 4, 2026-09-17): the legal name is the name already on the site."
+    },
+    "foundingDate": "2010"
+  },
+  "contact": {
+    "primaryPhone": {
+      "tel": "+201116111015",
+      "display": "+20 111 611 1015"
+    },
+    "whatsappUrl": "https://wa.me/201116111015",
+    "secondaryPhones": [
+      {
+        "tel": "+201014165151",
+        "display": "+20 101 416 5151"
+      },
+      {
+        "tel": "+201006992768",
+        "display": "+20 100 699 2768"
+      }
+    ],
+    "email": "elbasha.constructions@gmail.com",
+    "address": {
+      "ar": "الدور الرابع، عمارة رقم 10062، فوق البنك الأهلي، مدينة المعراج، زهراء المعادي، القاهرة",
+      "en": "4th Floor, Building 10062, above National Bank of Egypt, Al-Meraj City, Zahraa El Maadi, Cairo",
+      "postal": {
+        "streetAddress": {
+          "ar": "الدور الرابع، عمارة رقم 10062، فوق البنك الأهلي، مدينة المعراج، زهراء المعادي",
+          "en": "4th Floor, Building 10062, above National Bank of Egypt, Al-Meraj City, Zahraa El Maadi"
+        },
+        "addressLocality": {
+          "ar": "القاهرة",
+          "en": "Cairo"
+        },
+        "addressCountry": "EG"
+      },
+      "_note": "Sent by the client (answers batch 5, 2026-09-18). ar/en are shown on the Contact card and in the footer; postal feeds the JSON-LD PostalAddress."
+    },
+    "mapUrl": "https://www.google.com/maps?q=29.9739548,31.315296&z=17&hl=en",
+    "serviceArea": {
+      "ar": "جميع محافظات الجمهورية",
+      "en": "All governorates of Egypt"
+    },
+    "hours": {
+      "ar": "الأحد – الخميس، 10 صباحًا – 5 مساءً",
+      "en": "Sunday – Thursday, 10:00 AM – 5:00 PM",
+      "schema": "Su-Th 10:00-17:00"
+    }
+  },
+  "social": [
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "url": "https://www.facebook.com/share/1b3x72sW7X/"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/elbashaconstructions/"
+    }
+  ],
+  "form": {
+    "endpoint": "https://formspree.io/f/mjkeplye"
+  },
+  "domain": null,
+  "structuredData": {
+    "_readme": "JSON-LD on the home page. Emitted only when SITE_URL is set (production). The address is a PostalAddress built from contact.address.postal in the page language.",
+    "enabled": true
+  },
+  "_domainNote": "No custom domain yet (client, 2026-09-15). The site is deployed on the free *.pages.dev URL; set SITE_URL to that URL. See docs/DEPLOYMENT_GUIDE.md §10 when a domain is added."
+}
