@@ -1829,21 +1829,6 @@ bdi {
   font-weight: 700;
 }
 
-/* The address is the map link. It flows as text (several lines on phones), so the new-tab icon follows its last
-   word instead of floating at the card edge; the wrapped lines together make a tap target well over 44 px. */
-.contact-card a.contact-card__address {
-  display: inline;
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-
-.contact-card__address > .icon {
-  display: inline-block;
-  margin-inline-start: 0.35em;
-  vertical-align: -0.2em;
-}
-
 .contact-card__value a {
   min-height: 2.75rem;
 }
@@ -2122,16 +2107,10 @@ textarea.field__input {
 }
 
 /* Plain-text rows (address, hours) can wrap: keep the icon on the first line. */
-.site-footer__contact li > .icon,
-.site-footer__address > .icon {
+.site-footer__contact li > .icon {
   flex-shrink: 0;
   margin-block-start: 0.25rem;
   margin-block-start: calc((1lh - 18px) / 2);
-}
-
-/* The address is the map link and wraps over several lines: keep the pin on the first line. */
-.site-footer__contact .site-footer__address {
-  align-items: flex-start;
 }
 
 .site-footer .icon {

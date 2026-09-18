@@ -130,7 +130,8 @@
     "socialTitle": "تابعنا",
     "addressTitle": "الموقع",
     "hoursTitle": "مواعيد العمل",
-    "areaTitle": "نطاق العمل"
+    "areaTitle": "نطاق العمل",
+    "mapLink": "عرض على الخريطة"
   },
   "form": {
     "title": "أرسل رسالة",

@@ -850,6 +850,10 @@ DEPLOYMENT_GUIDE §11 D now includes the hero-film and Low Power Mode checks, to
 - **Contact card and footer:** the address itself is the link. The separate «عرض على الخريطة» / "View on map" link and its strings are
   gone. On the card the address flows as text with the new-tab icon after its last word; in the footer the pin stays on the first line.
 - **JSON-LD:** `hasMap` carries the same URL (home pages, AR and EN).
+- **Update (client, 2026-09-19):** the address went back to plain text, and the separate «عرض على الخريطة» / "View on map" link under
+  it is restored on the contact card and in the footer, exactly as before, now pointing to the dropped-pin URL. `hasMap` stays.
+  Re-checked: builds pass, the new URL is on 11 links + 2 JSON-LD blocks and `?q=` appears nowhere, the link name is «عرض على الخريطة» /
+  "View on map" + the new-tab hint (44 px tall), overflow is 0/40, and there are no console errors.
 
 **Checks**
 
