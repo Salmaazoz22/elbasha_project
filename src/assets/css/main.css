@@ -429,6 +429,12 @@ bdi {
   box-shadow: var(--shadow-sm);
 }
 
+@media (min-width: 62em) {
+  :root {
+    --header-h: 5rem;
+  }
+}
+
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -451,9 +457,10 @@ bdi {
   color: var(--ink-900);
 }
 
+/* Logo size (client answers batch 8): 64 px from 62em up, 52 px below; the image is 192 px tall, so both stay sharp. */
 .brand__logo {
   width: auto;
-  height: 3.25rem;
+  height: 4rem;
 }
 
 .brand__text {
@@ -560,7 +567,7 @@ bdi {
    without JavaScript, nojs.css (loaded in <noscript>) shows the full menu instead. */
 @media (max-width: 61.99em) {
   .brand__logo {
-    height: 2.75rem;
+    height: 3.25rem;
   }
 
   .nav-toggle {
@@ -727,6 +734,87 @@ bdi {
 
 .hero__media {
   z-index: -2;
+}
+
+/* The company film, muted, over the still (tablet width and up; attached by main.js after page load). It fades in once
+   playing, so the still is what paints first and what stays if autoplay is blocked. */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease);
+}
+
+.hero__video.is-playing {
+  opacity: 1;
+}
+
+@media (max-width: 47.99em) {
+  .hero__video {
+    display: none;
+  }
+}
+
+.hero__media-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-block-start: var(--space-4);
+}
+
+.hero__sound,
+.hero__pause {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  border: 1px solid rgb(255 255 255 / 0.6);
+  border-radius: 999px;
+  background: rgb(11 27 63 / 0.72);
+  color: var(--white);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.hero__sound {
+  padding: 0.5rem 1.125rem;
+}
+
+.hero__pause {
+  width: 2.75rem;
+  padding: 0;
+}
+
+.hero__sound:hover,
+.hero__pause:hover {
+  background: var(--navy-950);
+  border-color: var(--white);
+}
+
+.hero__sound:focus-visible,
+.hero__pause:focus-visible {
+  outline: 3px solid var(--orange-500);
+  outline-offset: 2px;
+}
+
+.hero__sound-icon,
+.hero__pause-icon {
+  display: inline-flex;
+}
+
+.hero__sound[aria-pressed="false"] .hero__sound-icon--off,
+.hero__sound[aria-pressed="true"] .hero__sound-icon--on,
+.hero__pause[data-state="playing"] .hero__pause-icon--play,
+.hero__pause:not([data-state="playing"]) .hero__pause-icon--pause {
+  display: none;
 }
 
 .hero__shade {
@@ -1423,61 +1511,14 @@ bdi {
 }
 
 .video-frame__video {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 20 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
 }
 
-.video-frame__toggle {
-  position: absolute;
-  inset-inline-end: var(--space-4);
-  bottom: var(--space-4);
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgb(255 255 255 / 0.5);
-  border-radius: 999px;
-  background: rgb(11 27 63 / 0.75);
-  color: var(--white);
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.video-frame__toggle:hover {
-  background: var(--navy-950);
-}
-
-.video-frame__toggle-icon--pause {
-  display: none;
-}
-
-.video-frame__toggle[aria-pressed="false"] .video-frame__toggle-icon--play,
-.video-frame__toggle:not([aria-pressed]) .video-frame__toggle-icon--play {
-  display: inline-flex;
-}
-
-.video-frame__toggle[aria-pressed="true"] .video-frame__toggle-icon--pause {
-  display: inline-flex;
-}
-
-.video-frame__toggle[aria-pressed="true"] .video-frame__toggle-icon--play {
-  display: none;
-}
-
-/* Phones held upright play the vertical reel (see <source media> in the home template and main.js); the frame is
-   capped to 80% of the viewport height so the whole reel stays visible. */
-@media (max-width: 47.99em) and (orientation: portrait) {
-  .video-frame {
-    width: min(100%, 80svh * 9 / 16);
-    margin-inline: auto;
-  }
-
-  .video-frame__video {
-    aspect-ratio: 9 / 16;
-  }
-}
 
 /* ---------- CTA band ---------- */
 .cta-band {
@@ -1547,6 +1588,12 @@ bdi {
     grid-template-columns: 1.4fr 1fr;
     gap: var(--space-16);
   }
+}
+
+.about-intro__logo {
+  width: clamp(11rem, 30vw, 16.25rem);
+  height: auto;
+  margin-block-end: var(--space-6);
 }
 
 .about-intro__lead {
@@ -2003,7 +2050,7 @@ textarea.field__input {
 }
 
 .site-footer__logo img {
-  height: 3.5rem;
+  height: 6rem;
   width: auto;
 }
 

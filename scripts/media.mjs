@@ -135,14 +135,15 @@ for (const n of [172, 180, 83, 36]) {
   await responsive(`equipment-${n}`, file, { widths: [320, 640], quality: 68, ratio: 4 / 3 });
 }
 
-// ---------- Logo: drop the dark 9 px band on the right edge, make the outer white transparent ----------
-{
-  const { data, info } = await sharp(join(SRC, 'logo.png'))
-    .extract({ left: 0, top: 0, width: 812, height: 447 })
-    .ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+// ---------- Logo (client answers batch 8, 2026-09-18: more prominent) ----------
+// Source: logo-hires.png, the 1299×945 raster inside the client's logo.pdf (a Photoshop export, not vector). It is the
+// same artwork as the old logo.png but cleaner and larger: the mark is 1004×674 px (was 812×447), with the full name
+// underneath. Largest clean display size at 2 image px per CSS px: mark ≈ 500×335, full logo ≈ 510×425 CSS px.
+// The outer white becomes transparent by flood fill from the edges, so interior whites (the house window) stay.
+async function transparentLogo(extract) {
+  const { data, info } = await sharp(join(SRC, 'logo-hires.png')).extract(extract).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const { width: w, height: h } = info;
   const isWhite = (i) => data[i] > 235 && data[i + 1] > 235 && data[i + 2] > 235;
-  // Flood-fill from the edges so interior whites (e.g. the house window) are preserved.
   const seen = new Uint8Array(w * h);
   const stack = [];
   for (let x = 0; x < w; x++) stack.push(x, (h - 1) * w + x);
@@ -160,15 +161,21 @@ for (const n of [172, 180, 83, 36]) {
     if (y > 0) stack.push(p - w);
     if (y < h - 1) stack.push(p + w);
   }
-  const clean = await sharp(data, { raw: info }).trim({ threshold: 1 }).png().toBuffer();
-  const meta = await sharp(clean).metadata();
-  const height = 112; // 2x the 56 px display height
-  const width = Math.round((meta.width * height) / meta.height);
-  const png = await sharp(clean).resize({ height }).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(join(IMG, 'logo.png'));
-  // Palette PNG is smaller than WebP for this flat artwork, so only PNG is shipped.
-  manifest.logo = { width, height, png: 'img/logo.png' };
-  console.log(`logo ${width}x${height}  png ${kb(png.size)}`);
+  return sharp(data, { raw: info }).trim({ threshold: 1 }).png().toBuffer();
 }
+// Palette PNG is smaller than WebP for this flat artwork, so only PNG is shipped.
+async function logoPng(key, buf, height) {
+  const meta = await sharp(buf).metadata();
+  const width = Math.round((meta.width * height) / meta.height);
+  const out = await sharp(buf).resize({ height }).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(join(IMG, `${key}.png`));
+  manifest[key] = { width, height, png: `img/${key}.png` };
+  console.log(`${key} ${width}x${height}  png ${kb(out.size)}`);
+}
+// Mark only (house, bridge, calligraphy; everything above the tagline, which starts at y = 722): header and footer.
+// 192 px tall = 2x the 96 px footer size, and 3x the 64 px header size.
+await logoPng('logo', await transparentLogo({ left: 0, top: 0, width: 1299, height: 721 }), 192);
+// Full logo with the Arabic and English name: About page, shown ≈ 260 px wide → 2x.
+await logoPng('logo-full', await transparentLogo({ left: 0, top: 0, width: 1299, height: 945 }), 432);
 
 // ---------- Favicons (derived from the 368 px icon; no vector source exists) ----------
 {

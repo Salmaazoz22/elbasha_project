@@ -16,6 +16,8 @@ export function home(ctx) {
   ${picture(ctx, `hero-${lang}`, {
     alt: t.hero.imageAlt, sizes: '100vw', className: 'hero__media', eager: true, mobile: `hero-${lang}-mobile`,
   })}
+  <video class="hero__video" muted loop playsinline preload="none" width="1280" height="576" aria-hidden="true"
+    data-hero-video data-webm="${video('final.webm')}" data-mp4="${video('final.mp4')}"></video>
   <div class="hero__shade" aria-hidden="true"></div>
   <div class="container hero__content">
     <p class="eyebrow eyebrow--light">${t.hero.eyebrow}</p>
@@ -24,6 +26,20 @@ export function home(ctx) {
     <div class="hero__actions">
       ${whatsappButton(ctx, { className: 'btn btn--primary btn--lg' })}
       ${callButton(ctx, { className: 'btn btn--outline-light btn--lg', showNumber: true })}
+    </div>
+    <div class="hero__media-controls" data-hero-controls hidden>
+      <button class="hero__sound" type="button" aria-pressed="false" data-hero-sound
+        data-label-on="${t.hero.soundOn}" data-label-off="${t.hero.soundOff}">
+        <span class="hero__sound-icon hero__sound-icon--on">${icon('volume-2', { size: 20 })}</span>
+        <span class="hero__sound-icon hero__sound-icon--off">${icon('volume-x', { size: 20 })}</span>
+        <span data-hero-sound-label>${t.hero.soundOn}</span>
+      </button>
+      <button class="hero__pause" type="button" data-hero-pause hidden
+        data-label-pause="${t.home.videoPause}" data-label-play="${t.home.videoPlay}">
+        <span class="hero__pause-icon hero__pause-icon--pause">${icon('pause', { size: 18 })}</span>
+        <span class="hero__pause-icon hero__pause-icon--play">${icon('play', { size: 18 })}</span>
+        <span class="visually-hidden" data-hero-pause-label>${t.home.videoPause}</span>
+      </button>
     </div>
   </div>
 </section>
@@ -54,24 +70,15 @@ export function home(ctx) {
 
 ${clientsSection(ctx)}
 
-<section class="section section--dark" aria-labelledby="video-title">
+<section class="section section--dark" id="video" aria-labelledby="video-title">
   <div class="container">
-    ${sectionHead(ctx, { eyebrow: t.home.videoEyebrow, title: t.home.videoTitle, id: 'video-title' })}
+    ${sectionHead(ctx, { eyebrow: t.home.videoEyebrow, title: t.home.videoTitle, lead: t.home.videoLead, id: 'video-title' })}
     <figure class="video-frame" data-reveal>
-      <video class="video-frame__video" controls muted loop playsinline preload="none"
-        poster="${video('reel-poster.webp')}" data-poster-landscape="${video('highlight-poster.webp')}" width="1280" height="576"
-        aria-label="${t.home.videoLabel}" data-autoplay-video>
-        <source src="${video('highlight.webm')}" type="video/webm" media="(min-width: 48em), (orientation: landscape)">
-        <source src="${video('highlight.mp4')}" type="video/mp4" media="(min-width: 48em), (orientation: landscape)">
-        <source src="${video('reel.webm')}" type="video/webm">
-        <source src="${video('reel.mp4')}" type="video/mp4">
+      <video class="video-frame__video" controls playsinline preload="none" poster="${video('final-poster.webp')}"
+        width="1280" height="576" aria-label="${t.home.videoLabel}" data-section-video>
+        <source src="${video('final.webm')}" type='video/webm; codecs="vp9, opus"'>
+        <source src="${video('final.mp4')}" type='video/mp4; codecs="avc1.64001f, mp4a.40.2"'>
       </video>
-      <button class="video-frame__toggle" type="button" hidden data-video-toggle
-        data-label-pause="${t.home.videoPause}" data-label-play="${t.home.videoPlay}">
-        <span class="video-frame__toggle-icon video-frame__toggle-icon--pause">${icon('pause', { size: 20 })}</span>
-        <span class="video-frame__toggle-icon video-frame__toggle-icon--play">${icon('play', { size: 20 })}</span>
-        <span data-video-toggle-label>${t.home.videoPlay}</span>
-      </button>
     </figure>
   </div>
 </section>
@@ -130,6 +137,8 @@ ${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
 <section class="section" aria-labelledby="about-intro-title">
   <div class="container about-intro">
     <div class="about-intro__text" data-reveal>
+      <img class="about-intro__logo" src="${ctx.asset(ctx.images['logo-full'].png)}" width="${ctx.images['logo-full'].width / 2}"
+        height="${ctx.images['logo-full'].height / 2}" alt="">
       <h2 class="visually-hidden" id="about-intro-title">${ctx.site.brand.name[lang]}</h2>
       <p class="about-intro__lead">${t.about.intro}</p>
       <div class="about-intro__actions">

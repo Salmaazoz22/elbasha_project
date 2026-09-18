@@ -787,6 +787,52 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 
 **Lighthouse — not re-run.** The change is about 2 KB of HTML on the four pages that show the section, plus 1.2 KB of shared CSS; no images or scripts.
 
+## 15k. Re-run after client requests batch 8: company film with sound, larger logo (2026-09-18)
+
+**Video**
+
+- **Budget decision (client).** FINAL.mp4 runs 3:12.5, so ~10 MB per format leaves ~415 kb/s for picture and sound combined. The dustiest
+  20 s were test-encoded and compared frame by frame: 960 px at ~400 kb/s smeared the grille and blurred the "CG060" marking on the
+  grader, while 1280 px at VP9 650k + Opus 64k / H.264 800k + AAC 96k looked like the previous highlight clip. The client chose the
+  latter: **`final.webm` 16.6 MiB, `final.mp4` 20.8 MiB**, 1280×576, 25 fps, full length, stereo sound, under Cloudflare's 25 MiB/file.
+  The master's letterbox bars are cropped (20:9). The edit already opens and closes on the company logo (last frame ≈ 189.5 s, no
+  trailing black), and that frame is the section poster.
+- **Hero** (≥ 48em): the still still paints first (LCP unchanged). `main.js` attaches the film after `load`, or at the latest 3 s after the
+  script runs, and autoplays it muted; it fades in once playing. The button «شغّل الصوت» / "Turn sound on" unmutes it and restarts it from 0.
+  It then plays once and stops on the logo frame; the button becomes «كتم الصوت» / "Mute". A pause button meets WCAG 2.2.2. The muted
+  loop pauses off screen and in background tabs. There is no autoplay with reduced motion or Save-Data, but the button still works.
+- **Phones** (< 48em): the hero stays the still and downloads no video. The same button plays the film with sound in the video section,
+  which is now a plain player (native controls, `preload="none"`, logo poster) with sound on ▶. The highlight and reel clips and the
+  reel master are retired.
+- **Apple WebKit gets the MP4 first** (`navigator.vendor`, which covers Safari and every iOS browser). Playwright's WebKit stalled on the
+  WebM, while every Apple device decodes H.264 in hardware. Elsewhere the smaller WebM stays first. Source types carry exact codecs.
+
+**Logo**
+
+- New source `source-assets/images/logo-hires.png`: the 1299×945 raster inside the client's `logo.pdf`, the same artwork as the old
+  logo.png but cleaner. Mark 1004×674 px (was 812×447); the full logo with the name is 1023×850. **Largest clean size** at 2 image px per
+  CSS px: mark ≈ 500×335, full logo ≈ 510×425 CSS px.
+- Header 52 → **64 px** from 62em (header 72 → 80 px), 44 → **52 px** below; footer 56 → **96 px**. All come from one 286×192 PNG (13.5 KB).
+  About: the full logo with the name, 176–260 px wide, above the intro (`logo-full.png`, 520×432, 40 KB).
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL set); 9 pages, 369 files, 56.0 MiB |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass |
+| Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
+| Chrome, autoplay policy "user gesture required": desktop AR/EN 1280, tablet 768 | Hero autoplays muted (WebM); the sound button → unmuted and restarted (3.8 s → 0), label «كتم الصوت»/"Mute"; second click mutes; pause works |
+| Chrome, phones AR/EN 375 | No hero video requested (only the 30 KB section poster); the sound button → the section film plays unmuted from 0 |
+| Chrome, reduced motion | No autoplay, no video requested; the sound button still plays the hero with sound |
+| WebKit (Playwright 26.6): iPhone 13, iPad, desktop | iPhone: the button plays the section film (MP4) with sound. iPad/desktop: the hero autostarts through the 3 s fallback and restarts with sound on tap. The page load event completes (it stalled before the MP4-first change) |
+| Header / footer logo sizes | 77×52 (≤ 61.99em), 95×64 (desktop); footer 143×96; no overflow at 320 px |
+| Console errors | none |
+
+**Not verifiable here:** a real iPhone and a real Android phone. Playwright's WebKit is Apple's engine but not iOS Safari's media stack.
+DEPLOYMENT_GUIDE §11 D now includes the hero-film and Low Power Mode checks, to run on real devices.
+**Lighthouse — not re-run.** The hero still stays the LCP element, and the film only starts after load, from tablet width up.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

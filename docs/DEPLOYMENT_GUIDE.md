@@ -19,7 +19,7 @@
 - [x] Lighthouse mobile Performance 90–100; desktop 100.
 - [x] Call button (`tel:+201116111015`) and WhatsApp button (`https://wa.me/201116111015`) on every page, plus a sticky contact bar on phones.
 - [x] Contact form sends through Formspree (`mjkeplye`), with loading, success and error states; it also works without JavaScript.
-- [x] Video is 52 s, WebM 5.9 MiB / MP4 6.5 MiB, muted, plays only when visible, with a pause button; respects reduced motion.
+- [x] Company film (client batch 8, 2026-09-18): the full 3:12 edit with sound, WebM 16.6 MiB / MP4 20.8 MiB. It plays muted in the home hero from tablet width up, with a sound button and a pause button, and with sound on request in the video section. It respects reduced motion and data-saver settings.
 - [x] Security headers (CSP etc.), long-term caching for hashed assets, and 301 redirects from the old `/HTML/*.html` addresses.
 - [x] `robots.txt`, `sitemap.xml` (generated once `SITE_URL` is set), favicon set and web manifest.
 - [x] No secrets in the repository; the site needs no secret keys.
@@ -53,7 +53,7 @@ The site works without these items; any missing ones are simply hidden. Details 
 | Pages | Home, Projects (all 32), About, Contact, and a 404 page. Each exists in Arabic (`/`, `/projects/`, `/about/`, `/contact/`) and English (`/en/...`). |
 | Content | All real company content from the original site, with the approved Arabic spelling fixes and English name corrections. No invented information. |
 | Contact channels | Primary number +20 111 611 1015 for calls and WhatsApp. Secondary numbers +20 101 416 5151 and +20 100 699 2768. Email elbasha.constructions@gmail.com. Facebook and LinkedIn. Formspree form. |
-| Media | 4 real project photos (responsive WebP + JPEG), hero images taken from the company video, compressed video, cleaned logo, favicons, social share image. |
+| Media | Client photos (project cards, gallery, equipment strip, service cards), hero images and the full company film with sound, the logo from the client's `logo.pdf` raster, favicons, social share image. |
 | Technical | Zero-dependency static build, host-like preview server, automatic checks, security headers, redirects, drafts build for client review. |
 
 ## 2. What is missing
@@ -142,8 +142,8 @@ Full comparison in `IMPLEMENTATION_PLAN.md` §7. Cloudflare Pages suits this sit
 
 **Limits checked against Cloudflare's docs on 2026-09-15:**
 - 500 builds/month, 1 at a time, 20-minute timeout
-- 20,000 files per site; this site has 74
-- **25 MiB per file**; the largest here is 6.5 MiB
+- 20,000 files per site; this site has 369
+- **25 MiB per file**; the largest here is 20.8 MiB (`final.mp4`)
 - 100 custom domains per project; 100 header rules; 2,000 static redirects
 
 **Why not the others:**
@@ -205,7 +205,7 @@ Open **Environment variables (advanced)** and add, for **Production**:
 - Select **Save and Deploy**.
 - The first build takes about a minute. The build log should end with:
   ```
-  Built production site → dist (74 files, 15.2 MiB)
+  Built production site → dist (369 files, 56.0 MiB)
   ...
   ✔ All checks passed
   ```
@@ -307,7 +307,9 @@ curl -sI "https://SITE$(curl -s https://SITE/ | grep -o '/assets/css/main\.[0-9a
 - [ ] The home page loads with the Arabic hero; switching to **English** opens the same page in English, and back.
 - [ ] **☰ menu** opens and closes, and links work. The bottom **WhatsApp / Call** bar hides while the menu is open.
 - [ ] **Call** opens the dialer with **+20 111 611 1015**. **WhatsApp** opens a chat with **+20 111 611 1015**.
-- [ ] Scroll to the **video**: it plays silently; **Pause** stops it.
+- [ ] **Hero film.** On an iPad, or a phone turned sideways, the hero film plays silently. Tap **🔊 شغّل الصوت / Turn sound on**: it restarts from the beginning with sound, the button changes to **كتم الصوت / Mute**, and ⏸ pauses it.
+- [ ] On a phone held upright the hero stays a photo. **شغّل الصوت / Turn sound on** scrolls to the video section and plays the film with sound. The section's own ▶ also plays it with sound.
+- [ ] With iPhone Low Power Mode on, the hero stays a photo, and the button still plays the film with sound.
 - [ ] **Projects:** 5 cards show photos (project 30 opens its 3 photos in the viewer), 27 projects show the navy tile, and the category buttons jump to their sections.
 - [ ] **Footer links:** secondary numbers, email (opens a mail app), Facebook and LinkedIn open correctly. Check Facebook by hand; it blocks automated checks.
 - [ ] No sideways scrolling on any page; text is readable without zooming.

@@ -1952,9 +1952,14 @@
     ]
   },
   "logo": {
-    "width": 168,
-    "height": 112,
+    "width": 286,
+    "height": 192,
     "png": "img/logo.png"
+  },
+  "logo-full": {
+    "width": 520,
+    "height": 432,
+    "png": "img/logo-full.png"
   },
   "og": {
     "width": 1200,

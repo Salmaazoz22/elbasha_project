@@ -60,7 +60,9 @@
     "eyebrow": "General supplies · Contracting · Infrastructure",
     "title": "El Basha for General Supplies & Contracting",
     "lead": "El-Basha Egyptian Company specializes in general supplies, construction services, and infrastructure projects.",
-    "imageAlt": "A motor grader levelling a road on a work site"
+    "imageAlt": "A motor grader levelling a road on a work site",
+    "soundOn": "Turn sound on",
+    "soundOff": "Mute"
   },
   "home": {
     "servicesEyebrow": "What we do",
@@ -70,7 +72,8 @@
     "projectsLead": "Photos from company projects. The projects page has the full list.",
     "videoEyebrow": "Video",
     "videoTitle": "From our work on site",
-    "videoLabel": "Footage of motor graders levelling roads on site",
+    "videoLead": "The full company film (3 minutes), with sound.",
+    "videoLabel": "El Basha company film: road earthworks with our machines on site",
     "videoPause": "Pause video",
     "videoPlay": "Play video"
   },
