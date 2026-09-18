@@ -831,6 +831,14 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 
 **Not verifiable here:** a real iPhone and a real Android phone. Playwright's WebKit is Apple's engine but not iOS Safari's media stack.
 DEPLOYMENT_GUIDE §11 D now includes the hero-film and Low Power Mode checks, to run on real devices.
+
+**Live follow-up (2026-09-18 → 19).**
+- **Byte ranges:** Cloudflare Pages answers `Range` requests with `200` and the whole file, never `206`. This held for
+  `final.mp4`, `final.webm`, the old highlight clip of the first deploy and a small image. The local preview server does honour
+  ranges, which is why local tests could not show it. Apple lists byte-range support as a requirement for iOS media, so an HLS
+  version for Apple devices was proposed as a fallback.
+- **Real iPhone: ✅ plays with sound** on the live site (tested by the team, 2026-09-19). The iPhone/HLS item is **closed; no HLS is
+  needed**. Seeking and the iPad hero were not part of that report; they stay covered by the DEPLOYMENT_GUIDE §11 D checks.
 **Lighthouse — not re-run.** The hero still stays the LCP element, and the film only starts after load, from tablet width up.
 
 ## 15l. Map link: dropped pin, address as the link text (2026-09-19)
