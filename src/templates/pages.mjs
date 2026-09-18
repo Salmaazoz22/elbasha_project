@@ -2,7 +2,7 @@
 import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
   backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectPhotos, projectsCount, ctaBand, gallery,
-  equipmentStrip,
+  equipmentStrip, clientsSection,
 } from './components.mjs';
 import { socialLinks } from './layout.mjs';
 
@@ -51,6 +51,8 @@ export function home(ctx) {
     </div>
   </div>
 </section>
+
+${clientsSection(ctx)}
 
 <section class="section section--dark" aria-labelledby="video-title">
   <div class="container">
@@ -151,6 +153,7 @@ ${pageHero(ctx, { title: t.about.title, image: 'bg-about' })}
   </div>
 </section>
 ${equipmentStrip(ctx)}
+${clientsSection(ctx, { tint: true })}
 ${ctaBand(ctx)}`;
   return { title: t.meta.about.title, description: t.meta.about.description, body, indexable: true };
 }

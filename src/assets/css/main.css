@@ -1120,6 +1120,63 @@ bdi {
   line-height: 1.45;
 }
 
+/* ---------- Clients & partners: names as text only, in equal tiles ---------- */
+/* Centred flex rows: 2 / 4 / 7 columns divide the 28 names evenly; with another count the last row stays centred. */
+.clients__grid {
+  --cols: 2;
+  --gap: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 36em) {
+  .clients__grid {
+    --cols: 4;
+    --gap: var(--space-3);
+  }
+}
+
+@media (min-width: 75em) {
+  .clients__grid {
+    --cols: 7;
+  }
+}
+
+.clients__item {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  display: grid;
+  place-items: center;
+  min-height: 4.5rem;
+  padding: var(--space-3) var(--space-4);
+  background: var(--white);
+  border: 1px solid var(--sand-100);
+  border-block-end: 3px solid var(--sand-100);
+  border-radius: var(--radius-sm);
+  color: var(--navy-700);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.section--tint .clients__item {
+  background: var(--sand-50);
+}
+
+@media (max-width: 35.99em) {
+  .clients__item {
+    min-height: 3.75rem;
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.9375rem;
+  }
+}
+
 .project-group__head {
   display: flex;
   flex-wrap: wrap;

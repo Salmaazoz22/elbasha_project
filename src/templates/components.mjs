@@ -183,6 +183,23 @@ export function equipmentStrip(ctx) {
 </section>`;
 }
 
+/**
+ * «عملاؤنا وشركاؤنا» / "Our Clients & Partners": company names as text in the page language (see clients.json).
+ * `tint` follows the page's alternating section backgrounds.
+ */
+export function clientsSection(ctx, { tint = false } = {}) {
+  const { t, lang } = ctx;
+  return html`
+<section class="section${tint ? ' section--tint' : ''} clients" aria-labelledby="clients-title">
+  <div class="container">
+    ${sectionHead(ctx, { title: t.clients.title, lead: t.clients.lead, id: 'clients-title' })}
+    <ul class="clients__grid" role="list" data-reveal>
+      ${ctx.clients.items.map((c) => html`<li class="clients__item" dir="auto">${c.name[lang]}</li>`)}
+    </ul>
+  </div>
+</section>`;
+}
+
 export function projectsCount(ctx, n) {
   return plural(ctx.t.common.projectsCount, n, ctx.lang);
 }

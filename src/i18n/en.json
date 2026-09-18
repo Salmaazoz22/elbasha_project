@@ -85,6 +85,10 @@
     },
     "openPhotos": "View the project photos"
   },
+  "clients": {
+    "title": "Our Clients & Partners",
+    "lead": "Proud to have worked with:"
+  },
   "gallery": {
     "eyebrow": "From our sites",
     "title": "Photos from the work sites",

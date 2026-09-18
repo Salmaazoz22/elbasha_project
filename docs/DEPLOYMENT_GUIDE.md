@@ -37,7 +37,8 @@ The site works without these items; any missing ones are simply hidden. Details 
 - [ ] Photos for the 27 projects that have none (project 30 got its photos in client batch 6, 2026-09-18)
 - [x] ~~Review of the 10 draft service descriptions~~ approved as written (client batch 5, 2026-09-18)
 - [x] ~~Written address and working hours~~ (hours: batch 3; address: batch 5, 2026-09-18)
-- [ ] About page: profile, photo, trust information (optional)
+- [ ] About page photo (profile: batch 4; clients & partners: batch 7, 2026-09-18)
+- [ ] (Optional) English spellings of the client names and any logo files the companies send
 - [ ] Legal company name, social links confirmation, SVG logo, high-resolution hero photo
 - [x] ~~Permission to publish two photos that show people~~ granted (client batch 5, 2026-09-18)
 
@@ -82,7 +83,7 @@ The full list of 68 unique markers is in `QA_REPORT.md` §13. To see every missi
 | 8 | **Review of the 14 corrected English names** (already applied) | Client sign-off | `projects-inventory.xlsx`, column "Corrected English name" |
 | 9 | ~~Permission to publish the Amr Ibn Al-As Axis and October Western Sector photos~~ | — | ✅ Resolved 2026-09-18: granted; the `photoNote` markers were removed from `projects.json` |
 | 10 | ~~Company profile~~ | — | ✅ Resolved 2026-09-17: the client's text replaced `about.intro`; the separate profile slot was removed |
-| 11 | **Trust information** — *deferred by the client (2026-09-17), not pending* (optional, only if real): clients/owners with permission, certificates, contractor classification | About page | New content; ask the developer |
+| 11 | ~~Trust information~~ | — | ✅ Clients & partners resolved 2026-09-18: 28 names, with permission, in `src/data/clients.json`; shown as text on the home and About pages. Logos only from a company's own file (add a `logo` to that entry and ask the developer). Certificates and classification are no longer requested. |
 | 12 | **Canonical social links:** is `facebook.com/share/1b3x72sW7X/` the link to keep? Any Instagram / YouTube / TikTok? | Footer and contact page | `site.json` → `social` |
 | 13 | **Analytics:** wanted or not? Cloudflare Web Analytics is free and cookie-free. | Visitor statistics | Cloudflare dashboard (no code needed) |
 | 14 | ~~Unused originals~~ | — | ✅ Resolved 2026-09-15: moved to the git-ignored `/archive` folder at the repository root (local only; also in git history at tag `original-upload`) |
@@ -105,7 +106,7 @@ This is the Images Needed table from `AUDIT_REPORT.md` §7.2, with the current s
 | 9 | About photo: team / equipment / office | Humanise the company | About page | 3:2, min **1600×1067** | **Yes** | No | Missing (hidden) |
 | 10 | (Optional) Equipment / fleet photos | Capability proof | About / services | 4:3, min 1200×900 | **Yes** | No | — |
 | 11 | (Optional) Certificates / classification scans | Trust | About | ≥ 1500 px long side | **Yes** | No | — |
-| 12 | (Optional) Client / owner logos | Trust | Home | SVG / PNG | **Yes, with the owner's permission** | No | — |
+| 12 | (Optional) Client / owner logos | Trust | Home and About | SVG / PNG | **Yes, from the company itself** | No | Names shown as text; no logo files received |
 
 ## 5. What content I need
 

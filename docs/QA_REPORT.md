@@ -758,6 +758,35 @@ removed in `a7e615c`, so the cover had been rendering without a logo.
 
 **Lighthouse — not re-run.** The projects page gains 5 lazy images below the fold. The home page is unchanged.
 
+## 15j. Re-run after client answers batch 7 (2026-09-18)
+
+**What changed**
+
+- **«عملاؤنا وشركاؤنا» / "Our Clients & Partners"** on the home page (after the projects, before the video) and on the About
+  page (after «معداتنا», before the CTA band, on a white background so the sections keep alternating). One component
+  (`clientsSection`), with data in `src/data/clients.json`: 28 companies in the client's order (well-known groups first,
+  then the rest as listed). The client confirmed that every company agreed to be named.
+- **Text only.** Names are shown in the page language in equal tiles. No logo was drawn, fetched or approximated. The lead
+  is the neutral "نفخر بالعمل مع:" / "Proud to have worked with:", with nothing about the nature or size of the work.
+- **Layout:** centred flex rows of 2 / 4 / 7 columns (below 576 px / from 576 px / from 1200 px). All three divide 28, so every
+  row is full; with another count the last row stays centred.
+- **Documents:** `CLIENT_REQUESTS.md` 29 → 30 items. The new item 30 is optional: confirm the English spellings (especially 7 and 11–23), and send
+  logo files if the companies want logos shown. It carries the full 28-name table. The deferred trust-signals section was removed.
+  `CLIENT_REQUESTS.pdf` was regenerated (5 pages). `photo-triage.pdf` does not mention clients and was not regenerated.
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` | ✅ pass (SITE_URL = https://elbasha.pages.dev); 29 unique markers hidden (unchanged) |
+| `npm run build:drafts` + `check.mjs --drafts` | ✅ pass |
+| Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
+| Clients section, home + About × AR/EN × 375/600/768/1024/1280/1920 px | 28 tiles each time; 2 / 4 / 4 / 4 / 7 / 7 columns; no name clipped; first "أوراسكوم" / "Orascom", last "الفهد" / "El Fahd" |
+| Section order | Home: projects (white) → clients (sand) → video (navy). About: equipment (sand) → clients (white) → CTA |
+| Console errors | none. The QA script logged aborted requests for the home video: the clients section sits just above it, so scrolling there starts the autoplay download, and navigating away cancels it. Loaded on its own, the video reaches `readyState` 4 with no error. |
+
+**Lighthouse — not re-run.** The change is about 2 KB of HTML on the four pages that show the section, plus 1.2 KB of shared CSS; no images or scripts.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.
