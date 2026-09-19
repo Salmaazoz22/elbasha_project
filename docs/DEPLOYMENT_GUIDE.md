@@ -373,6 +373,7 @@ curl -sI "https://SITE$(curl -s https://SITE/ | grep -o '/assets/css/main\.[0-9a
 | Phone numbers, WhatsApp link, email, social links, form endpoint | `src/data/site.json` | One file updates every page, both languages |
 | Address, hours, service area, map link | `src/data/site.json` | Replace the `[[NEEDS_CLIENT: …]]` text with the real value; the section appears automatically. The map link is optional. |
 | Service names and descriptions | `src/data/services.json` | Replace the description markers to show descriptions under each service. Descriptions written as drafts for client review get `"draft": true` inside the description object (`{"ar": "…", "en": "…", "draft": true}`); the flag has no visible effect, and the build lists flagged descriptions. Remove the flag when the client approves. |
+| Supplied materials (the "We supply" strip below the home hero) | `src/data/materials.json` | Order = display order; `note` is the optional second line ("All sizes"). `icon` must exist in `src/templates/icons.mjs`. Keep the Material Supply description in `services.json` in step. |
 | Project names and categories | `src/data/projects.json` | Keep `name.ar` and `name.en`; `category` is `roads`, `bridges`, `maintenance` or `brick-factories` |
 | Page text, titles, meta descriptions, buttons, form messages | `src/i18n/ar.json`, `src/i18n/en.json` | Keep both languages in step |
 | Colours, spacing, layout | `src/assets/css/main.css` | Colour tokens at the top; keep the contrast rules noted there |

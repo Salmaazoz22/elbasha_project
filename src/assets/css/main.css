@@ -892,6 +892,149 @@ bdi {
   }
 }
 
+/* ---------- "We supply" strip (home, directly below the hero; client batch 9) ---------- */
+/* Phones: heading, tiles (2 per row), button. From 62em: heading and button share the first row, the 7 tiles fill the second. */
+.supplies {
+  position: relative;
+  padding-block: clamp(2rem, 5vw, 3.25rem);
+  background: var(--white);
+  border-block-start: 4px solid var(--orange-500);
+  box-shadow: var(--shadow-sm);
+}
+
+.supplies__inner {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-areas: "head" "list" "cta";
+}
+
+.supplies__head {
+  grid-area: head;
+}
+
+.supplies__title {
+  color: var(--navy-700);
+  font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem);
+  line-height: 1.3;
+}
+
+.supplies__lead {
+  margin-block-start: var(--space-2);
+  color: var(--gray-600);
+  font-size: 1.0625rem;
+}
+
+.supplies__list {
+  --cols: 2;
+  --gap: var(--space-2);
+  grid-area: list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.supplies__item {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 4rem;
+  padding: var(--space-2);
+  background: var(--sand-50);
+  border: 1px solid var(--sand-100);
+  border-block-end: 3px solid rgb(240 120 32 / 0.45);
+  border-radius: var(--radius-sm);
+}
+
+.supplies__icon {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  background: rgb(240 120 32 / 0.12);
+  color: var(--orange-700);
+}
+
+/* Phones: a 24px icon in a smaller box leaves room for two-word names on one line. */
+.supplies__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.supplies__name {
+  text-wrap: balance;
+  color: var(--navy-700);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.supplies__note {
+  display: block;
+  color: var(--gray-600);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.supplies__cta {
+  grid-area: cta;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 36em) {
+  .supplies__list {
+    --cols: 4;
+    --gap: var(--space-3);
+  }
+
+  .supplies__item {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-3);
+    text-align: center;
+  }
+
+  .supplies__icon {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .supplies__icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .supplies__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "head cta" "list list";
+    align-items: end;
+  }
+
+  .supplies__list {
+    --cols: 7;
+  }
+
+  .supplies__cta {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 29.99em) {
+  .supplies__cta .btn {
+    width: 100%;
+  }
+}
+
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero {
   position: relative;

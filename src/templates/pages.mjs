@@ -2,7 +2,7 @@
 import { email, html, icon, isMarker, ltr, needs, phone, raw, slot } from './lib.mjs';
 import {
   backdrop, picture, sectionHead, whatsappButton, callButton, serviceCard, projectCard, projectPhotos, projectsCount, ctaBand, gallery,
-  equipmentStrip, clientsSection,
+  equipmentStrip, clientsSection, suppliesStrip,
 } from './components.mjs';
 import { socialLinks } from './layout.mjs';
 
@@ -43,6 +43,8 @@ export function home(ctx) {
     </div>
   </div>
 </section>
+
+${suppliesStrip(ctx)}
 
 <section class="section" id="services" aria-labelledby="services-title">
   <div class="container">

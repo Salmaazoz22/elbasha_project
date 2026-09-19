@@ -75,7 +75,11 @@
     "videoLead": "The full company film (3 minutes), with sound.",
     "videoLabel": "El Basha company film: road earthworks with our machines on site",
     "videoPause": "Pause video",
-    "videoPlay": "Play video"
+    "videoPlay": "Play video",
+    "suppliesTitle": "We supply",
+    "suppliesLead": "Building and road materials, delivered to project sites on schedule and in the quantities you need.",
+    "suppliesCta": "Get a quote on WhatsApp",
+    "suppliesWhatsappText": "Hello, I would like a quote for material supply."
   },
   "projects": {
     "title": "Our Projects",

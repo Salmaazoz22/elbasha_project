@@ -865,6 +865,44 @@ DEPLOYMENT_GUIDE §11 D now includes the hero-film and Low Power Mode checks, to
 | Horizontal overflow, 8 pages × 320/375/768/1280/1920 px | **0 / 40** |
 | Console errors | none |
 
+## 15m. "We supply" strip below the hero (client requests batch 9, 2026-09-19)
+
+**What changed**
+
+- **«نورّد جميع أنواع» / "We supply"** on both home pages, directly after the hero (not inside it): a heading, one line of
+  lead text, the 7 materials from the manager as icon tiles, and a **«اطلب عرض سعر على واتساب» / "Get a quote on WhatsApp"**
+  button. The button opens `wa.me/201116111015` with a prefilled message («مرحبًا، أريد عرض سعر لتوريد مواد.» /
+  "Hello, I would like a quote for material supply.").
+- **Data:** `src/data/materials.json` (names from the manager; "all sizes / all grades" as a second line). The strip is a plain
+  `<ul>` of text with decorative icons. It is not revealed on scroll, so it never starts hidden.
+- **Icons:** `brick-wall` from lucide. Six new ones drawn on lucide's 24 px grid, because lucide has no icons for these materials:
+  cement block, interlock (I-shaped paver), curbstone profile, keystone (arch with a solid keystone), crushed stone, sand heap.
+- **Layout:** phones: 2 tiles per row (icon beside the name), button full width below the list. From 36em: 4 per row, icon above
+  the name. From 62em: all 7 in one row, with the button beside the heading.
+- **Material Supply service description** (AR/EN) now names the seven materials.
+
+**Checks**
+
+| Check | Result |
+|---|---|
+| `npm run build` + `check.mjs` (SITE_URL = https://elbasha-contracting.com), `build:drafts` | ✅ pass; 9 pages, 369 files |
+| Strip markup | 7 items on `/` and `/en/`; the WhatsApp link is URL-encoded, `target=_blank rel=noopener`, with the new-tab hint |
+| Horizontal overflow, home AR/EN × 320/390/768/1366/1920 px | **0 / 10** |
+| Where the strip starts (top edge, px from the top of the page) | 1920×1080: 841, so the heading and most tiles show before any scrolling · 1366×768: 757, at the bottom edge · 390×844: 816, below the fold on phones |
+| Lighthouse accessibility / best practices / SEO, home AR/EN, mobile and desktop | **100 / 100 / 100** |
+
+**Lighthouse performance, mobile** — 5 runs each, alternating between this build and the previous commit (`6203a2a`) on the same
+machine, against `node scripts/serve.mjs`:
+
+| Page | Before (median) | After (median) | TBT median before → after | LCP median before → after |
+|---|---|---|---|---|
+| `/` | 91 | **91** | 332 → 340 ms | 2.22 → 2.22 s |
+| `/en/` | 87 | **92** | 466 → 317 ms | 2.07 → 2.13 s |
+
+Desktop: 100 on both pages. Single runs vary from about 79 to 98 on this machine for both builds, because of blocking time in
+`main.js`, which this change does not touch. The only layout shift (0.06, the first cold run only) is in the hero, is present before
+the change too, and is not caused by the strip.
+
 ## 16. Result
 
 The frontend is ready for production: it builds, validates, and passes the accessibility, responsive, functional and SEO checks above.

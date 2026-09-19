@@ -33,8 +33,8 @@ export function sectionHead(ctx, { eyebrow, title, lead, id, level = 2, align = 
   </header>`;
 }
 
-export function whatsappButton(ctx, { className = 'btn btn--whatsapp', label = ctx.t.cta.whatsapp } = {}) {
-  return html`<a class="${className}" href="${ctx.site.contact.whatsappUrl}" target="_blank" rel="noopener">
+export function whatsappButton(ctx, { className = 'btn btn--whatsapp', label = ctx.t.cta.whatsapp, href = ctx.site.contact.whatsappUrl } = {}) {
+  return html`<a class="${className}" href="${href}" target="_blank" rel="noopener">
     ${icon('whatsapp', { size: 20 })}<span>${label}</span><span class="visually-hidden">${ctx.t.common.newTab}</span></a>`;
 }
 
@@ -196,6 +196,33 @@ export function clientsSection(ctx, { tint = false } = {}) {
     <ul class="clients__grid" role="list" data-reveal>
       ${ctx.clients.items.map((c) => html`<li class="clients__item" dir="auto">${c.name[lang]}</li>`)}
     </ul>
+  </div>
+</section>`;
+}
+
+/**
+ * "We supply" strip, directly below the home hero (client batch 9): the materials as a list of icon tiles
+ * and a WhatsApp quote button with a prefilled message. Not revealed on scroll: it must show at once.
+ */
+export function suppliesStrip(ctx) {
+  const { t, lang } = ctx;
+  const quote = `${ctx.site.contact.whatsappUrl}?text=${encodeURIComponent(t.home.suppliesWhatsappText)}`;
+  return html`
+<section class="supplies" aria-labelledby="supplies-title">
+  <div class="container supplies__inner">
+    <div class="supplies__head">
+      <h2 class="supplies__title" id="supplies-title">${t.home.suppliesTitle}</h2>
+      <p class="supplies__lead">${t.home.suppliesLead}</p>
+    </div>
+    <ul class="supplies__list" role="list">
+      ${ctx.materials.items.map((m) => html`<li class="supplies__item">
+        <span class="supplies__icon">${icon(m.icon, { size: 28 })}</span>
+        <span class="supplies__name">${m.name[lang]}${m.note ? html` <span class="supplies__note">${m.note[lang]}</span>` : ''}</span>
+      </li>`)}
+    </ul>
+    <div class="supplies__cta">
+      ${whatsappButton(ctx, { className: 'btn btn--whatsapp btn--lg', label: t.home.suppliesCta, href: quote })}
+    </div>
   </div>
 </section>`;
 }

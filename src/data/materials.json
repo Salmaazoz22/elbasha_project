@@ -1,0 +1,73 @@
+{
+  "_readme": "Materials the company supplies (client batch 9, 2026-09-19, from the manager). Shown in this order in the \"We supply\" strip directly below the home hero, and named in the Material Supply service description (services.json). Names are the manager's wording; \"note\" is the size/grade qualifier, shown on a second line. Icons are in src/templates/icons.mjs; all but brick-wall were drawn for this site.",
+  "items": [
+    {
+      "id": "clay-bricks",
+      "icon": "brick-wall",
+      "name": {
+        "ar": "الطوب الطفلي",
+        "en": "Clay bricks"
+      },
+      "note": {
+        "ar": "بجميع مقاساته",
+        "en": "All sizes"
+      }
+    },
+    {
+      "id": "cement-bricks",
+      "icon": "cement-block",
+      "name": {
+        "ar": "الطوب الأسمنتي",
+        "en": "Cement bricks"
+      },
+      "note": {
+        "ar": "بجميع مقاساته",
+        "en": "All sizes"
+      }
+    },
+    {
+      "id": "interlock",
+      "icon": "interlock",
+      "name": {
+        "ar": "الإنترلوك",
+        "en": "Interlock paving"
+      }
+    },
+    {
+      "id": "curbstones",
+      "icon": "curbstone",
+      "name": {
+        "ar": "البردورة",
+        "en": "Curbstones"
+      }
+    },
+    {
+      "id": "keystone-blocks",
+      "icon": "keystone",
+      "name": {
+        "ar": "الكيستون بلوك",
+        "en": "Keystone blocks"
+      }
+    },
+    {
+      "id": "crushed-stone",
+      "icon": "crushed-stone",
+      "name": {
+        "ar": "السن",
+        "en": "Crushed stone"
+      },
+      "note": {
+        "ar": "بجميع أنواعه",
+        "en": "All grades"
+      }
+    },
+    {
+      "id": "sand",
+      "icon": "sand",
+      "name": {
+        "ar": "الرمل",
+        "en": "Sand"
+      }
+    }
+  ]
+}
